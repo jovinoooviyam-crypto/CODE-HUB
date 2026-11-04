@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#170d26">
+  <meta name="description" content="A little birthday universe made with love.">
+  <title>For My Love 💗</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="glow glow-one"></div><div class="glow glow-two"></div>
+  <div class="floating-hearts" aria-hidden="true"></div>
+
+  <main class="page">
+    <nav class="topbar">
+      <span class="brand">♡ just for you</span>
+      <button class="music-btn" id="musicBtn" aria-label="Toggle music">♫ <span>Sound off</span></button>
+    </nav>
+
+    <section class="hero" id="home">
+      <div class="eyebrow"><span class="sparkle">✦</span> TODAY IS YOUR DAY <span class="sparkle">✦</span></div>
+      <div class="cake-wrap" aria-hidden="true">
+        <div class="cake-glow"></div>
+        <div class="cake">
+          <div class="candle"><i></i></div>
+          <div class="icing"></div><div class="cake-top"></div>
+          <div class="cake-body"><span>♡</span><span>♡</span><span>♡</span></div>
+          <div class="plate"></div>
+        </div>
+      </div>
+      <p class="tiny-intro">To the prettiest part of my universe</p>
+      <h1>Happy Birthday,<br><em id="herName">My Love</em><span class="heart"> ♥</span></h1>
+      <p class="hero-copy">Today, the world got a little more beautiful.<br>And my world got <strong>you.</strong></p>
+      <button class="primary-btn" id="openLetter">Open your little surprise <span>♡</span></button>
+      <div class="scroll-note">SCROLL A LITTLE <span>↓</span></div>
+    </section>
+
+    <section class="letter-section" id="letter">
+      <div class="section-label">A NOTE FROM MY HEART</div>
+      <article class="letter-card">
+        <div class="letter-stamp">♡</div>
+        <p class="dear">My dearest,</p>
+        <p class="letter-text" id="letterText">If I could wrap every bit of happiness in the world and give it to you, I would. You deserve gentle mornings, loud laughter, dreams that come true, and a thousand little reasons to smile.</p>
+        <p class="letter-text">Thank you for being you. You make ordinary days feel special, and I hope today gives even a little of that magic back to you.</p>
+        <p class="signature">Forever cheering for you, <span>♡</span></p>
+      </article>
+    </section>
+
+    <section class="reasons">
+      <div class="section-label">A FEW LITTLE REMINDERS</div>
+      <h2>Reasons you're <em>one of a kind</em></h2>
+      <div class="reason-grid">
+        <div class="reason"><span>✧</span><h3>Your smile</h3><p>My favourite kind of sunshine.</p></div>
+        <div class="reason"><span>♡</span><h3>Your heart</h3><p>So much warmth in one person.</p></div>
+        <div class="reason"><span>☾</span><h3>Your magic</h3><p>You make life feel softer.</p></div>
+      </div>
+    </section>
+
+    <section class="finale">
+      <div class="big-heart">♥</div>
+      <p class="section-label">ONE LAST THING</p>
+      <h2>May this year be<br><em>beautifully yours.</em></h2>
+      <p class="final-copy">More adventures. More laughter. More wishes coming true.<br>And always, always, more reasons to smile.</p>
+      <button class="wish-btn" id="wishBtn">Make a birthday wish ✨</button>
+      <p class="wish-result" id="wishResult" aria-live="polite"></p>
+    </section>
+    <footer>Made with all my love <span>♥</span> just for you</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
