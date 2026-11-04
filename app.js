@@ -57,7 +57,7 @@ document.getElementById('musicBtn').addEventListener('click',async()=>{
 });
 
 // Quick personalisation: edit the two values below before sharing.
-const birthdayName='My Love';
+const birthdayName='Ragavi';
 document.getElementById('herName').textContent=birthdayName;
 
 if ('serviceWorker' in navigator && location.protocol !== 'file:') { window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{})); }
