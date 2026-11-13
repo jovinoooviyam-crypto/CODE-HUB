@@ -1,75 +1,269 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#170d26">
-  <meta name="description" content="A little birthday universe made with love.">
-  <title>For Ragavi💗</title>
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0D1020">
+    <meta name="description" content="CODE HUB - My personal project archive">
+
+    <title>CODE HUB | Project Archive</title>
+
+    <link rel="icon" type="image/png" href="src/icon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- PREVENT THEME FLASH -->
+    <script>
+        const savedTheme = localStorage.getItem("codehub-theme");
+
+        const systemTheme = window.matchMedia(
+            "(prefers-color-scheme: light)"
+        ).matches ? "light" : "dark";
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            savedTheme || systemTheme
+        );
+    </script>
+
 </head>
+
 <body>
-  <div class="stars" aria-hidden="true"></div>
-  <div class="glow glow-one"></div><div class="glow glow-two"></div>
-  <div class="floating-hearts" aria-hidden="true"></div>
 
-  <main class="page">
-    <nav class="topbar">
-      <span class="brand">♡ just for you</span>
-      <button class="music-btn" id="musicBtn" aria-label="Toggle music">♫ <span>Sound off</span></button>
-    </nav>
+    <!-- HEADER -->
 
-    <section class="hero" id="home">
-      <div class="eyebrow"><span class="sparkle">✦</span> TODAY IS YOUR DAY <span class="sparkle">✦</span></div>
-      <div class="cake-wrap" aria-hidden="true">
-        <div class="cake-glow"></div>
-        <div class="cake">
-          <div class="candle"><i></i></div>
-          <div class="icing"></div><div class="cake-top"></div>
-          <div class="cake-body"><span>♡</span><span>♡</span><span>♡</span></div>
-          <div class="plate"></div>
+    <header class="header">
+
+        <div class="site-head-logo">
+
+            <div class="icon">
+                <img
+                    src="src/CODE_HUB.png"
+                    class="img-icon"
+                    alt="CODE HUB Logo"
+                >
+            </div>
+
+            <div class="site-name">
+                <h1>CODE HUB<span>.</span></h1>
+                <p>THINK · CREATE · DEVELOP</p>
+            </div>
+
         </div>
-      </div>
-      <p class="tiny-intro">To the prettiest part of my universe</p>
-      <h1>Happy Birthday,<br><em id="herName">Ragavi S</em><span class="heart"> ♥</span></h1>
-      <p class="hero-copy">Today, the world got a little more beautiful.<br>And my world got <strong>you.</strong></p>
-      <button class="primary-btn" id="openLetter">Open your little surprise <span>♡</span></button>
-      <div class="scroll-note">SCROLL A LITTLE <span>↓</span></div>
-    </section>
 
-    <section class="letter-section" id="letter">
-      <div class="section-label">A NOTE FROM MY HEART</div>
-      <article class="letter-card">
-        <div class="letter-stamp">♡</div>
-        <p class="dear">My dearest,</p>
-        <p class="letter-text" id="letterText">If I could wrap every bit of happiness in the world and give it to you, I would. You deserve gentle mornings, loud laughter, dreams that come true, and a thousand little reasons to smile.</p>
-        <p class="letter-text">Thank you for being you. You make ordinary days feel special, and I hope today gives even a little of that magic back to you.</p>
-        <p class="signature">Forever cheering for you, <span>♡</span></p>
-      </article>
-    </section>
 
-    <section class="reasons">
-      <div class="section-label">A FEW LITTLE REMINDERS</div>
-      <h2>Reasons you're <em>one of a kind</em></h2>
-      <div class="reason-grid">
-        <div class="reason"><span>✧</span><h3>Your smile</h3><p>My favourite kind of sunshine.</p></div>
-        <div class="reason"><span>♡</span><h3>Your heart</h3><p>So much warmth in one person.</p></div>
-        <div class="reason"><span>☾</span><h3>Your magic</h3><p>You make life feel softer.</p></div>
-      </div>
-    </section>
+        <div class="header-actions">
 
-    <section class="finale">
-      <div class="big-heart">♥</div>
-      <p class="section-label">ONE LAST THING</p>
-      <h2>May this year be<br><em>beautifully yours.</em></h2>
-      <p class="final-copy">More adventures. More laughter. More wishes coming true.<br>And always, always, more reasons to smile.</p>
-      <button class="wish-btn" id="wishBtn">Make a birthday wish ✨</button>
-      <p class="wish-result" id="wishResult" aria-live="polite"></p>
-    </section>
-    <footer>Made with all my love <span>♥</span> just for you</footer>
-  </main>
-  <script src="app.js"></script>
+            <div class="header-tag">
+                <span class="status-dot"></span>
+                PERSONAL WORKSPACE
+            </div>
+
+            <!-- THEME TOGGLE -->
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Switch theme"
+                title="Change theme"
+                type="button"
+            >
+
+                <span class="toggle-track">
+
+                    <span class="toggle-thumb">
+
+                        <span class="sun-icon">☀</span>
+                        <span class="moon-icon">☾</span>
+
+                    </span>
+
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    ✦ WELCOME TO MY DIGITAL SPACE
+                </span>
+
+                <h2>
+                    Build something
+                    <span>extraordinary.</span>
+                </h2>
+
+                <p>
+                    Exploring ideas, creating experiences
+                    and turning imagination into reality
+                    through code.
+                </p>
+
+                <a href="#projects" class="explore-btn">
+                    Explore Projects <span>↗</span>
+                </a>
+
+            </div>
+
+            <div class="hero-decoration">CH</div>
+            <div class="hero-orb"></div>
+
+        </section>
+
+
+        <!-- PROJECT SECTION -->
+
+        <section class="projects-section" id="projects">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        THE COLLECTION
+                    </span>
+
+                    <h2>
+                        My Projects<span>.</span>
+                    </h2>
+
+                    <p class="section-description">
+                        A little collection of things I've built.
+                    </p>
+
+                </div>
+
+
+                <div class="project-count">
+
+                    <span id="projectCount">00</span>
+                    <small>TOTAL PROJECTS</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH BAR -->
+
+            <div class="search-container">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="projectSearch"
+                    placeholder="Search something..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- PROJECT GRID -->
+
+            <div class="project-container" id="projectContainer">
+
+
+                <!-- PROJECT 01 -->
+
+                <article class="projects" data-name="project name">
+
+                    <div class="project-icon">
+
+                        <img
+                            src="src/icon.png"
+                            class="project-img"
+                            alt="Project icon"
+                        >
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <span class="project-category">
+                            WEB DEVELOPMENT
+                        </span>
+
+                        <h3>
+                            <a href="#">Project Name</a>
+                        </h3>
+
+                        <p>
+                            A short description of your creative project.
+                        </p>
+
+                    </div>
+
+
+                    <a href="#" class="project-arrow" aria-label="Open project">
+                        ↗
+                    </a>
+
+                </article>
+
+
+                <!-- ADD MORE PROJECTS HERE -->
+
+
+            </div>
+
+
+            <!-- EMPTY SEARCH -->
+
+            <div class="empty-state" id="emptyState">
+
+                <span>✧</span>
+
+                <h3>No projects found</h3>
+
+                <p>Try searching with another keyword.</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-brand">
+            CODE HUB<span>.</span>
+        </div>
+
+        <p>Designed with creativity & code.</p>
+
+        <small>© 2026 CODE HUB</small>
+
+    </footer>
+
+
+    <script src="main.js"></script>
+    <script src="reloader.js"></script>
+
 </body>
+
 </html>
