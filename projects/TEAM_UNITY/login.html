@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM UNITY | Login</title>
+    <link rel="stylesheet" href="styles/login2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <main class="login-page">
+        <div class="login-box">
+            <div class="brand-mark">
+                <img
+                    src="src/unity_logo.png"
+                    class="login-logo"
+                    alt="Team Unity"
+                >
+                <span class="brand-text">
+                    <b>TEAM</b>
+                    <small>UNITY</small>
+                </span>
+            </div>
+
+            <h2>Login</h2>
+            <p>Welcome back to the Team Unity community</p>
+
+	    <div
+    id="g_id_onload"
+    data-client_id="639212954276-q9hgeukjnsdve2tlr904reec3qv0lipr.apps.googleusercontent.com"
+    data-callback="handleGoogleLogin"
+    data-auto_prompt="false">
+</div>
+
+<div
+    class="g_id_signin"
+    data-type="standard"
+    data-size="large"
+    data-theme="outline"
+    data-text="continue_with"
+    data-shape="rectangular"
+    data-logo_alignment="left">
+</div>
+
+
+            <form id="loginForm">
+                <label for="email">Email</label>
+
+                <div class="input-box">
+                    <i class="fa fa-envelope"></i>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <label for="password">Password</label>
+
+                <div class="input-box">
+                    <i class="fa fa-lock"></i>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <p class="forgot-password">
+                    <a href="forgot-password.html">
+                        Forgot Password?
+                    </a>
+                </p>
+
+                <button type="submit" id="loginBtn">
+                    Login
+                </button>
+
+                <p id="message" aria-live="polite"></p>
+            </form>
+
+            <p class="register-text">
+                Don't have an account?
+                <a href="register.html">Join as a artist</a>
+            </p>
+
+            <p class="register-trainer-text">
+                Don't have an account?
+                <a href="trainer-registeration.html">Join as a trainer</a>
+            </p>
+            
+            <p class="register-volunteer-text">
+                Don't have an account?
+                <a href="volunteer-register.html">Join as a Volunteer</a>
+            </p>
+
+        </div>
+    </main>
+
+    <script src="scripts/login.js"></script>
+</body>
+</html>

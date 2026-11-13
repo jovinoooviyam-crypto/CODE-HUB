@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Team Unity — Create. Collaborate. Inspire.">
+  <title>TEAM UNITY | Create. Collaborate. Inspire.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- Collaborator popup + team page -->
+  <link rel="stylesheet" href="styles/collaborator.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <!-- Boxicons -->
+  <link href='https://cdn.boxicons.com/3.0.8/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <!-- Logo -->
+      <a class="brand" href="#home" aria-label="Team Unity Home">
+        <span class="brand-mark"><img src="src/unity_logo.png" alt=""></span>
+        <span class="brand-text">
+          <b>TEAM</b>
+          <small>UNITY</small>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#who">Who Are We</a>
+        <a href="#works">Our Works</a>
+        <a href="#projects">Projects</a>
+        <a href="#join">Join With Us</a>
+        <a href="#contact">Reach Out With Us</a>
+      </nav>
+
+      <!-- Profile -->
+      <button class="profile-btn" data-login aria-label="Login">
+        <i class="fa fa-user-circle"></i>
+      </button>
+
+      <!-- Mobile Menu -->
+      <button class="menu-btn" id="menuBtn" aria-label="Open Navigation" aria-expanded="false">☰</button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#who">Who Are We</a>
+      <a href="#works">Our Works</a>
+      <a href="#projects">Projects</a>
+      <a href="#join">Join With Us</a>
+      <a href="#contact">Reach Out With Us</a>
+    </nav>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+  <main>
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+    <section class="hero section-block" id="home">
+      <!-- Background Slides -->
+      <div class="hero-slides" id="heroSlides">
+        <article class="hero-slide active" style="--hero-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=85');"></article>
+        <article class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2200&q=85');"></article>
+        <article class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=2200&q=85');"></article>
+      </div>
+
+      <!-- Dark Overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Hero Content -->
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">CREATIVE COMMUNITY ORGANIZATION</p>
+          <h1>TEAM <span>UNITY</span></h1>
+          <h2>SHARE WHAT YOU LEARN.</h2>
+          <p class="hero-text">
+            Team Unity brings together artists, volunteers, trainers and
+            collaborators from diverse backgrounds to create meaningful
+            projects, events and opportunities that inspire positive change.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#works">Explore Our Works <span>→</span></a>
+            <a class="btn btn-outline" href="#join">Join Team Unity</a>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+          <button class="arrow" id="prevSlide" aria-label="Previous Slide">←</button>
+          <div class="dots" id="dots">
+            <button class="dot active" aria-label="Slide 1"></button>
+            <button class="dot" aria-label="Slide 2"></button>
+            <button class="dot" aria-label="Slide 3"></button>
+          </div>
+          <button class="arrow" id="nextSlide" aria-label="Next Slide">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         WHO ARE WE
+    ========================== -->
+    <section class="section-block who-block" id="who">
+      <div class="container">
+        <div class="section-label">01 / IDENTITY</div>
+
+        <div class="who-grid">
+          <!-- Text -->
+          <div class="who-copy">
+            <h2>WHO ARE WE?</h2>
+            <p class="lead">A creative community built around people, purpose and the power of working together.</p>
+
+            <div class="identity-grid">
+              <!-- Vision -->
+              <article class="mini-info">
+                <div class="icon"><img src="src/eye-arrow-progress.png" alt=""></div>
+                <h3>Our Vision</h3>
+                <p>Art is for everyone - accessible, inclusive, and celebrate across generations.</p>
+              </article>
+
+              <!-- Mission -->
+              <article class="mini-info">
+                <div class="icon"><img src="src/target.png" alt=""></div>
+                <h3>Our Mission</h3>
+                <p>To preserve, promote, and pass on the rich heritage of arts by inspiring the younger generation, creating a lifelong learning community where there is no age limit to learn or unlearn, and ensuring every artist receives fair recognition, dignity, and rightful payment for their talent and contribution.</p>
+              </article>
+            </div>
+
+            <a href="#join" class="text-link">Meet & Join Our Community →</a>
+          </div>
+
+          <!-- Image -->
+          <div class="image-panel tall-image">
+            <img src="src/banner_1.jpeg" alt="Creative community team together">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         OUR WORKS
+    ========================== -->
+    <section class="section-block works-block" id="works">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-label">02 / ARCHIVE</div>
+            <h2>OUR WORKS</h2>
+          </div>
+          <a class="btn btn-small btn-outline works-button" href="works.html">View All Works →</a>
+        </div>
+
+        <!-- Year Selector
+        <div class="year-tabs" role="tablist">
+          <button class="year-tab active" data-year="2026">2026</button>
+          <button class="year-tab" data-year="2025">2025</button>
+          <button class="year-tab" data-year="2024">2024</button>
+          <button class="year-tab" data-year="2023">2023</button>
+          <button class="year-tab" data-year="2022">2022</button>
+        </div> -->
+
+        <!-- Dynamic Work Cards -->
+        <div class="works-grid" id="worksGrid">
+
+          <article class="project-card">
+            <!--<img src="/api/drive-image/1_JfOucFLNyug8MGKHYhmyhRq-B1fiAUj" alt="Project Image">-->
+            <div class="project-content">
+              <h1>View our works</h1>
+              <p>To view our works recorded on the year from 2022-2027 click the 'Explore our works'</p>
+              <div class="btn">
+                <a href="works.html">Explore our works →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+    <section class="section-block projects-block" id="projects">
+      <div class="container">
+        <div class="section-label">03 / WHAT WE CREATE</div>
+        <h2>PROJECTS</h2>
+        <p class="section-intro">
+          From education and creative training to community art and
+          workshops, our projects create spaces for people to learn,
+          connect and contribute.
+        </p>
+
+        <div class="projects-grid" id="school">
+          <!-- School -->
+          <article class="project-card">
+            <img src="/api/drive-image/14qFUufHSSzBNMqv7Xe7FLPunodEEIIOM" alt="Students learning">
+            <div class="project-content">
+              <span class="project-icon"><img src="src/school-bag.png" alt=""></span>
+              <h3>School</h3>
+              <p>Engaging school programs that inspire young mind through learning, creativity, teamwork, and meaningful experiences.</p>
+              <a href="projects.html">Explore Projects →</a>
+            </div>
+          </article>
+
+          <!-- College -->
+          <article class="project-card">
+            <img src="/api/drive-image/172HOiwaFUubl4zTuB5gAhb-PKa6fdxfj" alt="College students">
+            <div class="project-content">
+              <span class="project-icon"><img src="src/graduation-hat.png" alt=""></span>
+              <h3>College</h3>
+              <p>dynamic college programs that encourage learning, innovation, collaboration, and personal growth.</p>
+              <a href="projects.html">Explore Projects →</a>
+            </div>
+          </article>
+
+          <!-- Skill Labs -->
+          <article class="project-card">
+            <img src="/api/drive-image/16_Hz3S19l190FSGDGgeBqe0JjzxpBcVZ" alt="Skill development">
+            <div class="project-content">
+              <span class="project-icon"><img src="src/skill.png" alt=""></span>
+              <h3>Skill Labs</h3>
+              <p>Practical skill labs that build hands-on knowledge, creativity, confidence, and real-world abilities.</p>
+              <a href="projects.html">Explore Projects →</a>
+            </div>
+          </article>
+
+          <!-- Workshops -->
+          <article class="project-card">
+            <img src="/api/drive-image/1YfAhg2hM1iCRE5dzxeg1zEaBeo0MXfFx" alt="Creative workshop">
+            <div class="project-content">
+              <span class="project-icon"><img src="src/workshop.png" alt=""></span>
+              <h3>Workshops</h3>
+              <p>Intractive workshops that inspire creativity, Practical learning, collaboration, and new skills.</p>
+              <a href="projects.html">Explore Projects →</a>
+            </div>
+          </article>
+
+          <!-- Art Community -->
+          <article class="project-card">
+            <img src="/api/drive-image/1xjLEcd-myFCldbnBjNO9ccPGvoR6QIWR" alt="Art community">
+            <div class="project-content">
+              <span class="project-icon"><img src="src/art.png" alt=""></span>
+              <h3>Art Community</h3>
+              <p>Building an inclusive art community where creativity, expression, collaboration, and shared ideas come together.</p>
+              <a href="projects.html">Explore Projects →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         JOIN WITH US
+    ========================== -->
+    <section class="section-block join-block" id="join">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-label">04 / COMMUNITY</div>
+            <h2>JOIN WITH US</h2>
+          </div>
+          <p class="section-intro compact">There is a place for every kind of contributor.</p>
+        </div>
+
+        <div class="join-grid">
+          <!-- Artist -->
+          <article class="join-card">
+            <span><img src="src/painter.png" alt=""></span>
+            <h3>ARTIST</h3>
+            <p>Express your creativity and be part of inspiring projects.</p>
+            <a class="btn btn-outline" data-login aria-label="Login">Login / Join</a>
+          </article>
+
+          <!-- Trainer -->
+          <article class="join-card">
+            <span><img src="src/coach.png" alt=""></span>
+            <h3>TRAINER</h3>
+            <p>Share your knowledge and empower others to grow.</p>
+            <a class="btn btn-outline" data-login aria-label="Trainer Registration">Login / Join</a>
+          </article>
+
+          <!-- Volunteer -->
+          <article class="join-card">
+            <span><img src="src/volunteering.png" alt=""></span>
+            <h3>VOLUNTEER</h3>
+            <p>Contribute your time and skills to create positive impact.</p>
+            <a class="btn btn-outline" data-login aria-label="Login">Login / Join</a>
+          </article>
+
+          <!-- Collaborator (opens the team popup) -->
+          <article class="join-card">
+            <span><img src="src/collaboration.png" alt=""></span>
+            <h3>COLLABORATOR</h3>
+            <p>Collaborate with us to create meaningful experiences.</p>
+            <a class="btn btn-outline" href="#" data-collaborator aria-label="View collaborators">View Team</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SOCIAL MEDIA
+    ========================== -->
+    <section class="section-block social-block">
+      <div class="container social-inner">
+        <div>
+          <div class="section-label">05 / CONNECT</div>
+          <h2>OUR SOCIAL MEDIA PLATFORM</h2>
+          <p>Follow our journey.</p>
+        </div>
+
+        <div class="social-grid">
+          <a href="https://www.instagram.com/unity_offic?igsi=Y2V6enozZXZzaWds" aria-label="Instagram"><b><i class="fa-brands fa-instagram"></i></b><span>Instagram</span></a>
+          <a href="https://youtube.com/@teamunity62?si=7ojxnpERvkIEh_hK" aria-label="YouTube"><b><i class="fa-brands fa-youtube"></i></b><span>YouTube</span></a>
+          <a href="https://www.facebook.com/share/1HesWsQFaY/" aria-label="Facebook"><b><i class="fa-brands fa-facebook"></i></b><span>Facebook</span></a>
+          <a href="https://www.linkedin.com/in/team-unity-b17216358?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="Linked-in"><b><i class="fa-brands fa-linkedin"></i></b><span>Linkedin</span></a>
+          <a href="https://www.threads.com/@teamunity62" aria-label="Threads"><b><i class="fa-brands fa-threads"></i></b><span>Threads</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+    <section class="section-block contact-block" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <div class="section-label">06 / LET'S CONNECT</div>
+            <h2>LET'S CREATE SOMETHING TOGETHER</h2>
+            <p>Have an idea, project or opportunity? Reach out and let's start a conversation.</p>
+
+            <ul>
+              <li><b>Email</b><span>teamunityorganisation@gmail.com</span></li>
+              <li><b>Phone</b><span>+91 94442 43167</span></li>
+              <li><b>Location</b><span>Thiruvalluvar street, kodambakkam, chennai-600 024</span></li>
+              <li><b>Website</b><span>www.teamunity.org</span></li>
+            </ul>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contactForm">
+            <div class="warn">*This feature is under testing, No action will occur. Thank you for the understanding.</div>
+            <div class="form-row">
+              <label>
+                Name
+                <input required name="name" placeholder="Your name">
+              </label>
+              <label>
+                Email
+                <input required type="email" name="email" placeholder="Your email">
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Phone
+                <input name="phone" placeholder="Your phone number">
+              </label>
+              <label>
+                Category
+                <select name="category">
+                  <option>Collaborate</option>
+                  <option>Volunteer</option>
+                  <option>Artist</option>
+                  <option>Trainer</option>
+                  <option>General Enquiry</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Message
+              <textarea required name="message" rows="5" placeholder="Tell us how you'd like to connect..."></textarea>
+            </label>
+
+            <button class="btn btn-primary submit-btn" type="submit">Send Message <span>→</span></button>
+            <p class="form-message" id="formMessage" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Brand -->
+      <div>
+        <a class="brand footer-brand" href="#home">
+          <span class="brand-mark"><img src="src/unity_logo.png" alt=""></span>
+          <span class="brand-text">
+            <b>TEAM</b>
+            <small>UNITY</small>
+          </span>
+        </a>
+        <p>Team Unity is a creative community organization bringing people together to create, collaborate and inspire change.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#who">Who Are We</a>
+        <a href="#works">Our Works</a>
+        <a href="#projects">Projects</a>
+        <a href="#join">Join With Us</a>
+      </div>
+
+      <!-- Projects -->
+      <div>
+        <h4>Projects</h4>
+        <a href="#projects">School</a>
+        <a href="#projects">College</a>
+        <a href="#projects">Skill Labs</a>
+        <a href="#projects">Workshops</a>
+        <a href="#projects">Art Community</a>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4>Contact Info</h4>
+        <a href="mailto:teamunityorganisation@gmail.com">teamunityorganisation@gmail.com</a>
+        <a href="tel:+919444243167">+91 94442 43167</a>
+        <p>Thiruvalluvar street, kodambakkam, chennai-600 024</p>
+
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1HesWsQFaY/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://youtube.com/@teamunity62?si=7ojxnpERvkIEh_hK" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/unity_offic?igsi=Y2V6enozZXZzaWds" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/team-unity-b17216358?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.threads.com/@teamunity62" class="Threads" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================
+       LOGIN / PROFILE MODAL
+  ========================== -->
+  <div id="loginOverlay" class="login-overlay">
+    <div class="login-popup">
+
+        <button
+            type="button"
+            id="closeLogin"
+            class="close-login"
+            aria-label="Close login">
+            &times;
+        </button>
+
+        <iframe
+            id="loginFrame"
+            class="login-frame"
+            src=""
+            title="TEAM UNITY Login">
+        </iframe>
+    </div>
+  </div>
+
+  <!-- =========================
+       TRAINER REGISTRATION MODAL
+  ========================== -->
+  <div id="trainerOverlay" class="login-overlay">
+    <div class="login-popup">
+
+        <button
+            type="button"
+            id="closeTrainer"
+            class="close-login"
+            aria-label="Close trainer registration">
+            &times;
+        </button>
+
+        <iframe
+            id="trainerFrame"
+            class="login-frame"
+            src=""
+            title="TEAM UNITY Trainer Registration">
+        </iframe>
+    </div>
+  </div>
+
+  <!-- =========================
+       COLLABORATOR POPUP
+  ========================== -->
+  <div id="collabOverlay" class="collab-overlay" aria-hidden="true">
+    <div class="collab-popup" role="dialog" aria-modal="true" aria-label="TEAM UNITY collaborators">
+      <button type="button" id="closeCollab" class="collab-close" aria-label="Close">&times;</button>
+      <iframe id="collabFrame" class="collab-frame" title="TEAM UNITY Collaborators"></iframe>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/trainer-flow.js"></script>
+  <script src="data/projects-data.js"></script>
+  <script src="data/team-data.js"></script>
+  <script src="scripts/collaborator-modal.js"></script>
+
+</body>
+</html>

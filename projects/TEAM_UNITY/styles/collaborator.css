@@ -1,0 +1,262 @@
+/* =========================================================
+   TEAM UNITY — Collaborator popup + team page
+   Used by index.html (popup) and collaborator.html (content)
+========================================================= */
+
+:root {
+  --blue: #3354A5;
+  --blue-700: #24407f;
+  --blue-900: #16264c;
+  --blue-100: #dde4f3;
+  --blue-050: #f1f4fa;
+  --yellow: #E6E196;
+  --yellow-600: #c9c36f;
+  --yellow-050: #faf9ee;
+  --paper: #fdfdfa;
+  --radius: 14px;
+}
+
+/* ---------- POPUP (lives inside index.html) ---------- */
+
+.collab-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(16, 28, 56, .6);
+  z-index: 9999;
+}
+
+.collab-overlay.active {
+  display: flex;
+  animation: collabFade .25s ease;
+}
+
+.collab-popup {
+  position: relative;
+  width: min(860px, 100%);
+  height: min(720px, 90vh);
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .4);
+  animation: collabPop .25s ease;
+}
+
+.collab-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.collab-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(22, 38, 76, .85);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.collab-close:hover { background: #000; }
+
+@keyframes collabFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes collabPop {
+  from { opacity: 0; transform: scale(.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ---------- TEAM PAGE (lives inside collaborator.html) ---------- */
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--blue-900);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.collab-page {
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 40px 28px 48px;
+  background: var(--blue-050);
+}
+
+.collab-header {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.collab-eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  color: var(--blue);
+  margin: 0 0 10px;
+}
+
+.collab-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.15;
+  color: var(--blue-900);
+  margin: 0 0 12px;
+}
+
+.collab-intro {
+  color: var(--blue-700);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.collab-list {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.collab-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 28px 22px;
+  background: var(--paper);
+  border: 1px solid var(--blue-100);
+  border-radius: var(--radius);
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.collab-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--yellow-600);
+  box-shadow: 0 16px 28px -18px rgba(22, 38, 76, .35);
+}
+
+.collab-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--yellow);
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--yellow-050);
+}
+
+.collab-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collab-avatar span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--blue-900);
+}
+
+.collab-info h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  color: var(--blue-900);
+  margin: 0 0 4px;
+}
+
+.collab-role {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0 0 10px;
+}
+
+.collab-bio {
+  font-size: .9rem;
+  color: var(--blue-700);
+  margin: 0;
+}
+
+.collab-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.collab-links a {
+  font-size: .8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--blue-100);
+  color: var(--blue-900);
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.collab-links a:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--yellow-050);
+}
+
+.collab-empty {
+  text-align: center;
+  color: var(--blue-700);
+  margin-top: 40px;
+}
+
+.collab-empty[hidden] { display: none; }
+
+@media (max-width: 600px) {
+  .collab-page { padding: 28px 18px 36px; }
+}
+
+.colab-detail-1{
+  border: 1px solid #000;
+  display: flex;
+  border-radius: 20px;
+  width: max-content , -20px;
+  background-color: #16264c;
+  color: #f1f4fa;
+}
+
+.profile img{
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+  border: 2px solid #fff;
+}
+
+.details-contact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 20px;
+  font-size: 10px;
+}

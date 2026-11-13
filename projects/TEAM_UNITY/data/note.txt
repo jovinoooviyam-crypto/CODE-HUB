@@ -1,0 +1,56 @@
+dot:
+    -> · <-
+
+        description: "Description: In 2023, Team Unity collaborated with Chinna Chiru Ulagam Welfare Trust to participate in a first aid training program conducted by Alert NGO. The program focused on teaching essential first aid techniques and emergency response skills to help participants provide immediate assistance during accidents and medical emergencies.",
+
+{
+    id: 2,
+    title: "",
+    date: "Date: ",
+    tags: [""],
+    description: "Description: ",
+    activity: [""],
+    objective: [""],
+    outcome: ["",
+      '',
+      '',
+      ''
+    ],
+},
+
+
+
+
+
+
+data-$YEAR
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+
+
+
+
+data-projects
+
+{
+    ID: "",
+    image: "/api/drive-image/",
+    imageSlider: [
+        "/api/drive-image/",
+        "/api/drive-image/",
+        "/api/drive-image/",
+        "/api/drive-image/",
+    ],
+    date: "Date: ",
+    venue: "Venue: ",
+    description: ``,
+    mappingtag: "",
+},

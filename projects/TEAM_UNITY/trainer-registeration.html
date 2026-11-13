@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TEAM UNITY | Trainer Registration</title>
+
+    <link
+        rel="stylesheet"
+        href="styles/trainer-registration.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="registration-page">
+
+    <div class="registration-box">
+
+
+        <!-- =====================================
+             TEAM UNITY BRAND
+        ====================================== -->
+
+        <div class="brand-mark">
+
+            <img
+                src="src/unity_logo.png"
+                class="registration-logo"
+                alt="Team Unity"
+            >
+
+            <span class="brand-text">
+
+                <b>TEAM</b>
+
+                <small>UNITY</small>
+
+            </span>
+
+        </div>
+
+
+        <h2>Trainer Registration</h2>
+
+        <p class="intro">
+            Join our Folk Arts community as a trainer
+        </p>
+
+
+        <!-- =====================================
+             PROGRESS
+        ====================================== -->
+
+        <div class="progress">
+
+            <div class="progress-line">
+
+                <span id="progressLine"></span>
+
+            </div>
+
+
+            <div class="progress-step active">
+
+                <span>1</span>
+
+                <small>Account</small>
+
+            </div>
+
+
+            <div class="progress-step">
+
+                <span>2</span>
+
+                <small>Personal</small>
+
+            </div>
+
+
+            <div class="progress-step">
+
+                <span>3</span>
+
+                <small>Trainer</small>
+
+            </div>
+
+
+            <div class="progress-step">
+
+                <span>4</span>
+
+                <small>Teaching</small>
+
+            </div>
+
+
+            <div class="progress-step">
+
+                <span>5</span>
+
+                <small>Submit</small>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             FORM
+        ====================================== -->
+
+        <form id="trainerForm">
+
+
+            <!-- =================================
+                 PAGE 1
+            ================================== -->
+
+            <section class="form-page active">
+
+                <h3>Basic Account Details</h3>
+
+                <p class="section-description">
+                    Create your Team Unity trainer account.
+                </p>
+
+
+                <!-- FULL NAME -->
+
+                <label for="fullName">
+                    Full Name
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa fa-user"></i>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MOBILE -->
+
+                <label for="mobileNumber">
+                    Mobile Number
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa fa-phone"></i>
+
+                    <input
+                        type="tel"
+                        id="mobileNumber"
+                        name="mobileNumber"
+                        placeholder="Enter your mobile number"
+                        maxlength="10"
+                        autocomplete="tel"
+                        required
+                    >
+
+                </div>
+
+
+                <label class="checkbox-row">
+
+                    <input
+                        type="checkbox"
+                        id="whatsappSame"
+                        name="whatsappSame"
+                    >
+
+                    <span>
+                        This is my WhatsApp number
+                    </span>
+
+                </label>
+
+
+                <!-- PASSWORD -->
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 PAGE 2
+            ================================== -->
+
+            <section class="form-page">
+
+                <h3>Personal Details</h3>
+
+                <p class="section-description">
+                    Tell us a little about yourself.
+                </p>
+
+
+                <!-- DOB -->
+
+                <label>
+                    Date of Birth
+                </label>
+
+                <div class="date-fields">
+
+                    <input
+                        type="number"
+                        id="dobDay"
+                        name="dobDay"
+                        placeholder="Day"
+                        min="1"
+                        max="31"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="dobMonth"
+                        name="dobMonth"
+                        placeholder="Month"
+                        min="1"
+                        max="12"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="dobYear"
+                        name="dobYear"
+                        placeholder="Year"
+                        min="1900"
+                        max="2026"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- GENDER -->
+
+                <label>
+                    Gender
+                </label>
+
+                <div class="option-grid">
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Male"
+                            required
+                        >
+
+                        <span>Male</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Female"
+                        >
+
+                        <span>Female</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Transgender"
+                        >
+
+                        <span>Transgender</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Prefer not to say"
+                        >
+
+                        <span>Prefer not to say</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Others"
+                            id="genderOthers"
+                        >
+
+                        <span>Others</span>
+
+                    </label>
+
+
+                </div>
+
+
+                <input
+                    type="text"
+                    id="genderOtherText"
+                    name="genderOther"
+                    class="conditional-input hidden"
+                    placeholder="Please specify"
+                >
+
+
+                <!-- BLOOD GROUP -->
+
+                <label for="bloodGroup">
+                    Blood Group
+                </label>
+
+                <div class="select-box">
+
+                    <i class="fa fa-tint"></i>
+
+                    <select
+                        id="bloodGroup"
+                        name="bloodGroup"
+                        required
+                    >
+
+                        <option value="">
+                            Select blood group
+                        </option>
+
+                        <option value="A+">
+                            A+
+                        </option>
+
+                        <option value="A-">
+                            A-
+                        </option>
+
+                        <option value="B+">
+                            B+
+                        </option>
+
+                        <option value="B-">
+                            B-
+                        </option>
+
+                        <option value="AB+">
+                            AB+
+                        </option>
+
+                        <option value="AB-">
+                            AB-
+                        </option>
+
+                        <option value="O+">
+                            O+
+                        </option>
+
+                        <option value="O-">
+                            O-
+                        </option>
+
+                        <option value="Not sure">
+                            Not sure
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 PAGE 3
+            ================================== -->
+
+            <section class="form-page">
+
+                <h3>Trainer Details</h3>
+
+                <p class="section-description">
+                    Tell us about your artistic experience.
+                </p>
+
+
+                <!-- PROFESSIONAL NAME -->
+
+                <label for="professionalName">
+                    Trainer / Professional Name
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa fa-id-card"></i>
+
+                    <input
+                        type="text"
+                        id="professionalName"
+                        name="professionalName"
+                        placeholder="Professional or stage name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ART FORM -->
+
+                <label>
+                    Art Form
+                </label>
+
+                <div class="option-grid">
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            name="artForm"
+                            value="Parai"
+                        >
+
+                        <span>Parai</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            name="artForm"
+                            value="Oyil"
+                        >
+
+                        <span>Oyil</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            name="artForm"
+                            value="Karagam"
+                        >
+
+                        <span>Karagam</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            name="artForm"
+                            value="Thirumarakkal"
+                        >
+
+                        <span>Thirumarakkal</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            name="artForm"
+                            value="Saatai Kuchi"
+                        >
+
+                        <span>Saatai Kuchi</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            name="artForm"
+                            value="Street Play / Theater Play"
+                        >
+
+                        <span>
+                            Street Play / Theater Play
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            name="artForm"
+                            value="Mime"
+                        >
+
+                        <span>Mime</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            name="artForm"
+                            value="Others"
+                            id="artOther"
+                        >
+
+                        <span>Others</span>
+
+                    </label>
+
+                </div>
+
+
+                <input
+                    type="text"
+                    id="artOtherText"
+                    name="artOther"
+                    class="conditional-input hidden"
+                    placeholder="Please specify other art form"
+                >
+
+
+                <!-- SPECIFIC SKILL -->
+
+                <label for="specificSkill">
+                    Specific Skill / Tradition
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa fa-star"></i>
+
+                    <input
+                        type="text"
+                        id="specificSkill"
+                        name="specificSkill"
+                        placeholder="Specific skill or tradition"
+                    >
+
+                </div>
+
+
+                <!-- EXPERIENCE -->
+
+                <div class="two-column">
+
+                    <div>
+
+                        <label for="teachingExperience">
+                            Years of Teaching Experience
+                        </label>
+
+                        <input
+                            type="number"
+                            id="teachingExperience"
+                            name="teachingExperience"
+                            placeholder="Years"
+                            min="0"
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="professionalExperience">
+                            Years of Professional Experience
+                        </label>
+
+                        <input
+                            type="number"
+                            id="professionalExperience"
+                            name="professionalExperience"
+                            placeholder="Years"
+                            min="0"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <label for="location">
+                    Location
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa fa-map-marker"></i>
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="City / District / State"
+                        required
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 PAGE 4
+            ================================== -->
+
+            <section class="form-page">
+
+                <h3>Teaching Information</h3>
+
+                <p class="section-description">
+                    Help us understand how you teach.
+                </p>
+
+
+                <!-- WHAT CAN YOU TEACH -->
+
+                <label for="whatCanTeach">
+                    What can you teach?
+                </label>
+
+                <textarea
+                    id="whatCanTeach"
+                    name="whatCanTeach"
+                    placeholder="Describe the skills, art forms or traditions you can teach..."
+                    required
+                ></textarea>
+
+
+                <!-- LEVEL -->
+
+                <label>
+                    Teaching Level
+                </label>
+
+                <div class="option-grid three">
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="teachingLevel"
+                            value="Beginner"
+                            required
+                        >
+
+                        <span>Beginner</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="teachingLevel"
+                            value="Intermediate"
+                        >
+
+                        <span>Intermediate</span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="teachingLevel"
+                            value="Advanced"
+                        >
+
+                        <span>Advanced</span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- CLASS TYPE -->
+
+                <label>
+                    Class Type
+                </label>
+
+                <div class="option-grid three">
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="classType"
+                            value="Individual"
+                            required
+                        >
+
+                        <span>
+                            Individual
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="classType"
+                            value="Group"
+                        >
+
+                        <span>
+                            Group
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="classType"
+                            value="Both"
+                        >
+
+                        <span>
+                            Both
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- TEACHING MODE -->
+
+                <label>
+                    Teaching Mode
+                </label>
+
+                <div class="option-grid three">
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="teachingMode"
+                            value="Online"
+                            required
+                        >
+
+                        <span>
+                            Online
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="teachingMode"
+                            value="Offline"
+                        >
+
+                        <span>
+                            Offline
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="teachingMode"
+                            value="Both"
+                        >
+
+                        <span>
+                            Both
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- AGE GROUP -->
+
+                <label>
+                    Preferred Age Groups
+                </label>
+
+                <div class="two-column">
+
+                    <input
+                        type="number"
+                        name="ageGroupMin"
+                        placeholder="Minimum age"
+                        min="1"
+                    >
+
+                    <input
+                        type="number"
+                        name="ageGroupMax"
+                        placeholder="Maximum age"
+                        min="1"
+                    >
+
+                </div>
+
+
+                <!-- WORKSHOP -->
+
+                <label>
+                    Workshop Availability
+                </label>
+
+                <div class="option-grid">
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="workshopAvailability"
+                            value="Weekdays"
+                            required
+                        >
+
+                        <span>
+                            Weekdays
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="workshopAvailability"
+                            value="Weekends"
+                        >
+
+                        <span>
+                            Weekends
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="workshopAvailability"
+                            value="Both"
+                        >
+
+                        <span>
+                            Both
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="workshopAvailability"
+                            value="Others"
+                            id="availabilityOther"
+                        >
+
+                        <span>
+                            Others
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <input
+                    type="text"
+                    id="availabilityOtherText"
+                    name="availabilityOther"
+                    class="conditional-input hidden"
+                    placeholder="Please specify availability"
+                >
+
+
+                <!-- LANGUAGES -->
+
+                <label for="languages">
+                    Languages Spoken
+                </label>
+
+                <div class="input-box">
+
+                    <i class="fa fa-language"></i>
+
+                    <input
+                        type="text"
+                        id="languages"
+                        name="languages"
+                        placeholder="Example: Tamil, English"
+                        required
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 PAGE 5
+            ================================== -->
+
+            <section class="form-page">
+
+                <h3>Declaration</h3>
+
+                <p class="section-description">
+                    Please review your information before submitting.
+                </p>
+
+
+                <div class="declaration-box">
+
+                    <p>
+                        I hereby declare that the information
+                        provided by me in this registration form
+                        is true and accurate to the best of my
+                        knowledge.
+                    </p>
+
+                    <p>
+                        I understand that the information may be
+                        used by Team Unity for trainer verification,
+                        communication, training opportunities and
+                        related activities.
+                    </p>
+
+                </div>
+
+
+                <label class="declaration-check">
+
+                    <input
+                        type="checkbox"
+                        id="declaration"
+                        name="declaration"
+                        required
+                    >
+
+                    <span>
+                        I agree to the above declaration.
+                    </span>
+
+                </label>
+
+
+                <label for="additionalInformation">
+                    Additional Information
+                </label>
+
+                <textarea
+                    id="additionalInformation"
+                    name="additionalInformation"
+                    placeholder="Anything else you would like us to know?"
+                ></textarea>
+
+            </section>
+
+
+            <!-- =================================
+                 MESSAGE
+            ================================== -->
+
+            <p
+                id="formMessage"
+                aria-live="polite"
+            ></p>
+
+
+            <!-- =================================
+                 BUTTONS
+            ================================== -->
+
+            <div class="form-buttons">
+
+                <button
+                    type="button"
+                    id="backBtn"
+                >
+                    <i class="fa fa-arrow-left"></i>
+                    Back
+                </button>
+
+
+                <button
+                    type="button"
+                    id="nextBtn"
+                >
+                    Continue
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                >
+                    Submit Registration
+                    <i class="fa fa-check"></i>
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</main>
+
+
+<script src="scripts/trainer-registration.js"></script>
+
+</body>
+
+</html>
