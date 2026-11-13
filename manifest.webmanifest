@@ -1,9 +1,0 @@
-{
-  "name": "A Birthday Wish for My Love",
-  "short_name": "Birthday Love",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#170d26",
-  "theme_color": "#170d26",
-  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
-}
