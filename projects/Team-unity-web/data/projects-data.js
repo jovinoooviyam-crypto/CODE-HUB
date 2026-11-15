@@ -135,4 +135,22 @@ const projectDatas = [
         mappingtag: "",
     },
     */
+
+    // YEAR: 2026
+    // JAN
+
+    {
+        ID: "",
+        image: "/api/drive-image/",
+        imageSlider: [
+            "",
+            "",
+            "",
+            "",
+        ],
+        date: "Date: ",
+        venue: "",
+        description: ``,
+        mappingtag: "",
+    },
 ];
