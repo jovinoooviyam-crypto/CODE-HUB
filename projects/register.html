@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Team Unity cultural art form team.">
+  <title>Join the Team | TEAM UNITY</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/register.css">
+
+  <!--
+    New rules for the "conditional field appears next to its trigger" layout.
+    Feel free to move these into styles/register.css — kept inline here so
+    nothing in your existing stylesheet needs to change.
+  -->
+  <style>
+    /* Without this, register.css's ".field-row label { display: flex }"
+       (or similar) can silently override the browser's default
+       "[hidden] { display: none }" rule, since author CSS always beats
+       the UA stylesheet. This guarantees anything marked hidden actually
+       disappears, regardless of what other rules target it. */
+    [hidden] {
+      display: none !important;
+    }
+
+    .choice-with-extra {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .choice-with-extra .choice-grid {
+      flex: 1 1 auto;
+    }
+    .choice-with-extra .conditional-input {
+      flex: 1 1 220px;
+      min-width: 180px;
+      margin-top: 0;
+      align-self: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="reg-header">
+    <a class="brand" href="index.html" aria-label="Team Unity Home">
+      <img class="brand-mark" src="src/unity_logo.png"></img>
+      <span class="brand-text">
+        <b>TEAM</b>
+        <small>UNITY</small>
+      </span>
+    </a>
+    <!--   <a class="back-link" href="index.html">← Back to site</a>  -->
+  </header>
+
+  <main class="reg-main">
+    <div class="reg-intro">
+      <p class="eyebrow">CULTURAL ART FORM TEAM</p>
+      <h1>Join Team Unity</h1>
+      <p class="reg-sub">Four short steps — takes about four minutes.</p>
+    </div>
+
+    <!-- Progress -->
+    <ol class="progress" id="progress">
+      <li class="progress-step active" data-step="1">
+        <span class="progress-dot">1</span>
+        <span class="progress-label">Account</span>
+      </li>
+      <li class="progress-step" data-step="2">
+        <span class="progress-dot">2</span>
+        <span class="progress-label">Personal Details</span>
+      </li>
+      <li class="progress-step" data-step="3">
+        <span class="progress-dot">3</span>
+        <span class="progress-label">Art Form</span>
+      </li>
+      <li class="progress-step" data-step="4">
+        <span class="progress-dot">4</span>
+        <span class="progress-label">Availability</span>
+      </li>
+    </ol>
+
+    <form class="reg-card" id="regForm" novalidate>
+
+      <!-- ===================== STEP 1 — ACCOUNT ===================== -->
+      <section class="step active" data-step="1">
+        <h2>Create your account</h2>
+
+        <div class="field-row">
+          <label class="full-width">
+            Full name *
+            <input type="text" name="fullName" required placeholder="Your full name">
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label>
+            Username *
+            <input type="text" name="username" required placeholder="Choose a username" autocomplete="username" pattern="[A-Za-z0-9_.]{3,20}" title="3–20 characters: letters, numbers, underscore or dot">
+          </label>
+          <label>
+            Email *
+            <input type="email" name="email" required placeholder="you@example.com" autocomplete="email">
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label>
+            Password *
+            <div class="password-field">
+              <input type="password" name="password" id="passwordInput" required minlength="8" placeholder="At least 8 characters" autocomplete="new-password">
+              <button type="button" class="toggle-visibility" data-target="passwordInput" aria-label="Show password">👁</button>
+            </div>
+          </label>
+          <label>
+            Confirm password *
+            <div class="password-field">
+              <input type="password" name="confirmPassword" id="confirmPasswordInput" required minlength="8" placeholder="Re-enter your password" autocomplete="new-password">
+              <button type="button" class="toggle-visibility" data-target="confirmPasswordInput" aria-label="Show password">👁</button>
+            </div>
+          </label>
+        </div>
+        <p class="field-hint">Use at least 8 characters. You'll use this username and password to log back in later.</p>
+        <!-- <p class="register-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p> -->
+      </section>
+
+      <!-- ===================== STEP 2 — PERSONAL DETAILS ===================== -->
+      <section class="step" data-step="2">
+        <h2>Personal details</h2>
+
+        <div class="field-row">
+          <label class="full-width">
+            Date of birth *
+            <div class="dob-group">
+              <input type="text" name="dobDay" inputmode="numeric" maxlength="2" placeholder="DD" required aria-label="Day">
+              <span class="dob-sep">/</span>
+              <input type="text" name="dobMonth" inputmode="numeric" maxlength="2" placeholder="MM" required aria-label="Month">
+              <span class="dob-sep">/</span>
+              <input type="text" name="dobYear" inputmode="numeric" maxlength="4" placeholder="YYYY" required aria-label="Year">
+            </div>
+          </label>
+        </div>
+
+        <!-- Gender + its "please specify" field now live in the SAME row.
+             genderOtherRow starts hidden and only appears next to Gender
+             when "Other" is selected. -->
+        <div class="field-row">
+          <label>
+            Gender *
+            <select name="gender" required>
+              <option value="" disabled selected>Select one</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Transgender</option>
+              <option>Prefer not to say</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label id="genderOtherRow" hidden>
+            Please specify
+            <input type="text" name="genderOther" placeholder="Your answer">
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label>
+            Contact number *
+            <input type="tel" name="contactNumber" required placeholder="10-digit number">
+          </label>
+          <label>
+            WhatsApp number *
+            <input type="tel" name="whatsappNumber" required placeholder="10-digit number">
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label class="full-width">
+            Blood group *
+            <select name="bloodGroup" required>
+              <option value="" disabled selected>Select one</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>O+</option><option>O-</option>
+              <option>Not sure</option>
+            </select>
+          </label>
+        </div>
+
+        <!-- Profession + its two possible conditional fields (Other / College)
+             now live in the SAME row as Profession. Only one of the two ever
+             shows at once, since a profession can't be both "Other" and
+             "College student" at the same time. -->
+        <div class="field-row">
+          <label>
+            Profession *
+            <select name="profession" required>
+              <option value="" disabled selected>Select one</option>
+              <option>College student</option>
+              <option>Working</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label id="professionOtherRow" hidden>
+            Please specify
+            <input type="text" name="professionOther" placeholder="Your answer">
+          </label>
+          <label id="collegeRow" hidden>
+            College / Institution name
+            <input type="text" name="collegeName" placeholder="Your college or institution">
+          </label>
+        </div>
+      </section>
+
+      <!-- ===================== STEP 3 — ART FORM ===================== -->
+      <section class="step" data-step="3">
+        <h2>Your art form</h2>
+
+        <label class="full-width">
+          Why do you want to join our Unity cultural art form team? *
+          <textarea name="whyJoin" rows="4" required placeholder="Tell us in a few sentences"></textarea>
+        </label>
+
+        <!-- artFormOther now sits beside the choice grid via .choice-with-extra,
+             and is only revealed when "Other" is picked. -->
+        <fieldset class="choice-field">
+          <legend>Which cultural art form(s) are you interested in? * <small>(select all that apply)</small></legend>
+          <div class="choice-with-extra">
+            <div class="choice-grid" id="artFormGrid">
+              <label class="choice-pill"><input type="checkbox" name="artForm" value="Parai" required><span>Parai</span></label>
+              <label class="choice-pill"><input type="checkbox" name="artForm" value="Oyil"><span>Oyil</span></label>
+              <label class="choice-pill"><input type="checkbox" name="artForm" value="Karagattam"><span>Karagattam</span></label>
+              <label class="choice-pill"><input type="checkbox" name="artForm" value="Thirumarakkal"><span>Thirumarakkal</span></label>
+              <label class="choice-pill"><input type="checkbox" name="artForm" value="Saattai kutchi"><span>Saattai kutchi</span></label>
+              <label class="choice-pill"><input type="checkbox" name="artForm" value="Street Theatre"><span>Street Theatre</span></label>
+              <label class="choice-pill"><input type="checkbox" name="artForm" value="Mime"><span>Mime</span></label>
+              <label class="choice-pill"><input type="checkbox" name="artForm" value="Other"><span>Other</span></label>
+            </div>
+            <input type="text" class="conditional-input" name="artFormOther" placeholder="Please specify" hidden>
+          </div>
+        </fieldset>
+
+        <!-- hasExperience: "Other" shows experienceOther, "Yes" shows
+             experienceDesc (the "how much experience" field) — both sit
+             next to the choice grid, mutually exclusive. -->
+        <fieldset class="choice-field">
+          <legend>Do you have prior experience in this field? *</legend>
+          <div class="choice-with-extra">
+            <div class="choice-grid choice-grid-inline">
+              <label class="choice-pill"><input type="radio" name="hasExperience" value="Yes" required><span>Yes</span></label>
+              <label class="choice-pill"><input type="radio" name="hasExperience" value="No"><span>No</span></label>
+              <label class="choice-pill"><input type="radio" name="hasExperience" value="Other"><span>Other</span></label>
+            </div>
+            <input type="text" class="conditional-input" name="experienceOther" placeholder="Please specify" hidden>
+            <input type="text" class="conditional-input" id="experienceDescRow" name="experienceDesc" placeholder="How much experience? e.g. 2 years, school events" hidden>
+          </div>
+        </fieldset>
+
+        <label class="full-width">
+          List your other skills or art forms
+          <textarea name="otherSkills" rows="2" placeholder="Optional"></textarea>
+        </label>
+      </section>
+
+      <!-- ===================== STEP 4 — AVAILABILITY & DECLARATION ===================== -->
+      <section class="step" data-step="4">
+        <h2>Availability & declaration</h2>
+
+        <fieldset class="choice-field">
+          <legend>Availability *</legend>
+          <div class="choice-with-extra">
+            <div class="choice-grid choice-grid-inline" id="availabilityGrid">
+              <label class="choice-pill"><input type="checkbox" name="availability" value="Weekdays"><span>Weekdays</span></label>
+              <label class="choice-pill"><input type="checkbox" name="availability" value="Weekend"><span>Weekend</span></label>
+              <label class="choice-pill"><input type="checkbox" name="availability" value="Other" id="availabilityOtherBox"><span>Other</span></label>
+            </div>
+            <input type="text" class="conditional-input" name="availabilityOther" placeholder="Please specify" hidden>
+          </div>
+        </fieldset>
+
+        <label class="declaration">
+          <input type="checkbox" name="declaration" required>
+          <span>I confirm that the above information is true and I agree to add my number in the WhatsApp group, and I will follow the rules of the Unity Cultural Art Team. *</span>
+        </label>
+
+        <div class="review-box" id="reviewBox" hidden></div>
+      </section>
+
+      <!-- ===================== NAV ===================== -->
+      <div class="step-nav">
+        <button type="button" class="btn btn-outline" id="backBtn" hidden>← Back</button>
+        <span class="step-error" id="stepError" aria-live="polite"></span>
+        <button type="button" class="btn btn-primary" id="nextBtn">Continue →</button>
+        <button type="submit" class="btn btn-primary" id="submitBtn" hidden>Submit registration</button>
+      </div>
+    </form>
+
+    <div class="success-card" id="successCard" hidden>
+      <div class="success-mark">✓</div>
+      <h2>You're registered</h2>
+      <p>Thanks for joining Team Unity — we'll add you to the WhatsApp group shortly.</p>
+      <a class="btn btn-outline" href="dashboard.html">Back to site</a>
+    </div>
+  </main>
+
+  <script src="auth-popup.js"></script>
+  <script src="scripts/register.js"></script>
+</body>
+</html>

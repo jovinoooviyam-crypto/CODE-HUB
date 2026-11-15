@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Team Unity — Create. Collaborate. Inspire."
+    >
+
+    <title>TEAM UNITY | Create. Collaborate. Inspire.</title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         STYLESHEETS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/projects.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- Boxicons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.boxicons.com/3.0.8/boxicons.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="container nav-wrap">
+
+            <!-- Brand Logo -->
+            <a
+                class="brand"
+                href="#home"
+                aria-label="Team Unity Home"
+            >
+                <span class="brand-mark">
+                    <img
+                        src="src/unity_logo.png"
+                        alt="Team Unity Logo"
+                    >
+                </span>
+
+                <span class="brand-text">
+                    <b>TEAM</b>
+                    <small>UNITY</small>
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav
+                class="desktop-nav"
+                aria-label="Main Navigation"
+            >
+                <a href="index.html">Home</a>
+                <a href="index.html#who">Who Are We</a>
+                <a href="index.html#works">Our Works</a>
+                <a href="index.html#join">Join With Us</a>
+                <a href="index.html#contact">Reach Out With Us</a>
+            </nav>
+
+            <!-- Login / Profile Button -->
+            <button
+                class="profile-btn"
+                id="loginButton"
+                data-login
+                type="button"
+                aria-label="Login"
+            >
+                <i class="fa fa-user-circle"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open Navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav
+            class="mobile-nav"
+            id="mobileNav"
+            aria-label="Mobile Navigation"
+        >
+            <a href="index.html">Home</a>
+            <a href="index.html#who">Who Are We</a>
+            <a href="index.html#works">Our Works</a>
+            <a href="index.html#join">Join With Us</a>
+            <a href="index.html#contact">Reach Out With Us</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main>
+              
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+        <section class="hero section-block" id="home">
+            <!-- Background Slides -->
+            <div class="hero-slides" id="heroSlides">
+                <article class="hero-slide active" style="--hero-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=85');"></article>
+                <article class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2200&q=85');"></article>
+                <article class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=2200&q=85');"></article>
+            </div>
+
+            <!-- Dark Overlay -->
+            <div class="hero-overlay"></div>
+
+            <!-- Hero Content -->
+            <div class="container hero-content">
+                <div class="hero-copy">
+                    <p class="eyebrow">CREATIVE COMMUNITY ORGANIZATION</p>
+                    <h1>TEAM <span>UNITY</span></h1>
+                    <h2>SHARE WHAT YOU LEARN.</h2>
+                    <p class="hero-text">
+                        Team Unity brings together artists, volunteers, trainers and
+                        collaborators from diverse backgrounds to create meaningful
+                        projects, events and opportunities that inspire positive change.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#works">Explore Our Works <span>→</span></a>
+                        <a class="btn btn-outline" href="#join">Join Team Unity</a>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="arrow" id="prevSlide" aria-label="Previous Slide">←</button>
+                    <div class="dots" id="dots">
+                        <button class="dot active" aria-label="Slide 1"></button>
+                        <button class="dot" aria-label="Slide 2"></button>
+                        <button class="dot" aria-label="Slide 3"></button>
+                    </div>
+                    <button class="arrow" id="nextSlide" aria-label="Next Slide">→</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             DYNAMIC PROJECTS SECTION
+        ================================================== -->
+
+        <section
+            id="projects"
+            class="section-block"
+        >
+
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="section-head">
+
+                    <div class="section-label">
+                        WHAT WE CREATE
+                    </div>
+
+                    <h2>
+                        Our Projects
+                    </h2>
+
+                    <p class="section-intro">
+                        Explore the projects created by Team Unity.
+                        Click a project poster to view its photos.
+                    </p>
+
+                </div>
+
+                <!--
+                    Project cards are generated dynamically
+                    by scripts/projects.js.
+                -->
+                <div
+                    id="projectsGrid"
+                    class="projects-grid"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         PROJECT PHOTO GALLERY
+    ====================================================== -->
+
+    <div
+        id="projectGallery"
+        class="project-gallery"
+        aria-hidden="true"
+    >
+
+        <div class="gallery-container">
+
+            <!-- Close Gallery -->
+            <button
+                id="closeGallery"
+                class="gallery-close"
+                type="button"
+                aria-label="Close gallery"
+            >
+                &times;
+            </button>
+
+            <!-- Gallery Heading -->
+            <h2 id="galleryTitle">
+                Project Photos
+            </h2>
+
+            <!-- Dynamic Gallery Photos -->
+            <div
+                id="galleryGrid"
+                class="gallery-grid"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         IMAGE SLIDER MODAL (NEW)
+    ====================================================== -->
+
+    <div
+        id="imageSliderModal"
+        class="image-slider-modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-labelledby="sliderTitle"
+    >
+
+        <div class="slider-container">
+
+            <!-- Close Button -->
+            <button
+                id="closeSlider"
+                class="slider-close"
+                type="button"
+                aria-label="Close image slider"
+            >
+                &times;
+            </button>
+
+            <!-- Main Image -->
+            <div class="slider-content">
+
+                <img
+                    id="sliderImage"
+                    src=""
+                    alt="Full size project image"
+                    class="slider-image"
+                >
+
+                <!-- Navigation Arrows -->
+                <button
+                    id="prevSliderBtn"
+                    class="slider-nav slider-prev"
+                    type="button"
+                    aria-label="Previous image"
+                >
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                    id="nextSliderBtn"
+                    class="slider-nav slider-next"
+                    type="button"
+                    aria-label="Next image"
+                >
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+            <!-- Image Counter -->
+            <div class="slider-footer">
+
+                <span
+                    id="sliderCounter"
+                    class="slider-counter"
+                    aria-live="polite"
+                >
+                    1 / 1
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <!-- Brand Information -->
+            <div>
+
+                <a
+                    class="brand footer-brand"
+                    href="#home"
+                >
+
+                    <span class="brand-mark">
+                        <img
+                            src="src/unity_logo.png"
+                            alt="Team Unity Logo"
+                        >
+                    </span>
+
+                    <span class="brand-text">
+                        <b>TEAM</b>
+                        <small>UNITY</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Team Unity is a creative community organization
+                    bringing people together to create, collaborate
+                    and inspire change.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html#who">
+                    Who Are We
+                </a>
+
+                <a href="index.html#works">
+                    Our Works
+                </a>
+
+                <a href="projects.html#projects">
+                    Projects
+                </a>
+
+                <a href="index.html#join">
+                    Join With Us
+                </a>
+
+            </div>
+
+
+            <!-- Project Categories -->
+            <div>
+
+                <h4>Projects</h4>
+
+                <a href="projects.html#projects">
+                    School
+                </a>
+
+                <a href="projects.html#projects">
+                    College
+                </a>
+
+                <a href="projects.html#projects">
+                    Skill Labs
+                </a>
+
+                <a href="projects.html#projects">
+                    Workshops
+                </a>
+
+                <a href="projects.html#projects">
+                    Art Community
+                </a>
+
+            </div>
+
+
+            <!-- Contact Information -->
+            <div>
+
+                <h4>Contact Info</h4>
+
+                <a href="mailto:teamunityorganisation@gmail.com">
+                    teamunityorganisation@gmail.com
+                </a>
+
+                <a href="tel:+919444243167">
+                    +91 94442 43167
+                </a>
+
+                <p>
+                    Thiruvalluvar Street, Kodambakkam,
+                    Chennai - 600 024
+                </p>
+
+                <!-- Social Links -->
+                <div class="footer-social">
+
+                    <a
+                        href="https://www.facebook.com/share/1HesWsQFaY/"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a
+                        href="https://youtube.com/@teamunity62?si=7ojxnpERvkIEh_hK"
+                        aria-label="YouTube"
+                    >
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/unity_offic?igsi=Y2V6enozZXZzaWds"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/team-unity-b17216358?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a
+                        href="https://www.threads.com/@teamunity62"
+                        aria-label="Threads"
+                    >
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         LOGIN POPUP
+    ====================================================== -->
+
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-popup">
+            <button
+                type="button"
+                id="closeLogin"
+                class="close-login"
+                aria-label="Close login">
+                &times;
+            </button>
+
+            <iframe
+                id="loginFrame"
+                class="login-frame"
+                src=""
+                title="TEAM UNITY Login">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <!--
+        IMPORTANT:
+        This path must match the real location of your
+        project data file, which must define projectDatas.
+    -->
+    <script src="data/projects-data.js"></script>
+
+    <!-- Dynamic Project Cards and Gallery -->
+    <script src="scripts/projects.js"></script>
+
+    <!-- Main Website Functionality -->
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>

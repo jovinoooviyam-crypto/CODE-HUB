@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM UNITY | Volunteer Registration</title>
+
+    <link rel="stylesheet" href="styles/volunteer-registration.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<main class="registration-page">
+    <div class="registration-box">
+
+        <div class="brand-mark">
+            <img src="src/unity_logo.png" class="registration-logo" alt="Team Unity">
+            <span class="brand-text"><b>TEAM</b><small>UNITY</small></span>
+        </div>
+
+        <h2>Volunteer Registration</h2>
+        <p class="intro">Be part of the change. Create. Collaborate. Inspire.</p>
+
+        <div class="progress">
+            <div class="progress-line"><span id="progressLine"></span></div>
+            <div class="progress-step active"><span>1</span><small>Personal</small></div>
+            <div class="progress-step"><span>2</span><small>Background</small></div>
+            <div class="progress-step"><span>3</span><small>Skills</small></div>
+            <div class="progress-step"><span>4</span><small>Interests</small></div>
+            <div class="progress-step"><span>5</span><small>Submit</small></div>
+        </div>
+
+        <form id="volunteerForm">
+
+            <!-- STEP 1: PERSONAL INFORMATION -->
+            <section class="form-page active">
+                <h3>Personal Information</h3>
+                <p class="section-description">Tell us how to identify and contact you.</p>
+
+                <label for="fullName">Full Name *</label>
+                <div class="input-box">
+                    <i class="fa fa-user"></i>
+                    <input id="fullName" name="fullName" type="text"
+                           placeholder="Enter your full name" autocomplete="name" required>
+                </div>
+
+                <label for="dateOfBirth">Date of Birth *</label>
+                <input id="dateOfBirth" name="dateOfBirth" type="date"
+                       autocomplete="bday" required>
+
+                <label>Gender *</label>
+                <div class="option-grid">
+                    <label class="option"><input type="radio" name="gender" value="Male" required><span>Male</span></label>
+                    <label class="option"><input type="radio" name="gender" value="Female"><span>Female</span></label>
+                    <label class="option"><input type="radio" name="gender" value="Transgender"><span>Transgender</span></label>
+                    <label class="option"><input type="radio" name="gender" value="Prefer not to say"><span>Prefer not to say</span></label>
+                    <label class="option"><input type="radio" name="gender" value="Other" id="genderOther"><span>Other</span></label>
+                </div>
+                <input class="conditional-input hidden" id="genderOtherText"
+                       name="genderOther" type="text" placeholder="Please specify">
+
+                <label for="phone">Phone Number *</label>
+                <div class="input-box">
+                    <i class="fa fa-phone"></i>
+                    <input id="phone" name="phone" type="tel" maxlength="15"
+                           autocomplete="tel" placeholder="Enter phone number" required>
+                </div>
+
+                <label for="email">Email Address *</label>
+                <div class="input-box">
+                    <i class="fa fa-envelope"></i>
+                    <input id="email" name="email" type="email"
+                           autocomplete="email" placeholder="Enter email address" required>
+                </div>
+
+                <label for="city">City / Location *</label>
+                <div class="input-box">
+                    <i class="fa fa-map-marker"></i>
+                    <input id="city" name="city" type="text"
+                           placeholder="City / District / State" required>
+                </div>
+
+                <label for="address">Full Address <span class="optional">(Optional)</span></label>
+                <textarea id="address" name="address"
+                          autocomplete="street-address"
+                          placeholder="Enter your full address"></textarea>
+            </section>
+
+            <!-- STEP 2: EDUCATION AND PROFESSIONAL DETAILS -->
+            <section class="form-page">
+                <h3>Education &amp; Professional Details</h3>
+                <p class="section-description">Tell us about your current studies or work.</p>
+
+                <label for="currentStatus">Current Status *</label>
+                <select id="currentStatus" name="currentStatus" required>
+                    <option value="">Select your current status</option>
+                    <option>School Student</option>
+                    <option>College Student</option>
+                    <option>Working Professional</option>
+                    <option>Freelancer</option>
+                    <option>Other</option>
+                </select>
+
+                <div id="statusOtherWrap" class="hidden">
+                    <label for="statusOther">Please specify your status *</label>
+                    <input id="statusOther" name="statusOther" type="text"
+                           placeholder="Your current status">
+                </div>
+
+                <label for="institution">College / Institution / Organisation
+                    <span class="optional">(If applicable)</span></label>
+                <input id="institution" name="institution" type="text"
+                       placeholder="Enter institution or organisation">
+
+                <label for="course">Course / Department
+                    <span class="optional">(If applicable)</span></label>
+                <input id="course" name="course" type="text"
+                       placeholder="Example: B.Sc. Computer Science">
+
+                <label for="profession">Current Profession
+                    <span class="optional">(If applicable)</span></label>
+                <input id="profession" name="profession" type="text"
+                       placeholder="Enter your profession">
+
+                <label>Skills &amp; Expertise * <span class="optional">Select all that apply</span></label>
+                <div class="option-grid">
+                    <label class="option"><input type="checkbox" name="skills" value="Event Management"><span>Event Management</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Communication"><span>Communication</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Teaching"><span>Teaching</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Art and Creativity"><span>Art &amp; Creativity</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Photography"><span>Photography</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Video Editing"><span>Video Editing</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Graphic Design"><span>Graphic Design</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Social Media"><span>Social Media</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Writing"><span>Writing</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Technical Support"><span>Technical Support</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Community Outreach"><span>Community Outreach</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Fundraising"><span>Fundraising</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Administration"><span>Administration</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="First Aid"><span>First Aid</span></label>
+                    <label class="option"><input type="checkbox" name="skills" value="Other" id="skillOther"><span>Other</span></label>
+                </div>
+
+                <input class="conditional-input hidden" id="skillOtherText"
+                       name="skillOther" type="text" placeholder="Specify other skills">
+            </section>
+
+            <!-- STEP 3: VOLUNTEERING EXPERIENCE AND LANGUAGES -->
+            <section class="form-page">
+                <h3>Skills &amp; Experience</h3>
+                <p class="section-description">Help us understand how you would like to contribute.</p>
+
+                <label>Previous Volunteering Experience? *</label>
+                <div class="option-grid">
+                    <label class="option"><input type="radio" name="previousExperience" value="Yes" required><span>Yes</span></label>
+                    <label class="option"><input type="radio" name="previousExperience" value="No"><span>No</span></label>
+                </div>
+
+                <div id="experienceDetailsWrap" class="hidden">
+                    <label for="experienceDetails">Previous Experience Details
+                        <span class="optional">(Optional)</span></label>
+                    <textarea id="experienceDetails" name="experienceDetails"
+                              placeholder="Tell us about your previous volunteering"></textarea>
+                </div>
+
+                <label>Languages Known *</label>
+                <div class="option-grid">
+                    <label class="option"><input type="checkbox" name="languages" value="Tamil"><span>Tamil</span></label>
+                    <label class="option"><input type="checkbox" name="languages" value="English"><span>English</span></label>
+                    <label class="option"><input type="checkbox" name="languages" value="Other" id="languageOther"><span>Other</span></label>
+                </div>
+                <input class="conditional-input hidden" id="languageOtherText"
+                       name="languageOther" type="text" placeholder="Specify other languages">
+
+                <p class="hint">Select at least one language.</p>
+            </section>
+
+            <!-- STEP 4: AVAILABILITY AND MOTIVATION -->
+            <section class="form-page">
+                <h3>Availability &amp; Motivation</h3>
+                <p class="section-description">Tell us when you are available and why you want to join.</p>
+
+                <label>Availability *</label>
+                <div class="option-grid">
+                    <label class="option"><input type="radio" name="availability" value="Weekdays" required><span>Weekdays</span></label>
+                    <label class="option"><input type="radio" name="availability" value="Weekends"><span>Weekends</span></label>
+                    <label class="option"><input type="radio" name="availability" value="Both"><span>Both</span></label>
+                </div>
+
+                <label>Preferred Time *</label>
+                <div class="option-grid">
+                    <label class="option"><input type="radio" name="preferredTime" value="Morning" required><span>Morning</span></label>
+                    <label class="option"><input type="radio" name="preferredTime" value="Afternoon"><span>Afternoon</span></label>
+                    <label class="option"><input type="radio" name="preferredTime" value="Evening"><span>Evening</span></label>
+                    <label class="option"><input type="radio" name="preferredTime" value="Flexible"><span>Flexible</span></label>
+                </div>
+
+                <label for="motivation">Why would you like to volunteer with Team Unity? *</label>
+                <textarea id="motivation" name="motivation" minlength="10"
+                          placeholder="Share your motivation..." required></textarea>
+
+                <label for="contribution">What do you hope to learn or contribute?
+                    <span class="optional">(Optional)</span></label>
+                <textarea id="contribution" name="contribution"
+                          placeholder="Tell us what you hope to learn or contribute"></textarea>
+
+                <label for="additionalInfo">Any Additional Information?
+                    <span class="optional">(Optional)</span></label>
+                <textarea id="additionalInfo" name="additionalInfo"
+                          placeholder="Anything else you would like us to know?"></textarea>
+            </section>
+
+            <!-- STEP 5: DECLARATION -->
+            <section class="form-page">
+                <h3>Declaration &amp; Consent</h3>
+                <p class="section-description">Please review and agree before submitting.</p>
+
+                <div class="declaration-box">
+                    <p><strong>Contact consent:</strong> Team Unity may contact me regarding my volunteer registration, activities, events and related opportunities.</p>
+                    <p><strong>Volunteer guidelines:</strong> I agree to follow Team Unity's volunteer guidelines, respect others, and act responsibly during activities.</p>
+                    <p><strong>Privacy notice:</strong> The information submitted will be used by Team Unity to review my registration, coordinate volunteering activities, communicate with me and manage relevant records. My information should be handled securely and accessed only for appropriate purposes.</p>
+                </div>
+
+                <label class="declaration-check">
+                    <input type="checkbox" id="contactConsent" name="contactConsent" required>
+                    <span>I consent to being contacted by Team Unity about volunteering. *</span>
+                </label>
+
+                <label class="declaration-check">
+                    <input type="checkbox" id="guidelinesAgreement" name="guidelinesAgreement" required>
+                    <span>I agree to follow Team Unity's volunteer guidelines. *</span>
+                </label>
+
+                <label class="declaration-check">
+                    <input type="checkbox" id="privacyAcknowledgement" name="privacyAcknowledgement" required>
+                    <span>I have read and understood the privacy notice above. *</span>
+                </label>
+
+                <p class="hint">Fields marked * are required.</p>
+            </section>
+
+            <p id="formMessage" role="status" aria-live="polite"></p>
+
+            <div class="form-buttons">
+                <button type="button" id="backBtn"><i class="fa fa-arrow-left"></i> Back</button>
+                <button type="button" id="nextBtn">Continue <i class="fa fa-arrow-right"></i></button>
+                <button type="submit" id="submitBtn">Submit Registration <i class="fa fa-check"></i></button>
+            </div>
+
+        </form>
+    </div>
+</main>
+
+<script src="scripts/volunteer-registration.js"></script>
+</body>
+</html>

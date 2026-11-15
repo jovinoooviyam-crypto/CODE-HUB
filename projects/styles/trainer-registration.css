@@ -1,0 +1,746 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f6fb;
+
+    color: #222;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.registration-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 20px 12px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.registration-box {
+    width: 100%;
+    max-width: 560px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 28px 30px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand-mark {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-bottom: 15px;
+}
+
+.registration-logo {
+    width: 46px;
+    height: 46px;
+
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+.brand-text b {
+    color: #3354A5;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+}
+
+.brand-text small {
+    color: #555;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   TITLES
+========================================= */
+
+.registration-box h2 {
+    text-align: center;
+
+    color: #3354A5;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+
+.intro {
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.form-page h3 {
+    color: #3354A5;
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+.section-description {
+    color: #777;
+
+    font-size: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress {
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 5px 5px 27px;
+}
+
+.progress-line {
+    position: absolute;
+
+    top: 15px;
+
+    left: 9%;
+
+    right: 9%;
+
+    height: 3px;
+
+    background: #ddd;
+
+    z-index: 0;
+}
+
+#progressLine {
+    display: block;
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #3354A5;
+
+    transition: width 0.3s ease;
+}
+
+.progress-step {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 55px;
+}
+
+.progress-step span {
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ddd;
+
+    color: #777;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.progress-step small {
+    margin-top: 5px;
+
+    color: #888;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+.progress-step.active span {
+    background: #3354A5;
+
+    color: white;
+}
+
+.progress-step.active small {
+    color: #3354A5;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PAGES
+========================================= */
+
+.form-page {
+    display: none;
+}
+
+.form-page.active {
+    display: block;
+}
+
+
+/* =========================================
+   LABELS
+========================================= */
+
+label {
+    display: block;
+
+    color: #333;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin: 15px 0 7px;
+}
+
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.input-box {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+.input-box:focus-within {
+    border-color: #3354A5;
+
+    box-shadow:
+        0 0 0 3px rgba(51, 84, 165, 0.08);
+}
+
+.input-box i {
+    width: 40px;
+
+    text-align: center;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+.input-box input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+
+    outline: none;
+
+    padding: 11px 10px 11px 0;
+
+    background: transparent;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.date-fields {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1.25fr;
+
+    gap: 8px;
+}
+
+.date-fields input {
+    width: 100%;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    padding: 11px 10px;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+.date-fields input:focus {
+    border-color: #3354A5;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.select-box {
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.select-box i {
+    width: 40px;
+
+    text-align: center;
+
+    color: #888;
+}
+
+.select-box select {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 11px 8px;
+
+    background: white;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TWO COLUMN
+========================================= */
+
+.two-column {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.two-column input {
+    width: 100%;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    padding: 11px;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+.two-column input:focus {
+    border-color: #3354A5;
+}
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.checkbox-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 8px;
+
+    margin-bottom: 8px;
+
+    font-weight: normal;
+
+    cursor: pointer;
+}
+
+.checkbox-row input {
+    width: auto;
+
+    accent-color: #3354A5;
+}
+
+
+/* =========================================
+   OPTIONS
+========================================= */
+
+.option-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7px;
+}
+
+.option-grid.three {
+    grid-template-columns:
+        1fr 1fr 1fr;
+}
+
+.option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 0;
+
+    padding: 9px;
+
+    border: 1px solid #e0e0e0;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: normal;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.option:hover {
+    border-color: #3354A5;
+}
+
+.option input {
+    width: auto;
+
+    margin: 0;
+
+    accent-color: #3354A5;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+textarea {
+    width: 100%;
+
+    min-height: 95px;
+
+    padding: 11px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    resize: vertical;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+textarea:focus {
+    border-color: #3354A5;
+}
+
+
+/* =========================================
+   CONDITIONAL FIELDS
+========================================= */
+
+.hidden {
+    display: none !important;
+}
+
+.conditional-input {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 11px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+.conditional-input:focus {
+    border-color: #3354A5;
+}
+
+
+/* =========================================
+   DECLARATION
+========================================= */
+
+.declaration-box {
+    background: #f5f7ff;
+
+    border-left: 4px solid #3354A5;
+
+    border-radius: 7px;
+
+    padding: 15px;
+
+    color: #555;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.declaration-box p {
+    margin-bottom: 9px;
+}
+
+.declaration-box p:last-child {
+    margin-bottom: 0;
+}
+
+.declaration-check {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    font-weight: normal;
+
+    line-height: 1.4;
+
+    cursor: pointer;
+}
+
+.declaration-check input {
+    width: auto;
+
+    margin-top: 3px;
+
+    accent-color: #3354A5;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.form-buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.form-buttons button {
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 11px 18px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#backBtn {
+    display: none;
+
+    background: #eeeeee;
+
+    color: #444;
+}
+
+#nextBtn,
+#submitBtn {
+    margin-left: auto;
+
+    background: #3354A5;
+
+    color: white;
+}
+
+#submitBtn {
+    display: none;
+}
+
+.form-buttons button:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+#formMessage {
+    text-align: center;
+
+    font-size: 13px;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+    .registration-page {
+        padding: 8px;
+    }
+
+    .registration-box {
+        padding: 22px 18px;
+
+        border-radius: 14px;
+    }
+
+    .option-grid,
+    .option-grid.three {
+        grid-template-columns: 1fr;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-step {
+        width: 45px;
+    }
+
+    .progress-step small {
+        font-size: 8px;
+    }
+
+    .progress-line {
+        left: 8%;
+        right: 8%;
+    }
+
+}
+
+.trainer-popup {
+    width: min(640px, 92vw);
+    max-height: 90vh;
+}
+
+.trainer-frame {
+    width: 100%;
+    height: 80vh;
+    border: 0;
+}

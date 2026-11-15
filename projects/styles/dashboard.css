@@ -1,0 +1,238 @@
+:root {
+    --blue: #3354A5;
+    --blue-700: #24407f;
+    --blue-900: #16264c;
+    --blue-100: #dde4f3;
+    --blue-050: #f1f4fa;
+
+    --yellow: #E6E196;
+    --yellow-600: #c9c36f;
+    --yellow-800: #8f8a48;
+    --yellow-050: #faf9ee;
+
+    --white: #ffffff;
+    --text: #16264c;
+    --muted: #667085;
+    --border: #e1e5ed;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: "Manrope", sans-serif;
+    background: var(--white);
+    color: var(--text);
+}
+
+
+.dashboard {
+    width: 100%;
+    min-height: 100vh;
+    padding: 32px 24px 28px;
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue-050) 0%,
+            var(--white) 55%
+        );
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile-section {
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+
+.profile-picture-container {
+    width: 105px;
+    height: 105px;
+    margin: 0 auto 16px;
+}
+
+
+.profile-picture {
+    width: 105px;
+    height: 105px;
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid var(--white);
+
+    box-shadow:
+        0 8px 25px rgba(22, 38, 76, 0.18);
+}
+
+
+.profile-section h1 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    color: var(--blue-900);
+}
+
+
+.profile-section p {
+    margin: 6px 0 0;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   USER INFORMATION
+========================================================= */
+
+.user-info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 13px 15px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(22, 38, 76, 0.05);
+}
+
+
+.info-label {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    color: var(--muted);
+}
+
+
+.info-value {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--blue-900);
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+#logoutBtn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--blue);
+
+    color: var(--white);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+#logoutBtn:hover {
+    background: var(--blue-700);
+
+    transform: translateY(-1px);
+}
+
+
+#logoutBtn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   SMALL POPUP SCREENS
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .dashboard {
+        padding:
+            25px
+            18px
+            22px;
+    }
+
+
+    .profile-picture-container,
+    .profile-picture {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    .profile-section h1 {
+        font-size: 22px;
+    }
+
+}
