@@ -65,7 +65,7 @@ window.worksData202x = [
 {
   id: 1,
   title: "Waste Management Awareness Street Play in Agaramthen.",
-  tags: ["Awarness","Art Forms"],
+  tags: ["Awarness","Performance"],
   date: "26-01-2026",
   description: "Description: Team Unity, in collaboration with Eco Society Darwin, conducted a Waste Management Awareness Street Play in Agaramthen, Tambaram, promoting proper waste disposal and environmental cleanliness.",
   search: "20260126",
@@ -74,7 +74,7 @@ window.worksData202x = [
 {
   id: 2,
   title: " Women & Child rights based awareness",
-  tags: ["Awarness", "Art Forms"],
+  tags: ["Awarness", "Performance"],
   date: "31-01-2026",
   description: "Description: Team Unity, in collaboration with the Tamil Nadu Social Welfare Department, conducted a Girl Child Awareness Program at Saidapet, promoting girls' rights, education, and protection against child marriage and dowry.",
   search: "20260131",
@@ -83,21 +83,74 @@ window.worksData202x = [
 // FEB 2026
 
 {
-  id: 5,
+  id: 3,
   title: " Women & Child rights based awareness",
-  tags: ["Awarness", "Art Forms"],
+  tags: ["Awarness", "Performance"],
   date: "27-02-2026",
   description: "Description: Team Unity, in collaboration with the Tamil Nadu Social Welfare Department, conducted a Girl Child Awareness Program at Thiruvottiyur, promoting girls' rights, education, and protection against social evils.",
   search: "20260227",
 },
 
 {
-  id: 5,
+  id: 4,
   title: "Gender and Policy Lab ",
-  tags: ["Awarness", "Art Forms"],
+  tags: ["Awarness", "Performance"],
   date: "27-02-2026 to 29-02-2026",
   description: "Description: Team Unity conducted a three-day Bystander Intervention Program with GCC, promoting safer public spaces through awareness among public transport personnel.",
   search: "20260227-29",
 },
+
+// MAR 2026
+
+{
+  id: 5,
+  title: "Pranavam welfare trust",
+  tags: ["Performance"],
+  date: "01-03-2026",
+  description: "Description: Team Unity celebrated Pranavam Welfare Trust’s 10th Anniversary by showcasing traditional folk and martial arts.",
+  search: "20260301",
+},
+
+{
+  id: 6,
+  title: "IMH - Awareness Performance",
+  tags: ["Awarness", "Performance"],
+  date: "07-03-2026",
+  description: "Description: Team Unity participated in an Art and Music Therapy session at IMH, promoting emotional well-being through folk arts and cultural activities.",
+  search: "20260307",
+},
+
+{
+  id: 7,
+  title: "Right to Vote Awareness - Sindhi college",
+  tags: ["Awarness"],
+  date: "25-03-2026",
+  description: "Description: Team Unity conducted a Voter Awareness Programme at Thiruverkadu Bus Depot, promoting ethical voting and democratic responsibility through folk arts and street theatre.",
+  search: "20260325",
+},
+
+{
+  id: 8,
+  title: "ECO-BAZAAR",
+  tags: ["Performance"],
+  date: "28-03-2026",
+  description: "Description: Team Unity participated in the Eco-Bazaar at Kottivakkam, promoting eco-friendly practices, traditional arts, and sustainable living.",
+  search: "20260328",
+},
+
+{
+  id: 9,
+  title: "Autism Awareness Walkathon",
+  tags: ["Volunteering"],
+  date: "29-03-2026",
+  description: "Description: Team Unity supported the Autism Awareness Walkathon at Marina Beach, promoting autism awareness, social inclusion, and equal opportunities for neurodivergent individuals.",
+  search: "20260329",
+},
+
+
+// APR
+
+
+
 
 ];

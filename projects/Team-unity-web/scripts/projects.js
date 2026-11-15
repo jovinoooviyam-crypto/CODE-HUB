@@ -9,35 +9,36 @@
 
 const projects = [
     {
-        id: "ART",
-        title: "ART PERFORMANCE",
-        category: "ART-PERFORMANCE",
+        id: "Volunteering",
+        title: "Volunteering Events",
+        category: "Volunteering",
         description:
-            "We performs traditional folk arts at cultural events, community programs, and awareness campaigns, using art to celebrate our heritage, spread meaningful messages, and engage audiences.",
+            "Event volunteering involves assisting in event planning, coordination, registration, and management, ensuring smooth execution through teamwork, responsibility, and effective communication.",
         poster:
             "/api/drive-image/1PfQpnG_PSe9n-4Epg46M_ZnJ74fx1mqS",
         photos: projectDatas
     },
     {
-        id: "skill-labs",
-        title: "Skill Labs",
-        category: "SKILLS",
+        id: "Performance",
+        title: "Performance",
+        category: "Performance",
         description:
-            "Hands-on learning sessions designed to develop practical creative skills.",
+            "Art-form volunteering involves supporting and participating in traditional and contemporary art activities, helping showcase cultural expressions, creativity, and artistic talents..",
         poster:
             "/api/drive-image/172HOiwaFUubl4zTuB5gAhb-PKa6fdxfj",
-        mappingid: "skill-labs",
+        mappingid: "Performance",
         photos: projectDatas
     },
+    
     {
-        id: "art-community",
-        title: "Art Community",
-        category: "ART",
+        id: "Workshop",
+        title: "workshop",
+        category: "Workshop",
         description:
-            "A creative space connecting artists and people through shared ideas.",
+            "Workshop volunteering involves assisting with participant registration, material arrangements, coordination, and session management to ensure the smooth and successful conduct of the workshop.",
         poster:
             "/api/drive-image/13MI5SWRZuSyIH2zUWbv4ieNdYYgg5PSr",
-        mappingid: "art",
+        mappingid: "Workshop",
         photos: projectDatas
     },
     {

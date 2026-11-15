@@ -224,4 +224,106 @@ in maintaining a clean and healthy environment.`,
         harassment and discrimination.`,
         mappingtag: "20260227-29",
     },
+
+    // MAR
+
+    {
+        ID: "Volunteering",
+        image: "/api/drive-image/1gL91q99G_Py0YWOWItR3qPo3LbJ_Xcnu",
+        imageSlider: [
+            "/api/drive-image/11YMj8ALorHigsTQ0MeIdP-wY73V9B8AW",
+            "/api/drive-image/1QV0p_Z2iouOtadmnWaMDMzSEfQCgEd5q",
+            "/api/drive-image/1CXp3-TDxN3lsKeCz3slWeLtxjl5gR6AJ",
+            "/api/drive-image/1z1Oe2jb4cCW5xoDg_rUAKVnlDImq4ho2",
+        ],
+        date: "Date: 29-03-2026",
+        venue: "Marina Beach, Chennai",
+        description: `The Autism Awareness Walkathon was organized 
+        at Marina Beach, Chennai, by COE in collaboration with the 
+        Tamil Nadu Government. Team Unity participated as a core 
+        volunteering partner, supporting event coordination and 
+        community engagement while promoting autism awareness, 
+        social inclusion, and equal opportunities for neurodivergent individuals.`,
+        mappingtag: "20260329",
+    },
+
+    {
+        ID: "awarness",
+        image: "/api/drive-image/1ORtfNQpFEDhFCKxlfGeX14eS2yQogeQm",
+        imageSlider: /*[
+            "/api/drive-image/",
+            "/api/drive-image/",
+            "/api/drive-image/",
+            "/api/drive-image/",
+        ],*/
+        date: "Date: 28-03-2026",
+        venue: "Neelangarai,Chennai",
+        description: `Team Unity participated in the 
+        Eco-Bazaar at Kottivakkam, ECR, Chennai, promoting 
+        sustainable living through eco-friendly activities, 
+        traditional art forms, and community engagement while 
+        encouraging environmental responsibility.`,
+        mappingtag: "20260328",
+    },
+
+    {
+        ID: "awarness",
+        image: "/api/drive-image/19GvEL6XzkkJTkTOfMFQRRN8TU4XA9ryU",
+        imageSlider: [
+            "/api/drive-image/1LRboWED5GuTfcaBjWTsaJ9g8RmGznbY2",
+            "/api/drive-image/1ynibLzVQ761xo-J_7urLZUKSfxBHfj1M",
+            "/api/drive-image/1zRFlsjiJ_u64SbWGAHHDJXv17E5jGlb9",
+            "/api/drive-image/1DdSC_4BpdDb5gVpBeFBN7UZcyQ2ZMPD8",
+            "/api/drive-image/1QspeBGtYzVKRW2XI7HOu6fUDHVJ2TWq7",
+            "/api/drive-image/13A0tfVDfDUp7qEAHkXgOw_bzS5ixCpKe",
+        ],
+        date: "Date: 07-03-2026",
+        venue: "Institute of Mental Health (IMH)",
+        description: `On March 7, 2026, Team Unity participated 
+        in an Art and Music Therapy session at the Institute of 
+        Mental Health (IMH), promoting emotional well-being, social 
+        interaction, and community engagement through traditional folk arts.`,
+        mappingtag: "20260307",
+    },
+
+    {
+        ID: "Performance",
+        image: "/api/drive-image/1yOs_0lSOYhK4M_qSmZ0ThM3pBgfiok3W",
+        imageSlider: [
+            "/api/drive-image/1WT7cWaz__cdZTpAVHRbmXOH0sKpzprBH",
+            "/api/drive-image/176PvFNAxrTVl_NggOzGnb7B-Ai68yfb6",
+            "/api/drive-image/1PpErVzluKhOKrL4IzkB_l-SNFG8MIQql",
+            "/api/drive-image/1snbub-3iQ-X24xLCPOF8L1G3gAyFm36F",
+        ],
+        date: "Date: 01-03-2026",
+        venue: "Gopalapuram,Chennai",
+        description: `Team Unity participated in the 10th 
+        Anniversary Celebration of Pranavam Welfare Trust, 
+        showcasing Tamil Nadu’s rich cultural heritage 
+        through traditional folk and martial art performances.`,
+        mappingtag: "20260301",
+    },
+
+    {
+        ID: "awarness",
+        image: "/api/drive-image/13G0Wi7CWhdziRB1iLauyc--ZpdmfDcLs",
+        imageSlider: [
+            "/api/drive-image/11TaoEXpu4BVyFV10dyU9_2TiZRM6MUPM",
+            "/api/drive-image/15nK8j52sopZz6NYNvychGMZhGps5N6Ra",
+            "/api/drive-image/1nXpmF9JLeZeFPJ5AbsDl-LcE82bero2Y",
+            "/api/drive-image/13G0Wi7CWhdziRB1iLauyc--ZpdmfDcLs",
+        ],
+        date: "Date: 25-03-2026",
+        venue: "Thiruverkadu Bus Depot, Chennai",
+        description: `On March 25, 2026, Team Unity, 
+        in collaboration with the PG Department of 
+        Social Work, conducted a Right to Vote 
+        Awareness Programme at Thiruverkadu Bus 
+        Depot, promoting democratic responsibility, 
+        ethical voting, and voter participation through 
+        street theatre and traditional folk performances.`,
+        mappingtag: "20260325",
+    },
+
+    // APR
 ];
