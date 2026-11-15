@@ -140,7 +140,7 @@ const projectDatas = [
     // JAN
 
     {
-        ID: "",
+        ID: "awarness",
         image: "/api/drive-image/",
         imageSlider: [
             "",
@@ -148,8 +148,8 @@ const projectDatas = [
             "",
             "",
         ],
-        date: "Date: ",
-        venue: "",
+        date: "Date: 26-01-2026",
+        venue: "Agaramthen, Tambaram",
         description: ``,
         mappingtag: "",
     },

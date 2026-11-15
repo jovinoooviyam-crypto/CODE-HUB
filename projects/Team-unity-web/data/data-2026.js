@@ -64,7 +64,7 @@ window.worksData202x = [
 
 {
   id: 1,
-  title: "",
+  title: "Waste Management Awareness Street Play in Agaramthen.",
   tags: [""],
   date: "",
   description: "Description: ",
