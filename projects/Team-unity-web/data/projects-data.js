@@ -178,4 +178,50 @@ in maintaining a clean and healthy environment.`,
              education, and awareness against child marriage and dowry.`,
         mappingtag: "20260131",
     },
+
+    // FEB 2026
+
+    
+    {
+        ID: "awarness",
+        image: "/api/drive-image/1T5SgrezmDAJba0pMH9VCB65NOtzMof_x",
+        imageSlider: [
+            "/api/drive-image/1XyOHNSqry-usOmxAXi8ZR_HSyzAMvEHi",
+            "/api/drive-image/1xz-oxcGG-TVPKCU0VDurxETfLRUsy--B",
+            "/api/drive-image/1T5SgrezmDAJba0pMH9VCB65NOtzMof_x",
+            "/api/drive-image/1tX55w_dpasRIML-Tc-VsvPoJ-trLrrUe",
+        ],
+        date: "Date: 27-02-2026",
+        venue: "Thiruvottiyur urban tenements",
+        description: `On February 7, 2026, Team Unity, 
+        in collaboration with the Tamil Nadu Social Welfare 
+        Department, conducted a Girl Child Welfare and 
+        Empowerment Awareness Program at Thiruvottiyur 
+        Urban Tenements. Through traditional art forms 
+        and street plays, the event raised awareness about 
+        girls' rights, child marriage prevention, dowry 
+        prohibition, and child helpline services.`,
+        mappingtag: "20260227",
+    },
+
+    {
+        ID: "awarness",
+        image: "/api/drive-image/1UXbHRlgFl8TByPL9tWnEVFHOS17jzUsR",
+        imageSlider: [
+            "/api/drive-image/16tr2XV06MQ7g4IbCujUpa19HIbvTZPVC",
+            "/api/drive-image/1tm7zqDVN9fTnb22PAn4o_2z-3n1DAVFz",
+            "/api/drive-image/1VDPO3HjDL7Ew5RPcog8iC5u1Y3mTRbYP",
+            "/api/drive-image/1UXbHRlgFl8TByPL9tWnEVFHOS17jzUsR",
+        ],
+        date: "Date: 27-02-2026 to 29-02-2026",
+        venue: "Greater Chennai Corporation",
+        description: `Team Unity, in collaboration 
+        with the Greater Chennai Corporation’s 
+        Gender & Policy Lab, conducted a three-day 
+        Bystander Intervention Awareness Program, 
+        encouraging public transport personnel to 
+        intervene and support individuals facing 
+        harassment and discrimination.`,
+        mappingtag: "20260227-29",
+    },
 ];
