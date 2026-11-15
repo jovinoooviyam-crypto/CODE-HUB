@@ -1,0 +1,302 @@
+
+/* ==========================================
+   TEAM UNITY TRAINER ACCOUNT CHECK
+========================================== */
+
+const express = require("express");
+const path = require("path");
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "..")));
+
+// Your API routes must come after this point
+
+app.post("/api/account-status", (req, res) => {
+    const email = String(req.body.email || "")
+        .trim()
+        .toLowerCase();
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return res.status(400).json({
+            message: "Please enter a valid email address."
+        });
+    }
+
+    const sql = `
+        SELECT email FROM users WHERE LOWER(email) = ?
+        UNION
+        SELECT email FROM registrations WHERE LOWER(email) = ?
+        LIMIT 1
+    `;
+
+    db.get(sql, [email, email], (error, account) => {
+        if (error) {
+            console.error("ACCOUNT CHECK ERROR:", error);
+            return res.status(500).json({
+                message: "Unable to check the account."
+            });
+        }
+
+        return res.json({
+            exists: Boolean(account)
+        });
+    });
+});
+
+
+/* ==========================================
+   TEAM UNITY TRAINER REGISTRATION
+========================================== */
+
+app.post("/api/trainer-register", async (req, res) => {
+    const {
+        fullName,
+        username,
+        email,
+        password,
+        dobDay,
+        dobMonth,
+        dobYear,
+        gender,
+        contactNumber,
+        whatsappNumber,
+        bloodGroup,
+        profession,
+        collegeName,
+        whyJoin,
+        artForm,
+        hasExperience,
+        experienceDescription,
+        otherSkills,
+        availability,
+        declarationAgreed
+    } = req.body;
+
+    const cleanName = String(fullName || "").trim();
+    const cleanUsername = String(username || "").trim();
+    const normalizedEmail = String(email || "").trim().toLowerCase();
+
+    if (
+        !cleanName ||
+        !cleanUsername ||
+        !normalizedEmail ||
+        !password
+    ) {
+        return res.status(400).json({
+            message: "Name, username, email and password are required."
+        });
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
+        return res.status(400).json({
+            message: "Please enter a valid email address."
+        });
+    }
+
+    if (String(password).length < 8) {
+        return res.status(400).json({
+            message: "Your password must contain at least 8 characters."
+        });
+    }
+
+    if (
+        declarationAgreed !== true &&
+        declarationAgreed !== 1 &&
+        declarationAgreed !== "true"
+    ) {
+        return res.status(400).json({
+            message: "Please accept the declaration."
+        });
+    }
+
+    try {
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        /*
+         * Check both tables before creating the account.
+         * Existing accounts must use the normal login flow.
+         */
+        const accountSQL = `
+            SELECT email FROM users WHERE LOWER(email) = ?
+            UNION
+            SELECT email FROM registrations WHERE LOWER(email) = ?
+            LIMIT 1
+        `;
+
+        db.get(
+            accountSQL,
+            [normalizedEmail, normalizedEmail],
+            (checkError, existingAccount) => {
+                if (checkError) {
+                    console.error("TRAINER ACCOUNT CHECK ERROR:", checkError);
+
+                    return res.status(500).json({
+                        message: "Unable to check the existing account."
+                    });
+                }
+
+                if (existingAccount) {
+                    return res.status(409).json({
+                        exists: true,
+                        message:
+                            "This email is already registered. Please log in to your existing Team Unity account."
+                    });
+                }
+
+                const registrationSQL = `
+                    INSERT INTO registrations (
+                        full_name,
+                        username,
+                        email,
+                        password,
+                        dob_day,
+                        dob_month,
+                        dob_year,
+                        gender,
+                        contact_number,
+                        whatsapp_number,
+                        blood_group,
+                        profession,
+                        college,
+                        why_join,
+                        art_form,
+                        has_experience,
+                        experience_description,
+                        other_skills,
+                        availability,
+                        declaration_agreed
+                    )
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                `;
+
+                const registrationValues = [
+                    cleanName,
+                    cleanUsername,
+                    normalizedEmail,
+                    hashedPassword,
+                    dobDay || null,
+                    dobMonth || null,
+                    dobYear || null,
+                    gender || "",
+                    contactNumber || "",
+                    whatsappNumber || "",
+                    bloodGroup || "",
+                    profession || "",
+                    collegeName || "",
+                    whyJoin || "",
+                    Array.isArray(artForm)
+                        ? JSON.stringify(artForm)
+                        : (artForm || ""),
+                    hasExperience || "",
+                    experienceDescription || "",
+                    otherSkills || "",
+                    Array.isArray(availability)
+                        ? JSON.stringify(availability)
+                        : (availability || ""),
+                    1
+                ];
+
+                db.run(
+                    registrationSQL,
+                    registrationValues,
+                    function (registrationError) {
+                        if (registrationError) {
+                            console.error(
+                                "TRAINER REGISTRATION ERROR:",
+                                registrationError
+                            );
+
+                            if (
+                                registrationError.message.includes("UNIQUE")
+                            ) {
+                                return res.status(409).json({
+                                    message:
+                                        "This email or username is already registered. Please log in or use a different username."
+                                });
+                            }
+
+                            return res.status(500).json({
+                                message:
+                                    "Unable to save trainer registration."
+                            });
+                        }
+
+                        const registrationId = this.lastID;
+
+                        /*
+                         * Create the corresponding login account.
+                         * This role is specific to trainer registrations.
+                         */
+                        const userSQL = `
+                            INSERT INTO users (
+                                name,
+                                email,
+                                password,
+                                role
+                            )
+                            VALUES (?, ?, ?, ?)
+                        `;
+
+                        db.run(
+                            userSQL,
+                            [
+                                cleanName,
+                                normalizedEmail,
+                                hashedPassword,
+                                "Trainer"
+                            ],
+                            function (userError) {
+                                if (userError) {
+                                    console.error(
+                                        "TRAINER USER CREATION ERROR:",
+                                        userError
+                                    );
+
+                                    /*
+                                     * Roll back the registration row if
+                                     * the user account could not be created.
+                                     */
+                                    db.run(
+                                        "DELETE FROM registrations WHERE id = ?",
+                                        [registrationId],
+                                        () => {}
+                                    );
+
+                                    return res.status(500).json({
+                                        message:
+                                            "The trainer account could not be created. Please try again."
+                                    });
+                                }
+
+                                return res.status(201).json({
+                                    message:
+                                        "Trainer registration successful! You can now log in.",
+                                    user: {
+                                        id: this.lastID,
+                                        name: cleanName,
+                                        email: normalizedEmail,
+                                        role: "Trainer"
+                                    }
+                                });
+                            }
+                        );
+                    }
+                );
+            }
+        );
+    } catch (error) {
+        console.error("TRAINER REGISTRATION ERROR:", error);
+
+        return res.status(500).json({
+            message: "An unexpected error occurred during registration."
+        });
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Team Unity server running at http://localhost:${PORT}`);
+});
