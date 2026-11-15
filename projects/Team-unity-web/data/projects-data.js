@@ -157,4 +157,25 @@ the importance of proper waste management practices and their role
 in maintaining a clean and healthy environment.`,
         mappingtag: "20260126",
     },
+
+    {
+        ID: "",
+        image: "/api/drive-image/",
+        imageSlider: [
+            "/api/drive-image/",
+            "/api/drive-image/",
+            "/api/drive-image/",
+            "/api/drive-image/",
+        ],
+        date: "Date: 31-01-2026",
+        venue: "Saidapet Urban Tenements,Chennai",
+        description: `On January 31, 2026, Team Unity,
+         in collaboration with the Tamil Nadu Social Welfare
+          Department, conducted a Girl Child Welfare and 
+          Empowerment Awareness Program at Saidapet Urban
+           Tenements. Through street plays and traditional
+            art forms, the event promoted girls' rights,
+             education, and awareness against child marriage and dowry.`,
+        mappingtag: "20260131",
+    },
 ];

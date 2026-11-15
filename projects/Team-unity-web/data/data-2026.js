@@ -71,4 +71,13 @@ window.worksData202x = [
   search: "20260126",
 },
 
+{
+  id: 2,
+  title: " Women & Child rights based awareness",
+  tags: ["Awarness", "Art Forms"],
+  date: "31-01-2026",
+  description: "Description: ",
+  search: "20260131",
+},
+
 ];
