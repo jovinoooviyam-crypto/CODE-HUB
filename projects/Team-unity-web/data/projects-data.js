@@ -250,12 +250,12 @@ in maintaining a clean and healthy environment.`,
     {
         ID: "awarness",
         image: "/api/drive-image/1ORtfNQpFEDhFCKxlfGeX14eS2yQogeQm",
-        imageSlider: /*[
+        imageSlider: [/*
             "/api/drive-image/",
             "/api/drive-image/",
             "/api/drive-image/",
-            "/api/drive-image/",
-        ],*/
+            "/api/drive-image/",*/
+        ],
         date: "Date: 28-03-2026",
         venue: "Neelangarai,Chennai",
         description: `Team Unity participated in the 
