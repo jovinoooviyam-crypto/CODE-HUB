@@ -29,7 +29,6 @@ const projects = [
         mappingid: "Performance",
         photos: projectDatas
     },
-    
     {
         id: "Workshop",
         title: "workshop",
