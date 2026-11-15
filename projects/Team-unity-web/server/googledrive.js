@@ -1,22 +1,38 @@
-const { google } = require("googleapis");
-const path = require("path");
 
-const KEY_FILE = path.join(
-    __dirname,
-    "google-service-account.json"
-);
+export default async function handler(req, res) {
+    const { fileId } = req.query;
 
-const auth = new google.auth.GoogleAuth({
-    keyFile: KEY_FILE,
-    scopes: [
-        "https://www.googleapis.com/auth/drive.readonly"
-    ]
-});
+    if (!fileId) {
+        return res.status(400).send("Missing Google Drive file ID");
+    }
 
-const drive = google.drive({
-    version: "v3",
-    auth
-});
+    try {
+        const imageUrl =
+            `https://drive.google.com/uc?export=download&id=${fileId}`;
 
-module.exports = drive;
-module.exports = drive;
+        const response = await fetch(imageUrl);
+
+        if (!response.ok) {
+            return res.status(response.status).send("Image not found");
+        }
+
+        const contentType = response.headers.get("content-type");
+
+        if (!contentType?.startsWith("image/")) {
+            return res.status(400).send("Invalid image file");
+        }
+
+        res.setHeader("Content-Type", contentType);
+        res.setHeader("Cache-Control", "public, max-age=86400");
+
+        const imageBuffer = Buffer.from(
+            await response.arrayBuffer()
+        );
+
+        return res.status(200).send(imageBuffer);
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send("Unable to load image");
+    }
+}
