@@ -160,12 +160,12 @@ in maintaining a clean and healthy environment.`,
 
     {
         ID: "awarness",
-        image: "/api/drive-image/",
+        image: "/api/drive-image/10yXNKJwTDUl5YJBl-R6CVwgGPJL8RaZa",
         imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
+            "/api/drive-image/15X6-C4GhE05CziAVRbQkVMqhvMzbJHA5",
+            "/api/drive-image/1--kdwy8lqhpt3pPN2Fv8_7AVfKA4A5WY",
+            "/api/drive-image/1LZa-sd3EbPd4M4L-17qJ4rnfidfWtrop",
+            "/api/drive-image/1gMwYOCJJl2tJi_5k27wKMdBtaVU6tyEM",
         ],
         date: "Date: 31-01-2026",
         venue: "Saidapet Urban Tenements,Chennai",
