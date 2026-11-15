@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Register as an Artist or Volunteer with Team Unity.">
+  <title>Join Team Unity | Registration</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+
+<header class="reg-header">
+  <a class="brand" href="index.html">
+    <img src="src/unity_logo.png" alt="Team Unity">
+    <span class="brand-text"><b>TEAM</b><small>UNITY</small></span>
+  </a>
+</header>
+
+<main class="reg-main">
+
+  <div class="reg-intro">
+    <p class="eyebrow">CREATE. COLLABORATE. INSPIRE.</p>
+    <h1>Join Team Unity</h1>
+    <p class="reg-sub">Choose how you would like to be part of our community.</p>
+  </div>
+
+  <form class="reg-card" id="regForm">
+
+    <!-- REGISTRATION TYPE -->
+    <section class="form-section active" data-section="type">
+      <h2>Registration Type</h2>
+      <p class="section-description">Select the category you want to register for.</p>
+
+      <label for="registrationType">I want to register as *</label>
+      <select id="registrationType" name="registrationType" required>
+        <option value="">Select registration type</option>
+        <option value="Artist">Artist</option>
+        <option value="Volunteer">Volunteer</option>
+      </select>
+
+      <div class="type-info" id="typeInfo">
+        Select Artist or Volunteer to continue.
+      </div>
+    </section>
+
+    <!-- ================= ARTIST FORM ================= -->
+
+    <div id="artistFields" class="registration-fields" hidden>
+
+      <section class="form-section" data-section="artist-account">
+        <h2>Create your account</h2>
+
+        <label>Full Name *
+          <input type="text" name="artist_fullName" required placeholder="Your full name">
+        </label>
+
+        <label>Username *
+          <input type="text" name="artist_username" required
+            pattern="[A-Za-z0-9_.]{3,20}"
+            placeholder="Choose a username">
+        </label>
+
+        <label>Email Address *
+          <input type="email" name="artist_email" required placeholder="you@example.com">
+        </label>
+
+        <div class="field-row">
+          <label>Password *
+            <div class="password-field">
+              <input type="password" name="artist_password" id="artistPassword"
+                minlength="8" required placeholder="At least 8 characters">
+              <button type="button" class="toggle-password" data-target="artistPassword">👁</button>
+            </div>
+          </label>
+
+          <label>Confirm Password *
+            <div class="password-field">
+              <input type="password" name="artist_confirmPassword" id="artistConfirmPassword"
+                minlength="8" required placeholder="Confirm password">
+              <button type="button" class="toggle-password" data-target="artistConfirmPassword">👁</button>
+            </div>
+          </label>
+        </div>
+        <p class="field-hint">Use at least 8 characters.</p>
+      </section>
+
+      <section class="form-section" data-section="artist-personal">
+        <h2>Personal Details</h2>
+
+        <label>Date of Birth *</label>
+        <div class="field-row dob-group">
+          <input type="number" name="artist_dobDay" min="1" max="31" placeholder="DD" required>
+          <input type="number" name="artist_dobMonth" min="1" max="12" placeholder="MM" required>
+          <input type="number" name="artist_dobYear" min="1900" max="2100" placeholder="YYYY" required>
+        </div>
+
+        <label>Gender *
+          <select name="artist_gender" id="artistGender" required>
+            <option value="">Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Transgender</option>
+            <option>Prefer not to say</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <label id="artistGenderOtherWrap" hidden>Please specify
+          <input type="text" name="artist_genderOther" placeholder="Your answer">
+        </label>
+
+        <div class="field-row">
+          <label>Contact Number *
+            <input type="tel" name="artist_contactNumber" required placeholder="Contact number">
+          </label>
+          <label>WhatsApp Number *
+            <input type="tel" name="artist_whatsappNumber" required placeholder="WhatsApp number">
+          </label>
+        </div>
+
+        <label>Blood Group *
+          <select name="artist_bloodGroup" required>
+            <option value="">Select blood group</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>AB+</option><option>AB-</option>
+            <option>O+</option><option>O-</option>
+            <option>Not sure</option>
+          </select>
+        </label>
+
+        <label>Profession *
+          <select name="artist_profession" id="artistProfession" required>
+            <option value="">Select profession</option>
+            <option>College student</option>
+            <option>Working</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <label id="artistProfessionOtherWrap" hidden>Please specify
+          <input type="text" name="artist_professionOther">
+        </label>
+
+        <label id="artistCollegeWrap" hidden>College / Institution Name
+          <input type="text" name="artist_collegeName">
+        </label>
+      </section>
+
+      <section class="form-section" data-section="artist-art">
+        <h2>Your Art Form</h2>
+
+        <label>Why do you want to join our Unity cultural art form team? *
+          <textarea name="artist_whyJoin" rows="4" required></textarea>
+        </label>
+
+        <fieldset class="choice-field">
+          <legend>Interested Cultural Art Forms * <small>(Select all that apply)</small></legend>
+          <div class="choice-grid">
+            <label class="choice-pill"><input type="checkbox" name="artist_artForm" value="Parai"><span>Parai</span></label>
+            <label class="choice-pill"><input type="checkbox" name="artist_artForm" value="Oyil"><span>Oyil</span></label>
+            <label class="choice-pill"><input type="checkbox" name="artist_artForm" value="Karagattam"><span>Karagattam</span></label>
+            <label class="choice-pill"><input type="checkbox" name="artist_artForm" value="Thirumarakkal"><span>Thirumarakkal</span></label>
+            <label class="choice-pill"><input type="checkbox" name="artist_artForm" value="Saattai kutchi"><span>Saattai kutchi</span></label>
+            <label class="choice-pill"><input type="checkbox" name="artist_artForm" value="Street Theatre"><span>Street Theatre</span></label>
+            <label class="choice-pill"><input type="checkbox" name="artist_artForm" value="Mime"><span>Mime</span></label>
+            <label class="choice-pill"><input type="checkbox" name="artist_artForm" value="Other" id="artistArtOther"><span>Other</span></label>
+          </div>
+          <input class="conditional-input" type="text" name="artist_artFormOther"
+            id="artistArtOtherText" placeholder="Specify your art form" hidden>
+        </fieldset>
+
+        <fieldset class="choice-field">
+          <legend>Previous Experience *</legend>
+          <div class="choice-grid">
+            <label class="choice-pill"><input type="radio" name="artist_hasExperience" value="Yes" required><span>Yes</span></label>
+            <label class="choice-pill"><input type="radio" name="artist_hasExperience" value="No"><span>No</span></label>
+            <label class="choice-pill"><input type="radio" name="artist_hasExperience" value="Other"><span>Other</span></label>
+          </div>
+          <label id="artistExperienceWrap" hidden>Please specify
+            <input type="text" name="artist_experienceOther">
+          </label>
+          <label id="artistExperienceDescWrap" hidden>Experience Details
+            <input type="text" name="artist_experienceDesc" placeholder="Example: 2 years, school events">
+          </label>
+        </fieldset>
+
+        <label>Other Skills or Art Forms
+          <textarea name="artist_otherSkills" rows="3" placeholder="Optional"></textarea>
+        </label>
+      </section>
+
+      <section class="form-section" data-section="artist-availability">
+        <h2>Availability & Declaration</h2>
+
+        <fieldset class="choice-field">
+          <legend>Availability *</legend>
+          <div class="choice-grid">
+            <label class="choice-pill"><input type="checkbox" name="artist_availability" value="Weekdays"><span>Weekdays</span></label>
+            <label class="choice-pill"><input type="checkbox" name="artist_availability" value="Weekend"><span>Weekend</span></label>
+            <label class="choice-pill"><input type="checkbox" name="artist_availability" value="Other" id="artistAvailabilityOther"><span>Other</span></label>
+          </div>
+          <input class="conditional-input" type="text" name="artist_availabilityOther"
+            id="artistAvailabilityOtherText" placeholder="Specify availability" hidden>
+        </fieldset>
+
+        <label class="declaration">
+          <input type="checkbox" name="artist_declaration" required>
+          <span>I confirm that the above information is true. I agree to join the WhatsApp group and follow the rules of the Unity Cultural Art Team. *</span>
+        </label>
+      </section>
+
+    </div>
+
+    <!-- ================= VOLUNTEER FORM ================= -->
+
+    <div id="volunteerFields" class="registration-fields" hidden>
+
+      <section class="form-section" data-section="volunteer-personal">
+        <h2>Personal Information</h2>
+
+        <label>Full Name *
+          <input type="text" name="volunteer_fullName" required>
+        </label>
+
+        <label>Date of Birth *
+          <input type="date" name="volunteer_dateOfBirth" required>
+        </label>
+
+        <fieldset class="choice-field">
+          <legend>Gender *</legend>
+          <div class="choice-grid">
+            <label class="choice-pill"><input type="radio" name="volunteer_gender" value="Male" required><span>Male</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_gender" value="Female"><span>Female</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_gender" value="Transgender"><span>Transgender</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_gender" value="Prefer not to say"><span>Prefer not to say</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_gender" value="Other" id="volunteerGenderOther"><span>Other</span></label>
+          </div>
+          <input class="conditional-input" type="text" name="volunteer_genderOther"
+            id="volunteerGenderOtherText" placeholder="Please specify" hidden>
+        </fieldset>
+
+        <div class="field-row">
+          <label>Phone Number *
+            <input type="tel" name="volunteer_phone" maxlength="15" required>
+          </label>
+          <label>Email Address *
+            <input type="email" name="volunteer_email" required>
+          </label>
+        </div>
+
+        <label>City / Location *
+          <input type="text" name="volunteer_city" required placeholder="City / District / State">
+        </label>
+
+        <label>Full Address
+          <textarea name="volunteer_address" rows="3" placeholder="Optional"></textarea>
+        </label>
+      </section>
+
+      <section class="form-section" data-section="volunteer-background">
+        <h2>Education & Professional Details</h2>
+
+        <label>Current Status *
+          <select name="volunteer_currentStatus" id="volunteerStatus" required>
+            <option value="">Select status</option>
+            <option>School Student</option>
+            <option>College Student</option>
+            <option>Working Professional</option>
+            <option>Freelancer</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <label id="volunteerStatusOtherWrap" hidden>Please specify
+          <input type="text" name="volunteer_statusOther">
+        </label>
+
+        <label>College / Institution / Organisation
+          <input type="text" name="volunteer_institution">
+        </label>
+
+        <label>Course / Department
+          <input type="text" name="volunteer_course">
+        </label>
+
+        <label>Current Profession
+          <input type="text" name="volunteer_profession">
+        </label>
+
+        <fieldset class="choice-field">
+          <legend>Skills & Expertise * <small>(Select all that apply)</small></legend>
+          <div class="choice-grid">
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Event Management"><span>Event Management</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Communication"><span>Communication</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Teaching"><span>Teaching</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Art and Creativity"><span>Art & Creativity</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Photography"><span>Photography</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Video Editing"><span>Video Editing</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Graphic Design"><span>Graphic Design</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Social Media"><span>Social Media</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Writing"><span>Writing</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Technical Support"><span>Technical Support</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Community Outreach"><span>Community Outreach</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Fundraising"><span>Fundraising</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Administration"><span>Administration</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="First Aid"><span>First Aid</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_skills" value="Other" id="volunteerSkillOther"><span>Other</span></label>
+          </div>
+          <input class="conditional-input" type="text" name="volunteer_skillOther"
+            id="volunteerSkillOtherText" placeholder="Specify other skills" hidden>
+        </fieldset>
+      </section>
+
+      <section class="form-section" data-section="volunteer-experience">
+        <h2>Skills & Experience</h2>
+
+        <fieldset class="choice-field">
+          <legend>Previous Volunteering Experience? *</legend>
+          <div class="choice-grid">
+            <label class="choice-pill"><input type="radio" name="volunteer_previousExperience" value="Yes" required><span>Yes</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_previousExperience" value="No"><span>No</span></label>
+          </div>
+        </fieldset>
+
+        <label id="volunteerExperienceWrap" hidden>Previous Experience Details
+          <textarea name="volunteer_experienceDetails" rows="3"></textarea>
+        </label>
+
+        <fieldset class="choice-field">
+          <legend>Languages Known *</legend>
+          <div class="choice-grid">
+            <label class="choice-pill"><input type="checkbox" name="volunteer_languages" value="Tamil"><span>Tamil</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_languages" value="English"><span>English</span></label>
+            <label class="choice-pill"><input type="checkbox" name="volunteer_languages" value="Other" id="volunteerLanguageOther"><span>Other</span></label>
+          </div>
+          <input class="conditional-input" type="text" name="volunteer_languageOther"
+            id="volunteerLanguageOtherText" placeholder="Specify languages" hidden>
+        </fieldset>
+      </section>
+
+      <section class="form-section" data-section="volunteer-availability">
+        <h2>Availability & Motivation</h2>
+
+        <fieldset class="choice-field">
+          <legend>Availability *</legend>
+          <div class="choice-grid">
+            <label class="choice-pill"><input type="radio" name="volunteer_availability" value="Weekdays" required><span>Weekdays</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_availability" value="Weekends"><span>Weekends</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_availability" value="Both"><span>Both</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="choice-field">
+          <legend>Preferred Time *</legend>
+          <div class="choice-grid">
+            <label class="choice-pill"><input type="radio" name="volunteer_preferredTime" value="Morning" required><span>Morning</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_preferredTime" value="Afternoon"><span>Afternoon</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_preferredTime" value="Evening"><span>Evening</span></label>
+            <label class="choice-pill"><input type="radio" name="volunteer_preferredTime" value="Flexible"><span>Flexible</span></label>
+          </div>
+        </fieldset>
+
+        <label>Why would you like to volunteer with Team Unity? *
+          <textarea name="volunteer_motivation" minlength="10" required></textarea>
+        </label>
+
+        <label>What do you hope to learn or contribute?
+          <textarea name="volunteer_contribution"></textarea>
+        </label>
+
+        <label>Additional Information
+          <textarea name="volunteer_additionalInfo"></textarea>
+        </label>
+      </section>
+
+      <section class="form-section" data-section="volunteer-declaration">
+        <h2>Declaration & Consent</h2>
+
+        <div class="declaration-box">
+          <p><strong>Contact consent:</strong> Team Unity may contact me regarding my volunteer registration and related opportunities.</p>
+          <p><strong>Volunteer guidelines:</strong> I agree to follow Team Unity's guidelines and act responsibly.</p>
+          <p><strong>Privacy notice:</strong> My information will be used to review my registration, coordinate activities and maintain relevant records securely.</p>
+        </div>
+
+        <label class="declaration">
+          <input type="checkbox" name="volunteer_contactConsent" required>
+          <span>I consent to being contacted by Team Unity. *</span>
+        </label>
+
+        <label class="declaration">
+          <input type="checkbox" name="volunteer_guidelinesAgreement" required>
+          <span>I agree to follow Team Unity's volunteer guidelines. *</span>
+        </label>
+
+        <label class="declaration">
+          <input type="checkbox" name="volunteer_privacyAcknowledgement" required>
+          <span>I have read and understood the privacy notice. *</span>
+        </label>
+      </section>
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="step-nav">
+      <button type="button" class="btn btn-outline" id="backBtn" hidden>← Back</button>
+      <span id="stepCounter">Step 1</span>
+      <button type="button" class="btn btn-primary" id="nextBtn">Continue →</button>
+      <button type="submit" class="btn btn-primary" id="submitBtn" hidden>Submit Registration ✓</button>
+    </div>
+
+    <p class="step-error" id="stepError" role="alert"></p>
+
+  </form>
+
+  <div class="success-card" id="successCard" hidden>
+    <div class="success-mark">✓</div>
+    <h2>Registration Submitted!</h2>
+    <p>Thank you for becoming a part of Team Unity.</p>
+    <a href="index.html" class="btn btn-outline">Back to Home</a>
+  </div>
+
+</main>
+
+<script src="scripts/register.js"></script>
+</body>
+</html>
