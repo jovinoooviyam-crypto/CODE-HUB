@@ -76,7 +76,7 @@ window.worksData202x = [
   title: " Women & Child rights based awareness",
   tags: ["Awarness", "Art Forms"],
   date: "31-01-2026",
-  description: "Description: ",
+  description: "Description: Team Unity, in collaboration with the Tamil Nadu Social Welfare Department, conducted a Girl Child Awareness Program at Saidapet, promoting girls' rights, education, and protection against child marriage and dowry.",
   search: "20260131",
 },
 
