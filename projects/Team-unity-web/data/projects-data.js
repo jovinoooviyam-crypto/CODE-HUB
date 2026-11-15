@@ -150,7 +150,11 @@ const projectDatas = [
         ],
         date: "Date: 26-01-2026",
         venue: "Agaramthen, Tambaram",
-        description: ``,
+        description: `Team Unity, in collaboration with Eco Society Darwin, 
+conducted a Waste Management Awareness Street Play in Agaramthen, 
+Tambaram. The program aimed to educate the local community about 
+the importance of proper waste management practices and their role 
+in maintaining a clean and healthy environment.`,
         mappingtag: "",
     },
 ];

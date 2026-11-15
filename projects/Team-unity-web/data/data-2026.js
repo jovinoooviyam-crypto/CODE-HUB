@@ -66,8 +66,8 @@ window.worksData202x = [
   id: 1,
   title: "Waste Management Awareness Street Play in Agaramthen.",
   tags: [""],
-  date: "",
-  description: "Description: ",
+  date: "26-01-2026",
+  description: "Description: Team Unity, in collaboration with Eco Society Darwin, conducted a Waste Management Awareness Street Play in Agaramthen, Tambaram, promoting proper waste disposal and environmental cleanliness.",
   search: "",
 },
 
