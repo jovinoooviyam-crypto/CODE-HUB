@@ -62,6 +62,13 @@ window.worksData202x = [
 // YEAR 2026
 // JAN
 
-
+{
+  id: 1,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
 
 ];
