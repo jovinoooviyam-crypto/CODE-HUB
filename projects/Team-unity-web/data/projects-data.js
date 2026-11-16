@@ -411,53 +411,66 @@ in maintaining a clean and healthy environment.`,
         mappingtag: "20260517",
     },
 
-    /*
     {
-        ID: "awarness",
-        image: "/api/drive-image/",
+        ID: "workshop",
+        image: "/api/drive-image/12xvl5Whzatb0-HL2TaW6GaWfU5t0R_ze",
         imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
+            "/api/drive-image/1p5miivB50MD8eaWdhB7lWW8n9pptlpkZ",
+            "/api/drive-image/1F5-9Tzcvlql_7etAlrhbiB2M3Q-rwjsN",
+            "/api/drive-image/1p9UIRgbB_MKWy15eUr19k4i7jNHAD9eC",
+            "/api/drive-image/1kUN_pic57NnOIb6cR0gA8L9sopXRXj05",
+            "/api/drive-image/1ZYez-9yYaDtc6bJ0CzqWCWtrIpudgMDC",
         ],
-        date: "Date: ",
-        venue: "",
-        description: ``,
-        mappingtag: "",
+        date: "Date: 07-05-2026",
+        venue: "Manali,Chennai",
+        description: `Team Unity collaborated with 
+        SRF Company, Manali, for a four-day Employee 
+        Engagement Programme, using street theatre and 
+        interactive art forms to promote social awareness, 
+        community engagement, and child empowerment among 
+        employees and their families.`,
+        mappingtag: "20260507",
     },
 
     {
-        ID: "awarness",
-        image: "/api/drive-image/",
+        ID: "Performance",
+        image: "/api/drive-image/1wpVhnz0ZNJHVTleQiezE33msx6cJuSaU",
         imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
+            "/api/drive-image/1RxJWc2OViec8JyaYVsBm2my1ZWS4wQ5b",
+            "/api/drive-image/1wpVhnz0ZNJHVTleQiezE33msx6cJuSaU",
+            "/api/drive-image/1zeMEaMlvLQMxs-JubWKSFDlAtnlho9O_",
+            // "/api/drive-image/",
         ],
-        date: "Date: ",
-        venue: "",
-        description: ``,
-        mappingtag: "",
+        date: "Date: 31-05-2026",
+        venue: "Decathlon Nolambur,Chennai",
+        description: `On May 31, 2026, Team Unity, in 
+        collaboration with Thuvakkam NGO, conducted a 
+        Road Safety Awareness Campaign at Decathlon, 
+        Nolambur, using mime performances to promote 
+        traffic rule awareness and responsible road 
+        behaviour among the public.`,
+        mappingtag: "20260531",
     },
 
     {
-        ID: "awarness",
-        image: "/api/drive-image/",
+        ID: "workshop",
+        image: "/api/drive-image/1GxaEetL2EgRjEgD-CnQWL6-X0eGUXN_N",
         imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
+            "/api/drive-image/1hExeMkWKR2KQX4-TkajVW6KczUgMdH-k",
+            "/api/drive-image/1GxaEetL2EgRjEgD-CnQWL6-X0eGUXN_N",
+            // "/api/drive-image/",
+            // "/api/drive-image/",
         ],
-        date: "Date: ",
-        venue: "",
-        description: ``,
-        mappingtag: "",
+        date: "Date: 07-06-2026",
+        venue: "Egmore,Chennai",
+        description: `On June 7, 2026, Team Unity collaborated 
+        with Agai to conduct a Puppetry Workshop, introducing 
+        puppet-making and performance techniques as creative 
+        tools for storytelling, cultural expression, and social awareness.`,
+        mappingtag: "20260607",
     },
 
-    {
+/*    {
         ID: "awarness",
         image: "/api/drive-image/",
         imageSlider: [

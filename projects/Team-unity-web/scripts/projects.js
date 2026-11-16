@@ -29,6 +29,7 @@ const projects = [
         mappingid: "Performance",
         photos: projectDatas
     },
+    
     {
         id: "workshop",
         title: "workshop",
