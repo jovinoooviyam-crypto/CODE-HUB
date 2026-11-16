@@ -18,7 +18,7 @@ window.TEAM_UNITY_COLLABORATORS = {
     {
       name: "Agai",
       role: "",
-      bio: "",
+      bio: "agai.theatreofvoices",
       photo: "src/collaboration/agai.theatreofvoices.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
