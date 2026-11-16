@@ -569,7 +569,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    z-index: 10;
+    z-index: 1500;
 }
 
 .slider-nav:hover:not(:disabled) {
