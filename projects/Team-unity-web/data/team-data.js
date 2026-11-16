@@ -16,10 +16,10 @@ window.TEAM_UNITY_COLLABORATORS = {
 
   members: [
     {
-      name: "XYZ college",
-      role: "Skill Labs",
-      bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      name: "Agai",
+      role: "",
+      bio: "",
+      photo: "src/collaboration/agai.theatreofvoices.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
