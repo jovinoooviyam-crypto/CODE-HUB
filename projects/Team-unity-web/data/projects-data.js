@@ -248,7 +248,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "awarness",
+        ID: "workshop",
         image: "/api/drive-image/1ORtfNQpFEDhFCKxlfGeX14eS2yQogeQm",
         imageSlider: [/*
             "/api/drive-image/",
@@ -411,6 +411,7 @@ in maintaining a clean and healthy environment.`,
         mappingtag: "20260517",
     },
 
+    /*
     {
         ID: "awarness",
         image: "/api/drive-image/",
@@ -529,5 +530,5 @@ in maintaining a clean and healthy environment.`,
         venue: "",
         description: ``,
         mappingtag: "",
-    },
+    },*/
 ];
