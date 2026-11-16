@@ -48,7 +48,6 @@
         <div class="collab-avatar">${avatar}</div>
         <div class="collab-info">
           <h2>${esc(m.name)}</h2>
-          ${m.bio  ? `<p class="collab-bio">${esc(m.bio)}</p>` : ""}
         </div>
       </article>
     `;
