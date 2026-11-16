@@ -350,19 +350,27 @@ in maintaining a clean and healthy environment.`,
         mappingtag: "20260412",
     },
 
+    // 10 EVENTS UPLOADED
+
     {
-        ID: "awarness",
-        image: "/api/drive-image/",
+        ID: "Performance",
+        image: "/api/drive-image/12EXvj9mCIkAPFrCAUx3wd78eVN140TdH",
         imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
+            "/api/drive-image/19heLSLPNLTdhitoTmC54wM0i388aKN8K",
+            "/api/drive-image/1NH89wvaHEtzA_MopJe13DBNXYz1g_1kZ",
+            "/api/drive-image/19JKbQM9XZIhKI5-tVhwNghv49GjYT-kH",
+            "/api/drive-image/1-4EZChC75FBnFpF3IOw4C7q48oXtDwW1",
+            "/api/drive-image/1DRje4dNXRIRI5MwEU5IQtFsvdsxrvXvr",
+            "/api/drive-image/1s378Nod8Sbv7khdyTz1oIH8lG-YB7nVF",
         ],
-        date: "Date: ",
-        venue: "",
-        description: ``,
-        mappingtag: "",
+        date: "Date: 19-04-2026",
+        venue: "Sembedu, Thiruvallur",
+        description: `Team Unity participated in the third Dr. B. R. 
+        Ambedkar Birth Anniversary celebration, “சாதிவியல்”, organized 
+        with Karpi Payilagam at Sembedu, Thiruvallur. Through traditional 
+        art forms and street theatre, the event promoted social justice, 
+        equality, human dignity, and community unity.`,
+        mappingtag: "20260419",
     },
 
     {
