@@ -583,7 +583,7 @@ in maintaining a clean and healthy environment.`,
         date: "Date: 19-07-2026",
         venue: "Anna Nagar Tower Park,Chennai",
         description: `Team Unity conducted an Oyilattam orientation workshop at Tower Park, Anna Nagar, introducing participants to the traditional Tamil folk dance through hands-on practice while promoting cultural preservation and heritage.`,
-        mappingtag: ""20260719,
+        mappingtag: "20260719",
     },
     
     {
