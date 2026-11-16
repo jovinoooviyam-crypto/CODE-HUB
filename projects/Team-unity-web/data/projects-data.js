@@ -375,17 +375,22 @@ in maintaining a clean and healthy environment.`,
 
     {
         ID: "awarness",
-        image: "/api/drive-image/",
+        image: "/api/drive-image/10BYArcP5PHhkvo0lPzH09TsDmjlkmdvO",
         imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
+            "/api/drive-image/1rZg57HyULNMI08Fw442JAEqpNuWMkTqH",
+            "/api/drive-image/1nbnGqbk-3X7p6KzUfyNyAW5VCCqoVKk5",
+            "/api/drive-image/198Hupcq6GM58hGDwK_MMVZS0kiv-TU6p",
+            "/api/drive-image/1RJ-APBZpbr7pm62Uq0XVHlbCtWqvjwZy",
+            "/api/drive-image/1XEGV77zt3azYKGUMh0C-2YEOOz9_AYeq",
         ],
-        date: "Date: ",
-        venue: "",
-        description: ``,
-        mappingtag: "",
+        date: "Date: 15-05-2026",
+        venue: "Maduravoyal,Chennai",
+        description: `Team Unity collaborated with The Banyan under the
+         Nalan Project to conduct an expressive arts and psychosocial workshop 
+         during its youth summer camp. Using traditional Tamil folk arts, Parai 
+         drumming, and Oyilattam, the session promoted emotional well-being,
+         self-worth, and social inclusion.`,
+        mappingtag: "20260515",
     },
 
     {

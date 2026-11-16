@@ -169,12 +169,12 @@ window.worksData202x = [
 },
 
 {
-  id: 5,
-  title: "",
-  tags: [""],
-  date: "",
-  description: "Description: ",
-  search: "",
+  id: 12,
+  title: "Banyan Community Mental Health Workshop",
+  tags: ["Workshop", "Teaching"],
+  date: "15-05-2026",
+  description: "Description: Team Unity collaborated with The Banyan for a folk arts-based workshop, promoting emotional well-being, self-worth, and social inclusion through Parai and Oyilattam.",
+  search: "20260515",
 },
 
 {
