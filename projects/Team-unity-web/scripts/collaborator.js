@@ -46,12 +46,12 @@
     return `
       <article class="collab-card">
         <div class="collab-avatar">${avatar}</div>
-        <div class="collab-info">
+        ` /*<div class="collab-info">
           <h2>${esc(m.name)}</h2>
           ${m.role ? `<p class="collab-role">${esc(m.role)}</p>` : ""}
           ${m.bio  ? `<p class="collab-bio">${esc(m.bio)}</p>` : ""}
           ${links  ? `<div class="collab-links">${links}</div>` : ""}
-        </div>
+        </div>*/
       </article>
     `;
   }
