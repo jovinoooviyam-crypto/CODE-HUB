@@ -16,10 +16,21 @@ window.TEAM_UNITY_COLLABORATORS = {
 
   members: [
     {
-      name: "Agai",
+      name: "agai.theatreofvoices",
       role: "",
-      bio: "agai.theatreofvoices",
+      bio: "",
       photo: "src/collaboration/agai.theatreofvoices.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },/*
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -27,15 +38,159 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "XYZ School",
+      name: "amaippaithiralvom",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
       instagram: "",
       linkedin: ""
-    }
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    }, // 10
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    },
+    {
+      name: "amaippaithiralvom",
+      role: "Skill Labs",
+      bio: "Runs hands-on workshops for students and young artists across Chennai.",
+      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      email: "",
+      phone: "",
+      website: "",
+      instagram: "",
+      linkedin: ""
+    }*/
+// 16
   ]
 };
