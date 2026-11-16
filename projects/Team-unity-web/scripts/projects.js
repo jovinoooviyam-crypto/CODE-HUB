@@ -32,12 +32,12 @@ const projects = [
     {
         id: "workshop",
         title: "workshop",
-        category: "Workshop",
+        category: "workshop",
         description:
             "Workshop volunteering involves assisting with participant registration, material arrangements, coordination, and session management to ensure the smooth and successful conduct of the workshop.",
         poster:
             "/api/drive-image/13MI5SWRZuSyIH2zUWbv4ieNdYYgg5PSr",
-        mappingid: "Workshop",
+        mappingid: "workshop",
         photos: projectDatas
     },
     {
