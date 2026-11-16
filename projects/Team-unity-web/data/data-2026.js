@@ -244,6 +244,69 @@ window.worksData202x = [
   search: "20260627-28",
 },
 
+{
+  id: 20,
+  title: "TNPCB's Plastic Awareness",
+  tags: ["Performance", "Awarness"],
+  date: "03-07-2026",
+  description: "Description: Team Unity participated in a plastic awareness campaign at Koyambedu Market, promoting sustainable living and responsible waste management through folk arts.",
+  search: "20260703",
+},
+
+{
+  id: 21,
+  title: "Sembedu oyil Workshop",
+  tags: ["Workshop"],
+  date: "12-07-2026",
+  description: "Description: Team Unity conducted an Oyilattam workshop in Semmedu, introducing students to traditional folk dance and cultural heritage.",
+  search: "20260712",
+},
+
+{
+  id: 22,
+  title: "Anti corruption awareness",
+  tags: ["Performance", "Awareness"],
+  date: "18-07-2026",
+  description: "Description: Team Unity participated in an anti-corruption awareness campaign at Marina Beach, promoting integrity and civic responsibility through folk arts.",
+  search: "20260718",
+},
+
+{
+  id: 23,
+  title: "Team Unity Oyil Workshop",
+  tags: ["Workshop"],
+  date: "19-07-2026",
+  description: "Description: Team Unity conducted an Oyilattam workshop at Tower Park, Anna Nagar, promoting traditional folk dance and cultural heritage.",
+  search: "20260719",
+},
+
+{
+  id: 24,
+  title: "Nazarath college Workshop",
+  tags: ["Workshop"],
+  date: "24-07-2026",
+  description: "Description: Team Unity conducted a Parai and Silambam workshop at Nazareth College, introducing students to traditional Tamil arts and cultural heritage.",
+  search: "20260724",
+},
+
+{
+  id: 25,
+  title: "Dc squad collab",
+  tags: ["Performance"],
+  date: "25-07-2026",
+  description: "Description: Team Unity collaborated with Team DC to promote transgender rights and inclusion through Parai and Karagam performances.",
+  search: "20260725",
+},
+
+{
+  id: 26,
+  title: "Mssw (MSW SOCIAL WORK) Workshop",
+  tags: ["Workshop"],
+  date: "31-07-2026 to 1-08-2026",
+  description: "Description: Team Unity conducted a two-day Folk Arts Skills Lab at MSSW, promoting traditional arts as tools for social work and community engagement.",
+  search: "20260731-01",
+},
+
 
 
 ];
