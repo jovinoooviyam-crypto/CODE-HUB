@@ -525,7 +525,7 @@ in maintaining a clean and healthy environment.`,
         mappingtag: "20260607",
     },
 
-/*    {
+    {
         ID: "Performance",
         image: "/api/drive-image/1821BF8sSv35s58_-hNUdFNBNfjGycKKU",
         imageSlider: [
@@ -631,5 +631,5 @@ in maintaining a clean and healthy environment.`,
         venue: "MSSW College Egmore,Chennai",
         description: `Team Unity conducted a two-day Folk Arts Skills Lab for MSW students at Madras School of Social Work, introducing traditional Tamil art forms as tools for community engagement, social awareness, and social change while promoting cultural preservation.`,
         mappingtag: "20260731-01",
-    },*/
+    },
 ];
