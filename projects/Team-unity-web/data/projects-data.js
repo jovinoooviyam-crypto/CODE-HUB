@@ -470,52 +470,62 @@ in maintaining a clean and healthy environment.`,
         mappingtag: "20260607",
     },
 
+    {
+        ID: "Volunteering",
+        image: "/api/drive-image/1dmTrfX-NG5iRQZze1eBlogiw_5kXhz-g",
+        imageSlider: [
+            "/api/drive-image/1lABaa5SYPTbeNtDc1TvL2pB6Ug4ajJde",
+            "/api/drive-image/1qiE6AtFIKKZtUDNvDzERu988KdenWMgY",
+            "/api/drive-image/1YkR4n54c30TDAcK4saR6DOLMMNPo18_R",
+            "/api/drive-image/1sCRNz88Qv2Q0g1bBP3cIiHYfrGtspHIH",
+            "/api/drive-image/1UW9EHnUnTsbIUqZo2O-2ktygkbKctC21",
+        ],
+        date: "Date: 27-06-2026 to 28-06-2026",
+        venue: "Anchetty,Krishnagiri",
+        description: `Team Unity organized the Kadhaipom Kalaipom 
+        Rural Camp, using traditional storytelling and folk arts to 
+        engage rural communities, preserve cultural heritage, and spread 
+        awareness about social issues.`,
+        mappingtag: "20260627-28",
+    },
+
+    {
+        ID: "workshop",
+        image: "/api/drive-image/1ls6mYa6UDVXv8q_y5YjQactGFw3DoQ7f",
+        imageSlider: [
+            "/api/drive-image/1zSbJ9rnLnmYgKpWEsrpFmc7-9hSkhFoX",
+            "/api/drive-image/1a-cwg-8EDRTETM7LXcPV5pZEDJC3ajta",
+            "/api/drive-image/1f0AwS9grKq9_6KX5cFmSJZuHFLdAyCV9",
+            "/api/drive-image/1a-cwg-8EDRTETM7LXcPV5pZEDJC3ajta",
+            "/api/drive-image/1h_IYZNK-omcnhNJRnnepmjQ8tia0UsKW",
+        ],
+        date: "Date: 06-06-2026",
+        venue: "Navalur, Serapanancheri, and Vattampakkam",
+        description: `As part of the National Domestic Worker Welfare 
+        Programme, Team Unity participated in Kalai Thiruvizha across Navalur, 
+        Serapanancheri, and Vattampakkam, using traditional Tamil folk arts to 
+        promote domestic workers' rights, dignity, welfare, and social equality.`,
+        mappingtag: "20260606",
+    },
+
+    {
+        ID: "workshop",
+        image: "/api/drive-image/1L2ShdjOpLC4zECC8_c_fWdnsH7OKbWSs",
+        imageSlider: [
+            "/api/drive-image/19WedxavuDDWVlx4JUG_JMJsHn9h1FZsp",
+            "/api/drive-image/1YXr_2bDebVuYjfH3N4o6B8QUuQbOsZtK",
+            "/api/drive-image/1lD6OH4U3V2SGbga9GtvaSsKdWNEJsPoK",
+            "/api/drive-image/1L2ShdjOpLC4zECC8_c_fWdnsH7OKbWSs",
+        ],
+        date: "Date: 07-06-2026",
+        venue: "Sembedu,Tiruvallur",
+        description: `Team Unity organized the Semmedu Parai Workshop in Semmedu, 
+        Thiruvallur, providing hands-on training to preserve and promote the traditional 
+        Tamil folk art of Parai while encouraging cultural appreciation and skill development.`,
+        mappingtag: "20260607",
+    },
+
 /*    {
-        ID: "awarness",
-        image: "/api/drive-image/",
-        imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-        ],
-        date: "Date: ",
-        venue: "",
-        description: ``,
-        mappingtag: "",
-    },
-
-    {
-        ID: "awarness",
-        image: "/api/drive-image/",
-        imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-        ],
-        date: "Date: ",
-        venue: "",
-        description: ``,
-        mappingtag: "",
-    },
-
-    {
-        ID: "awarness",
-        image: "/api/drive-image/",
-        imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-        ],
-        date: "Date: ",
-        venue: "",
-        description: ``,
-        mappingtag: "",
-    },
-
-    {
         ID: "awarness",
         image: "/api/drive-image/",
         imageSlider: [

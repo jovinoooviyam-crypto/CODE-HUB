@@ -212,34 +212,34 @@ window.worksData202x = [
   description: "Description: Team Unity collaborated with Agai to conduct a Puppetry Workshop, promoting creativity, storytelling, and social awareness through puppetry.",
   search: "20260607",
 },
-/*
+
 {
   id: 17,
-  title: "",
-  tags: [""],
-  date: "",
-  description: "Description: ",
-  search: "",
+  title: "Kadhaipom Kalaipom",
+  tags: ["Volunteering"],
+  date: "27-06-2026 to 28-06-2026",
+  description: "Description: Team Unity conducted the Kadhaipom Kalaipom Rural Camp, promoting folk arts, cultural preservation, and social awareness.",
+  search: "20260627-28",
 },
 
 {
   id: 18,
-  title: "",
-  tags: [""],
-  date: "",
-  description: "Description: ",
-  search: "",
+  title: "National domestic worker welfare workshop",
+  tags: ["Workshop", "performance"],
+  date: "06-06-2026",
+  description: "Description: Team Unity participated in Kalai Thiruvizha, promoting domestic workers' rights, dignity, and social welfare through traditional folk arts.",
+  search: "20260606",
 },
 
 {
   id: 19,
-  title: "",
-  tags: [""],
-  date: "",
-  description: "Description: ",
-  search: "",
+  title: "Sembedu parai workshop",
+  tags: ["Workshop"],
+  date: "07-06-2026",
+  description: "Description: Team Unity conducted a Parai Workshop in Semmedu, Thiruvallur, promoting traditional folk arts, cultural heritage, and skill development.",
+  search: "20260607",
 },
 
-*/
+
 
 ];
