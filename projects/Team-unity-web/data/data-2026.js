@@ -168,8 +168,19 @@ window.worksData202x = [
   search: "20260419",
 },
 
+// MAY
+
 {
   id: 12,
+  title: "SRF Company - Puppet Workshop",
+  tags: ["Workshop", "Collaboration"],
+  date: "07-05-2026",
+  description: "Description: Team Unity collaborated with SRF Company, Manali, for a four-day programme promoting social awareness and child empowerment through street theatre and interactive activities.",
+  search: "20260507",
+},
+
+{
+  id: 13,
   title: "Banyan Community Mental Health Workshop",
   tags: ["Workshop", "Teaching"],
   date: "15-05-2026",
@@ -178,21 +189,12 @@ window.worksData202x = [
 },
 
 {
-  id: 13,
+  id: 14,
   title: "Mullivaikkal remembrance for Tamizharan",
   tags: ["Performance", "Rally"],
   date: "17-05-2026",
   description: "Description: Team Unity commemorated Mullivaikkal Remembrance Day at Mylapore through a street play and rally, honouring the lives lost during the Sri Lankan conflict.",
   search: "20260517",
-},
-
-{
-  id: 14,
-  title: "SRF Company - Puppet Workshop",
-  tags: ["Workshop", "Collaboration"],
-  date: "07-05-2026",
-  description: "Description: Team Unity collaborated with SRF Company, Manali, for a four-day programme promoting social awareness and child empowerment through street theatre and interactive activities.",
-  search: "20260507",
 },
 
 {
@@ -204,26 +206,10 @@ window.worksData202x = [
   search: "20260531",
 },
 
+// JUNE
+
 {
   id: 16,
-  title: "Agai Puppetry ",
-  tags: ["Learning", "Workshop"],
-  date: "07-06-2026",
-  description: "Description: Team Unity collaborated with Agai to conduct a Puppetry Workshop, promoting creativity, storytelling, and social awareness through puppetry.",
-  search: "20260607",
-},
-
-{
-  id: 17,
-  title: "Kadhaipom Kalaipom",
-  tags: ["Volunteering"],
-  date: "27-06-2026 to 28-06-2026",
-  description: "Description: Team Unity conducted the Kadhaipom Kalaipom Rural Camp, promoting folk arts, cultural preservation, and social awareness.",
-  search: "20260627-28",
-},
-
-{
-  id: 18,
   title: "National domestic worker welfare workshop",
   tags: ["Workshop", "performance"],
   date: "06-06-2026",
@@ -232,12 +218,30 @@ window.worksData202x = [
 },
 
 {
-  id: 19,
+  id: 17,
+  title: "Agai Puppetry ",
+  tags: ["Learning", "Workshop"],
+  date: "07-06-2026",
+  description: "Description: Team Unity collaborated with Agai to conduct a Puppetry Workshop, promoting creativity, storytelling, and social awareness through puppetry.",
+  search: "20260607",
+},
+
+{
+  id: 18,
   title: "Sembedu parai workshop",
   tags: ["Workshop"],
   date: "07-06-2026",
   description: "Description: Team Unity conducted a Parai Workshop in Semmedu, Thiruvallur, promoting traditional folk arts, cultural heritage, and skill development.",
   search: "20260607",
+},
+
+{
+  id: 19,
+  title: "Kadhaipom Kalaipom",
+  tags: ["Volunteering"],
+  date: "27-06-2026 to 28-06-2026",
+  description: "Description: Team Unity conducted the Kadhaipom Kalaipom Rural Camp, promoting folk arts, cultural preservation, and social awareness.",
+  search: "20260627-28",
 },
 
 
