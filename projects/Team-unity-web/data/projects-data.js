@@ -374,7 +374,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "awarness",
+        ID: "workshop",
         image: "/api/drive-image/10BYArcP5PHhkvo0lPzH09TsDmjlkmdvO",
         imageSlider: [
             "/api/drive-image/1rZg57HyULNMI08Fw442JAEqpNuWMkTqH",
@@ -394,18 +394,21 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "awarness",
-        image: "/api/drive-image/",
+        ID: "Performance",
+        image: "/api/drive-image/1NP_fHU2ibo_Oj6pZBwYxtTbNms6EvCNK",
         imageSlider: [
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
-            "/api/drive-image/",
+            "/api/drive-image/1j42aY66MqLh6f8nNTx5nNeTk02CxUQX3",
+            "/api/drive-image/1jDbyYZ2Y9dJKQ3cr_Ir6VEF3N-kjl-Zl",
+            "/api/drive-image/1Q6lJXqEFOrJSz0b4pVuq_pe7AWjJBMYl",
         ],
-        date: "Date: ",
-        venue: "",
-        description: ``,
-        mappingtag: "",
+        date: "Date: 17-05-2026",
+        venue: "Tamizharan Office, Mylapore, Chennai",
+        description: `On May 17, 2026, Team Unity, in collaboration with 
+        Central Chennai Tamizharan Students, organized a Mullivaikkal 
+        Remembrance Day programme at Mylapore, featuring a street play and 
+        rally to honour the victims and remember the lives lost during the 
+        Sri Lankan conflict.`,
+        mappingtag: "20260517",
     },
 
     {
