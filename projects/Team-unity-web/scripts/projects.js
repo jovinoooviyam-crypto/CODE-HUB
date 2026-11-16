@@ -30,7 +30,7 @@ const projects = [
         photos: projectDatas
     },
     {
-        id: "Workshop",
+        id: "workshop",
         title: "workshop",
         category: "Workshop",
         description:
