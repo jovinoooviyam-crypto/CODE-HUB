@@ -105,8 +105,9 @@ button { font-family: inherit; cursor: pointer; }
 
 .codehub{
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   margin-left: 80px;
+  margin-right: 80px;
 }
 
 .codehub p{
