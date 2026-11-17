@@ -10,8 +10,8 @@
 
 window.TEAM_UNITY_COLLABORATORS = {
 
-  eyebrow: "COLLABORATORS",
-  title: "Meet Our Collaborators",
+  eyebrow: "COLLABORATORS AND SUPPOTERS",
+  title: "Meet Our Collaborators and Suppoters",
   intro: "The people and partners who help us create, teach and inspire.",
 
   members: [
