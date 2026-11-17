@@ -276,7 +276,7 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 860px) {
   .desktop-nav, .profile-btn { display: none; }
   .menu-btn { display: grid; place-items: center; }
-  .codehub{ display: flex; justify-content: space-between; margin-left: 80px; margin-right: 80px }
+  .codehub{ display: flex; flex-direction: row; justify-content: space-between; margin-left: 80px; margin-right: 80px }
 }
 
 /* =========================================================
@@ -938,6 +938,7 @@ button { font-family: inherit; cursor: pointer; }
   .codehub{
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   margin-left: 80px;
   margin-right: 80px;
 }
