@@ -104,6 +104,11 @@ button { font-family: inherit; cursor: pointer; }
 ==========================================================*/
 
 .codehub{
+  display: flex;
+  justify-content: left;
+}
+
+.codehub p{
   font-size: 10px;
 }
 
