@@ -277,7 +277,7 @@ button { font-family: inherit; cursor: pointer; }
   .desktop-nav, .profile-btn { display: none; }
   .menu-btn { display: grid; place-items: center; }
   /* .codehub{ display: flex; flex-direction: row; justify-content: space-between; margin-left: 80px; margin-right: 80px } */
-  .codehub { margin-left: 20px; margin-bottom: 10px; margin-top: 5px;}
+  .codehub { margin-left: 20px; margin-top: 5px;}
 }
 
 /* =========================================================
