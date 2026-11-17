@@ -25,12 +25,12 @@ window.TEAM_UNITY_COLLABORATORS = {
       website: "",
       instagram: "",
       linkedin: ""
-    },/*
+    },
     {
       name: "amaippaithiralvom",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -38,10 +38,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "gnc_msw",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/gnc_msw.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -49,10 +49,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "goldheartfoundation",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/goldheartfoundation.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -60,10 +60,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "kaeltheatre",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/kaeltheatre.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -71,10 +71,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "learninglinksfoundation",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/learninglinksfoundation.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -82,10 +82,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "move_a_muscle",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/move_a_muscle.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -93,10 +93,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "mscas_psychology",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/mscas_psychology.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -104,10 +104,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "newatamil",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/newatamil.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -115,10 +115,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "sindhi.college",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/sindhi.college.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -126,10 +126,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     }, // 10
     {
-      name: "amaippaithiralvom",
+      name: "sindhicollegemsw",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/sindhicollegemsw.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -137,10 +137,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "socialwelfaretn",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/socialwelfaretn.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -148,10 +148,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "student_artist_fedaration_2022",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/student_artist_fedaration_2022.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -159,10 +159,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "theopenhousechennai",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/theopenhousechennai.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -170,10 +170,10 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "tngov_autismcoe",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/tngov_autismcoe.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
@@ -181,16 +181,16 @@ window.TEAM_UNITY_COLLABORATORS = {
       linkedin: ""
     },
     {
-      name: "amaippaithiralvom",
+      name: "tnpcb_meendum_manjappai",
       role: "Skill Labs",
       bio: "Runs hands-on workshops for students and young artists across Chennai.",
-      photo: "src/collaboration/agai.amaippaithiralvom.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
+      photo: "src/collaboration/tnpcb_meendum_manjappai.jpg",                       // e.g. "src/team/priya.jpg" (leave "" to show initials)
       email: "",
       phone: "",
       website: "",
       instagram: "",
       linkedin: ""
-    }*/
+    }
 // 16
   ]
 };
