@@ -106,6 +106,8 @@ button { font-family: inherit; cursor: pointer; }
 .codehub p{
   font-size: 10px;
   color: lightgray;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 /* =========================================================
