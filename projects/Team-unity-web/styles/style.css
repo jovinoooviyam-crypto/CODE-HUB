@@ -276,7 +276,7 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 860px) {
   .desktop-nav, .profile-btn { display: none; }
   .menu-btn { display: grid; place-items: center; }
-  .codehub{ display: flex; flex-direction: row;}
+  .codehub{ display: flex; justify-content: space-between; margin-left: 80px; margin-right: 80px }
 }
 
 /* =========================================================
@@ -950,7 +950,7 @@ button { font-family: inherit; cursor: pointer; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero { min-height: 100vh; padding-top: 110px; }
-  .codehub{ display: flex; justify-content: space-between; margin-left: 80px; margin-right: 80px;}
+  .codehub{ display: flex; flex-direction: row; margin-left: 20px;}
 }
 
 /* Accessible focus ring for keyboard users */
