@@ -951,7 +951,7 @@ button { font-family: inherit; cursor: pointer; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero { min-height: 100vh; padding-top: 110px; }
-  .codehub{ display: flex; flex-direction: row; margin-left: 20px;}
+  .codehub{ display: flex;justify-content: space-between; flex-direction: row; margin-left: 20px;}
 }
 
 /* Accessible focus ring for keyboard users */
