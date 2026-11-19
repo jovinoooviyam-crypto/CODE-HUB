@@ -541,7 +541,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "Workshop",
+        ID: "workshop",
         image: "/api/drive-image/1Z8hCdpZIzoUHc1baZeqE_1I2pjcTLyvW",
         imageSlider: [
             "/api/drive-image/1xPrENcP6Wp-2w-wsrVxwExcxdeMNO096",
@@ -571,7 +571,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "Workshop",
+        ID: "workshop",
         image: "/api/drive-image/1Ads0OKdOuQvMKhwbQNbXuan0FKXKO24C",
         imageSlider: [
             "/api/drive-image/1eUDDqP7SIgGd3EdzZnuwO6Cxlci5Xg8f",
@@ -587,7 +587,7 @@ in maintaining a clean and healthy environment.`,
     },
     
     {
-        ID: "Workshop",
+        ID: "workshop",
         image: "/api/drive-image/19dqXk3XZFycqCSPIRfJCsB--EBH_BVcI",
         imageSlider: [
             "/api/drive-image/1kSDAk9PXUXnkole3gnTrLPITNjcwBeUF",
@@ -619,7 +619,7 @@ in maintaining a clean and healthy environment.`,
     },
     
     {
-        ID: "Workshop",
+        ID: "workshop",
         image: "/api/drive-image/1qVqDVftebtWb0HsC1lGUTau7FOSw7mv6",
         imageSlider: [
             "/api/drive-image/17W_DYhgvnzJAueXL-XRL_Jpq4TjXv16R",
@@ -634,7 +634,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "Workshop",
+        ID: "workshop",
         image: "/api/drive-image/1JLd_BtPVcEYWBlpzCNKOGOHq-uGDKvwG",
         imageSlider: [
             "/api/drive-image/11OjM1_dKNVqQ2RoSTxqEeEHN1BXu-D_h",
