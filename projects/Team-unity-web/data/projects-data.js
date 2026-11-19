@@ -915,7 +915,7 @@ in maintaining a clean and healthy environment.`,
 
     {
         ID: "volunteering",
-        image: "jovinoooviyam-crypto/CODE-HUB/projects/Team-unity-web/src/UNITY_RG_BAN.jpeg",
+        image: "/src/UNITY_RG_BAN.jpeg",
         imageSlider: [
             "~/UNITY_RG_BAN.jpeg",
             // "/api/drive-image/",
