@@ -307,6 +307,277 @@ window.worksData202x = [
   search: "20260731-01",
 },
 
+{
+  id: 27,
+  title: "Mssw (Msw d&e) Workshop",
+  tags: ["Workshop"],
+  date: "03-08-26",
+  description: "Description: Team Unity conducted a five-day Folk Arts Skill Lab at MSSW, promoting arts-based approaches to inclusion, empowerment, and social work practice.",
+  search: "20260803",
+},
+/*
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+
+{
+  id: 5,
+  title: "",
+  tags: [""],
+  date: "",
+  description: "Description: ",
+  search: "",
+},
+*/
+
 
 
 ];
