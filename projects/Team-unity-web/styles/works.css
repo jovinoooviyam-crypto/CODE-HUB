@@ -28,6 +28,18 @@
   --ease: cubic-bezier(.4, 0, .2, 1);
 }
 
+/*==========================================================
+   CodeHub
+==========================================================*/
+
+/* .codehub { margin-left: 60px; display: flex; flex-direction: row; justify-content: space-between; margin-top: 5px; margin-right: 60px;} */
+
+.codehub p{
+  font-size: 10px;
+  color: lightgray;
+
+}
+
 /* =========================================================
    GLOBAL
 ========================================================= */

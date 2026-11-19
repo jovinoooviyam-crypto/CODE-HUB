@@ -98,6 +98,18 @@
   .menu-btn { display: grid; place-items: center; }
 }
 
+/*==========================================================
+   CodeHub
+==========================================================*/
+
+/* .codehub { margin-left: 60px; display: flex; flex-direction: row; justify-content: space-between; margin-top: 5px; margin-right: 60px;} */
+
+.codehub p{
+  font-size: 10px;
+  color: lightgray;
+
+}
+
 /* =========================================================
    PROJECT GALLERY
 ========================================================= */
@@ -221,6 +233,8 @@
         font-size: 24px;
     }
 
+    .codehub { margin-left: 20px; margin-top: 5px;}
+
 }
 
 
@@ -229,6 +243,8 @@
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+
+    .codehub { margin-left: 20px; margin-top: 5px;}
 
 }
 
@@ -724,6 +740,8 @@
         font-size: 24px;
     }
 
+    .codehub { margin-left: 20px; margin-top: 5px;}
+
 }
 
 @media (max-width: 480px) {
@@ -755,6 +773,8 @@
         font-size: 12px;
         padding: 6px 12px;
     }
+
+    .codehub { margin-left: 20px; margin-top: 5px;}
 
 }
 
