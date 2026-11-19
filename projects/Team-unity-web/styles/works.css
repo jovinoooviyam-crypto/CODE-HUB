@@ -298,6 +298,7 @@ button {
 @media (max-width: 860px) {
   .desktop-nav, .profile-btn { display: none; }
   .menu-btn { display: grid; place-items: center; }
+  .codehub { margin-left: 20px; margin-top: 5px;}
 }
 
 /* =========================================================
@@ -891,6 +892,7 @@ button:focus-visible {
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .codehub { margin-left: 20px; margin-top: 5px;}
 }
 
 @media (max-width: 860px) {
@@ -927,6 +929,8 @@ button:focus-visible {
   .footer {
     padding-top: 56px;
   }
+
+  .codehub { margin-left: 20px; margin-top: 5px;}
 }
 
 @media (max-width: 600px) {
@@ -1027,6 +1031,8 @@ button:focus-visible {
   .copyright {
     padding: 20px 18px;
   }
+
+  .codehub { margin-left: 20px; margin-top: 5px;}
 }
 
 @media (max-width: 380px) {
@@ -1050,6 +1056,8 @@ button:focus-visible {
   .work-card-content {
     padding: 18px;
   }
+
+  .codehub { margin-left: 20px; margin-top: 5px;}
 }
 
 
@@ -1085,6 +1093,8 @@ button:focus-visible {
     flex-direction: column;
     gap: 10px;
   }
+
+  .codehub { margin-left: 20px; margin-top: 5px;}
 }
 
 
