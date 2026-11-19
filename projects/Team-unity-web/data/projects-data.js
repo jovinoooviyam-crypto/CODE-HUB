@@ -915,9 +915,9 @@ in maintaining a clean and healthy environment.`,
 
     {
         ID: "volunteering",
-        image: "/src/UNITY_RG_BAN.jpeg",
+        image: "~/UNITY_RG_BAN.jpeg",
         imageSlider: [
-            "/src/UNITY_RG_BAN.jpeg",
+            "~/UNITY_RG_BAN.jpeg",
             // "/api/drive-image/",
             // "/api/drive-image/",
             // "/api/drive-image/",
