@@ -181,7 +181,6 @@ in maintaining a clean and healthy environment.`,
 
     // FEB 2026
 
-    
     {
         ID: "awarness",
         image: "/api/drive-image/1T5SgrezmDAJba0pMH9VCB65NOtzMof_x",
@@ -372,6 +371,8 @@ in maintaining a clean and healthy environment.`,
         equality, human dignity, and community unity.`,
         mappingtag: "20260419",
     },
+
+    // MAY
 
     {
         ID: "workshop",
@@ -835,7 +836,7 @@ in maintaining a clean and healthy environment.`,
         description: `Team Unity participated in the national conference at Madras Christian College, Chennai, with seven members presenting Parai, Silambam, and Thirumarakkal to promote Tamil cultural heritage, artistic expression, and social awareness.`,
         mappingtag: "20260928",
     },
-// THISONE -cover
+
     {
         ID: "awarness",
         image: "/api/drive-image/1Orbl8QVvG1Q4YO5IhznKuoC0LR6EGPWs",
@@ -915,7 +916,7 @@ in maintaining a clean and healthy environment.`,
 
     {
         ID: "volunteering",
-        image: "/api/drive-image/1aZGMK2VM3VhNRU_IBP-mYXCzF-1F5xt6"
+        image: "/api/drive-image/1aZGMK2VM3VhNRU_IBP-mYXCzF-1F5xt6",
         imageSlider: [
             "/api/drive-image/1aZGMK2VM3VhNRU_IBP-mYXCzF-1F5xt6",
             // "/api/drive-image/",
