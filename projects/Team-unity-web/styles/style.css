@@ -104,6 +104,8 @@ button { font-family: inherit; cursor: pointer; }
    CodeHub
 ==========================================================*/
 
+.codehub { margin-left: 60px; display: flex; flex-direction: row; margin-top: 5px; margin-right: 60px;}
+
 .codehub p{
   font-size: 10px;
   color: lightgray;
