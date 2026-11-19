@@ -228,7 +228,7 @@ in maintaining a clean and healthy environment.`,
     // MAR
 
     {
-        ID: "Volunteering",
+        ID: "volunteering",
         image: "/api/drive-image/1gL91q99G_Py0YWOWItR3qPo3LbJ_Xcnu",
         imageSlider: [
             "/api/drive-image/11YMj8ALorHigsTQ0MeIdP-wY73V9B8AW",
@@ -287,7 +287,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "Performance",
+        ID: "performance",
         image: "/api/drive-image/1yOs_0lSOYhK4M_qSmZ0ThM3pBgfiok3W",
         imageSlider: [
             "/api/drive-image/1WT7cWaz__cdZTpAVHRbmXOH0sKpzprBH",
@@ -328,7 +328,7 @@ in maintaining a clean and healthy environment.`,
     // APR
 
     {
-        ID: "Performance",
+        ID: "performance",
         image: "/api/drive-image/1qG6i2bpix8GFtFD78bxb9e5Hdn1qKwIk",
         imageSlider: [
             "/api/drive-image/17msW7yrP_iLRKuTvXHqGhNiaIvkgbdIa",
@@ -353,7 +353,7 @@ in maintaining a clean and healthy environment.`,
     // 10 EVENTS UPLOADED
 
     {
-        ID: "Performance",
+        ID: "performance",
         image: "/api/drive-image/12EXvj9mCIkAPFrCAUx3wd78eVN140TdH",
         imageSlider: [
             "/api/drive-image/19heLSLPNLTdhitoTmC54wM0i388aKN8K",
@@ -394,7 +394,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "Performance",
+        ID: "performance",
         image: "/api/drive-image/1NP_fHU2ibo_Oj6pZBwYxtTbNms6EvCNK",
         imageSlider: [
             "/api/drive-image/1j42aY66MqLh6f8nNTx5nNeTk02CxUQX3",
@@ -433,7 +433,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "Performance",
+        ID: "performance",
         image: "/api/drive-image/1wpVhnz0ZNJHVTleQiezE33msx6cJuSaU",
         imageSlider: [
             "/api/drive-image/1RxJWc2OViec8JyaYVsBm2my1ZWS4wQ5b",
@@ -471,7 +471,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "Volunteering",
+        ID: "volunteering",
         image: "/api/drive-image/1dmTrfX-NG5iRQZze1eBlogiw_5kXhz-g",
         imageSlider: [
             "/api/drive-image/1lABaa5SYPTbeNtDc1TvL2pB6Ug4ajJde",
@@ -526,7 +526,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "Performance",
+        ID: "performance",
         image: "/api/drive-image/1821BF8sSv35s58_-hNUdFNBNfjGycKKU",
         imageSlider: [
             "/api/drive-image/1Nb5XgcJLBhGB6VYdUZqhrq6DxtVo1SRJ",
@@ -556,7 +556,7 @@ in maintaining a clean and healthy environment.`,
     },
     
     {
-        ID: "Performance",
+        ID: "performance",
         image: "/api/drive-image/1gc6cLbhEZddm_854Nwe0QAP6C_Hj8FSN",
         imageSlider: [
             "/api/drive-image/1vafcjxyIygsgEb4rDTGLg5C24q6GCdxf",
@@ -603,7 +603,7 @@ in maintaining a clean and healthy environment.`,
     },
 
     {
-        ID: "Performance",
+        ID: "performance",
         image: "/api/drive-image/1Gl-fFyx78ATWiZFmguNikHqOoCJlSLAt",
         imageSlider: [
             "/api/drive-image/1WBs2oVd4YGTvVLsE-uFEgMfy1rim4ghK",

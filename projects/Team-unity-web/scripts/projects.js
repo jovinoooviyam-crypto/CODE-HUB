@@ -9,7 +9,7 @@
 
 const projects = [
     {
-        id: "Volunteering",
+        id: "volunteering",
         title: "Volunteering Events",
         category: "Volunteering",
         description:
@@ -19,7 +19,7 @@ const projects = [
         photos: projectDatas
     },
     {
-        id: "Performance",
+        id: "performance",
         title: "Performance",
         category: "Performance",
         description:
@@ -33,7 +33,7 @@ const projects = [
     {
         id: "workshop",
         title: "workshop",
-        category: "workshop",
+        category: "Workshop",
         description:
             "Workshop volunteering involves assisting with participant registration, material arrangements, coordination, and session management to ensure the smooth and successful conduct of the workshop.",
         poster:
@@ -44,7 +44,7 @@ const projects = [
     {
         id: "awarness",
         title: "Awarness Events",
-        category: "AWARNESS",
+        category: "Awarness",
         description:
             "Interactive workshops where participants learn, create and collaborate.",
         poster:
