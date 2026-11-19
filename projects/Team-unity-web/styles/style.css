@@ -937,6 +937,7 @@ button { font-family: inherit; cursor: pointer; }
   .works-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .join-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .codehub{margin-left: 20px; display: flex; flex-direction: row; justify-content: space-between; margin-left: 20px;}
   /* .codehub{ */
   /* display: flex; */
   /* justify-content: space-between; */
