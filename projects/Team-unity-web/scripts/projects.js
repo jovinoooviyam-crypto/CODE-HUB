@@ -9,23 +9,13 @@
 
 const projects = [
     {
-        id: "volunteering",
-        title: "Volunteering Events",
-        category: "Volunteering",
-        description:
-            "Event volunteering involves assisting in event planning, coordination, registration, and management, ensuring smooth execution through teamwork, responsibility, and effective communication.",
-        poster:
-            "/api/drive-image/1PfQpnG_PSe9n-4Epg46M_ZnJ74fx1mqS",
-        photos: projectDatas
-    },
-    {
         id: "performance",
         title: "Performance",
         category: "Performance",
         description:
             "Art-form volunteering involves supporting and participating in traditional and contemporary art activities, helping showcase cultural expressions, creativity, and artistic talents..",
         poster:
-            "/api/drive-image/172HOiwaFUubl4zTuB5gAhb-PKa6fdxfj",
+            "/api/drive-image/13MI5SWRZuSyIH2zUWbv4ieNdYYgg5PSr",
         mappingid: "Performance",
         photos: projectDatas
     },
@@ -37,7 +27,7 @@ const projects = [
         description:
             "Workshop volunteering involves assisting with participant registration, material arrangements, coordination, and session management to ensure the smooth and successful conduct of the workshop.",
         poster:
-            "/api/drive-image/13MI5SWRZuSyIH2zUWbv4ieNdYYgg5PSr",
+            "/api/drive-image/1O2z0XRl3f0R1bbdC1-K8MI59eKa8ezZM",
         mappingid: "workshop",
         photos: projectDatas
     },
@@ -48,8 +38,18 @@ const projects = [
         description:
             "Interactive workshops where participants learn, create and collaborate.",
         poster:
-            "/api/drive-image/1-EZ6Q_S9fDkwbhBJtqmzuWrzYl6KUgp-",
+            "/api/drive-image/11TaoEXpu4BVyFV10dyU9_2TiZRM6MUPM",
         mappingid: "awarness",
+        photos: projectDatas
+    },
+    {
+        id: "volunteering",
+        title: "Volunteering Events",
+        category: "Volunteering",
+        description:
+            "Event volunteering involves assisting in event planning, coordination, registration, and management, ensuring smooth execution through teamwork, responsibility, and effective communication.",
+        poster:
+            "/api/drive-image/1WxCNtuaZ1hFjgvQ9knuQF9uFb3VwAoeR",
         photos: projectDatas
     },
 ];
