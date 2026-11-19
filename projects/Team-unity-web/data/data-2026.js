@@ -223,7 +223,7 @@ window.worksData202x = [
   tags: ["Learning", "Workshop"],
   date: "07-06-2026",
   description: "Description: Team Unity collaborated with Agai to conduct a Puppetry Workshop, promoting creativity, storytelling, and social awareness through puppetry.",
-  search: "20260607",
+  search: "20260607-1",
 },
 
 {
@@ -232,7 +232,7 @@ window.worksData202x = [
   tags: ["Workshop"],
   date: "07-06-2026",
   description: "Description: Team Unity conducted a Parai Workshop in Semmedu, Thiruvallur, promoting traditional folk arts, cultural heritage, and skill development.",
-  search: "20260607",
+  search: "20260607-2",
 },
 
 {
@@ -317,12 +317,39 @@ window.worksData202x = [
 },
 /*
 {
-  id: 5,
-  title: "",
-  tags: [""],
-  date: "",
-  description: "Description: ",
-  search: "",
+  id: 28,
+  title: "Neet protest",
+  tags: ["Performance"],
+  date: "05-08-2026",
+  description: "Description: Team Unity supported the Anti-NEET protest through folk arts and street theatre, highlighting the demand to abolish NEET and protect state rights in medical education.",
+  search: "20260805",
+},
+
+{
+  id: 29,
+  title: "Awareness Pledge Against Drug Abuse",
+  tags: ["Performance", "Awareness"],
+  date: "11-08-2026",
+  description: "Description: Team Unity promoted drug prevention and a nicotine-free generation through traditional folk and martial arts performances.",
+  search: "20260811",
+},
+
+{
+  id: 30,
+  title: "Anbu Academy Puppetry Workshop",
+  tags: ["Workshop"],
+  date: "15-08-2026",
+  description: "Description: Team Unity collaborated with Anbu Academy to promote puppetry, storytelling, and social awareness through a creative workshop.",
+  search: "20260815-1",
+},
+
+{
+  id: 31,
+  title: "Kael Theatre 1,2 free stage event",
+  tags: ["Performance"],
+  date: "15-08-2026",
+  description: "Description: Team Unity participated in the “1, 2 and Free” theatre fest with a short play on freedom and liberation.",
+  search: "20260815-2",
 },
 
 {
@@ -331,34 +358,7 @@ window.worksData202x = [
   tags: [""],
   date: "",
   description: "Description: ",
-  search: "",
-},
-
-{
-  id: 5,
-  title: "",
-  tags: [""],
-  date: "",
-  description: "Description: ",
-  search: "",
-},
-
-{
-  id: 5,
-  title: "",
-  tags: [""],
-  date: "",
-  description: "Description: ",
-  search: "",
-},
-
-{
-  id: 5,
-  title: "",
-  tags: [""],
-  date: "",
-  description: "Description: ",
-  search: "",
+  search: "20260817",
 },
 
 {
