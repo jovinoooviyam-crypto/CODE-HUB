@@ -367,10 +367,13 @@ openSelectedWork(mappingTag) {
 
         // Close button
         modal.querySelector(".event-iframe-close")
-            .addEventListener("click", () => {
-                this.backToWorks();
-            });
+    .addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
 
+        window.worksPortfolio.backToWorks();
+    });
+        
         // Close when clicking outside the iframe
         modal.querySelector(".event-iframe-backdrop")
             .addEventListener("click", () => {
@@ -396,13 +399,16 @@ openSelectedWork(mappingTag) {
 
 // Close the iframe popup
 backToWorks() {
-    const modal = document.getElementById("eventIframeModal");
+     const modal = document.getElementById("eventIframeModal");
 
     if (modal) {
         modal.classList.remove("active");
 
-        // Stop iframe content after closing
-        document.getElementById("eventDetailsFrame").src = "about:blank";
+        const iframe = document.getElementById("eventDetailsFrame");
+
+        if (iframe) {
+            iframe.src = "about:blank";
+        }
     }
 
     document.body.classList.remove("event-modal-open");

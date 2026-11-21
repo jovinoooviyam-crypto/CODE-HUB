@@ -1522,11 +1522,12 @@ button:focus-visible {
 }
 
 .event-iframe-close {
+
+.event-iframe-close {
     position: absolute;
     top: 12px;
     right: 15px;
-
-    z-index: 5;
+    z-index: 100;
 
     width: 42px;
     height: 42px;
@@ -1535,18 +1536,24 @@ button:focus-visible {
     border-radius: 50%;
 
     background: #3354A5;
-    color: #ffffff;
+    color: white;
 
     font-size: 30px;
     line-height: 1;
 
     cursor: pointer;
+    pointer-events: auto;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
-    transition: 0.2s ease;
+.event-iframe-container iframe {
+    position: relative;
+    z-index: 1;
+}
+
 }
 
 .event-iframe-close:hover {
