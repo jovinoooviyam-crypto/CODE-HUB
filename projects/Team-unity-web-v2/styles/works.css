@@ -1587,3 +1587,37 @@ body.event-modal-open {
         font-size: 25px;
     }
 }
+
+
+.event-iframe-container {
+    position: relative;
+    isolation: isolate;
+}
+
+.event-iframe-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    z-index: 1000;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #3354A5;
+    color: #fff;
+
+    font-size: 30px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.event-iframe-close:hover {
+    background: #16264c;
+}

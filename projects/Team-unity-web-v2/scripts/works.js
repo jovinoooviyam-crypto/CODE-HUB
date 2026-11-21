@@ -319,7 +319,9 @@ class WorksPortfolio {
   // =======================================================
 
   
+
 openSelectedWork(mappingTag) {
+
     const event = projectDatas.find(
         item => String(item.mappingtag) === String(mappingTag)
     );
@@ -335,10 +337,11 @@ openSelectedWork(mappingTag) {
         return;
     }
 
-    // Create the iframe popup if it doesn't already exist
+    // Create iframe popup only once
     let modal = document.getElementById("eventIframeModal");
 
     if (!modal) {
+
         modal = document.createElement("div");
         modal.id = "eventIframeModal";
         modal.className = "event-iframe-modal";
@@ -347,6 +350,7 @@ openSelectedWork(mappingTag) {
             <div class="event-iframe-backdrop"></div>
 
             <div class="event-iframe-container">
+
                 <button
                     class="event-iframe-close"
                     type="button"
@@ -360,6 +364,7 @@ openSelectedWork(mappingTag) {
                     title="Team Unity Event Details"
                     src="about:blank"
                 ></iframe>
+
             </div>
         `;
 
@@ -367,53 +372,68 @@ openSelectedWork(mappingTag) {
 
         // Close button
         modal.querySelector(".event-iframe-close")
-    .addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
+            .addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.backToWorks();
+            });
 
-        window.worksPortfolio.backToWorks();
-    });
-        
-        // Close when clicking outside the iframe
+        // Close when clicking outside popup
         modal.querySelector(".event-iframe-backdrop")
             .addEventListener("click", () => {
                 this.backToWorks();
             });
     }
 
-    // Load the selected event inside the iframe
+    // Load selected event
     const params = new URLSearchParams({
         mappingtag: mappingTag,
         title: work?.title || "Team Unity Event"
     });
 
-    document.getElementById("eventDetailsFrame").src =
-        `event-details.html?${params.toString()}`;
+    const iframe = modal.querySelector("#eventDetailsFrame");
 
+    iframe.src = `event-details.html?${params.toString()}`;
+
+    // Display popup
     modal.classList.add("active");
-    document.body.classList.add("event-modal-open");
 
-    // Prevent background page scrolling
+    document.body.classList.add("event-modal-open");
     document.body.style.overflow = "hidden";
+
 }
 
+
 // Close the iframe popup
+
 backToWorks() {
-     const modal = document.getElementById("eventIframeModal");
+
+    // Close iframe popup
+    const modal = document.getElementById("eventIframeModal");
 
     if (modal) {
+
         modal.classList.remove("active");
 
-        const iframe = document.getElementById("eventDetailsFrame");
+        const iframe = modal.querySelector("iframe");
 
         if (iframe) {
             iframe.src = "about:blank";
         }
     }
 
+    // Close image slider if open
+    this.closeSlider();
+
+    // Restore page scrolling
     document.body.classList.remove("event-modal-open");
     document.body.style.overflow = "";
+
+    // Reset selected work
+    this.selectedWork = null;
+
 }
+
 
   // =======================================================
   // RENDER SELECTED WORK DETAILS
@@ -677,8 +697,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
 document.addEventListener("keydown", (event) => {
+
     if (event.key === "Escape") {
-        window.worksPortfolio?.backToWorks();
+
+        const modal = document.getElementById("eventIframeModal");
+        const slider = document.querySelector(".works-image-slider");
+
+        // Close image slider first if it is open
+        if (slider?.classList.contains("active")) {
+            window.worksPortfolio?.closeSlider();
+            return;
+        }
+
+        // Otherwise close event popup
+        if (modal?.classList.contains("active")) {
+            window.worksPortfolio?.backToWorks();
+        }
+
     }
+
 });
+
