@@ -409,14 +409,6 @@ backToWorks() {
     document.body.style.overflow = "";
 }
 
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        window.worksPortfolio?.backToWorks();
-    }
-});
-
-
   // =======================================================
   // RENDER SELECTED WORK DETAILS
   // =======================================================
