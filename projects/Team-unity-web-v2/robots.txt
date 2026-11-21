@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://teamunity62.vercel.app/sitemap.xml
