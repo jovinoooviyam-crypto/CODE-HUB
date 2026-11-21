@@ -1442,3 +1442,11 @@ button:focus-visible {
   }
 
 }
+
+.work-card-link {
+  border: none;
+  padding: 0;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
