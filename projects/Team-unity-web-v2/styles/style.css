@@ -201,8 +201,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .brand-text { display: flex; flex-direction: column; line-height: 1; transform: translateX(-5px);}
-.brand-text b { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: .02em; }
-.brand-text small { font-size: 1.5rem; color: var(--blue); letter-spacing: .18em; margin-top: 3px; }
+.brand-text b { font-weight: bolder; font-family: var(--font-display); font-size: 1.02rem; letter-spacing: .02em; }
+.brand-text small { font-weight: bolder; font-size: .68rem; color: var(--blue); letter-spacing: .18em; margin-top: 3px; }
 
 .desktop-nav {
   display: flex;
