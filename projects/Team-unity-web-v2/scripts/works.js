@@ -318,48 +318,104 @@ class WorksPortfolio {
   // OPEN SELECTED WORK
   // =======================================================
 
-  openSelectedWork(mappingTag) {
-
-    if (typeof projectDatas === "undefined") {
-      console.error("Project data is unavailable.");
-      return;
-    }
-
+  
+openSelectedWork(mappingTag) {
     const event = projectDatas.find(
-      photo => String(photo.mappingtag) === String(mappingTag)
+        item => String(item.mappingtag) === String(mappingTag)
+    );
+
+    const worksData = window[`worksData${this.currentYear}`] || [];
+
+    const work = worksData.find(
+        item => String(item.search) === String(mappingTag)
     );
 
     if (!event) {
-      console.error("Event not found:", mappingTag);
-      return;
+        console.error("Event not found:", mappingTag);
+        return;
     }
 
-    const workList = window[`worksData${this.currentYear}`] || [];
+    // Create the iframe popup if it doesn't already exist
+    let modal = document.getElementById("eventIframeModal");
 
-    const work = workList.find(
-      item => String(item.search) === String(mappingTag)
-    );
+    if (!modal) {
+        modal = document.createElement("div");
+        modal.id = "eventIframeModal";
+        modal.className = "event-iframe-modal";
 
-    if (!work) {
-      console.error("Work details not found:", mappingTag);
-      return;
+        modal.innerHTML = `
+            <div class="event-iframe-backdrop"></div>
+
+            <div class="event-iframe-container">
+                <button
+                    class="event-iframe-close"
+                    type="button"
+                    aria-label="Close event details"
+                >
+                    &times;
+                </button>
+
+                <iframe
+                    id="eventDetailsFrame"
+                    title="Team Unity Event Details"
+                    src="about:blank"
+                ></iframe>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        // Close button
+        modal.querySelector(".event-iframe-close")
+            .addEventListener("click", () => {
+                this.backToWorks();
+            });
+
+        // Close when clicking outside the iframe
+        modal.querySelector(".event-iframe-backdrop")
+            .addEventListener("click", () => {
+                this.backToWorks();
+            });
     }
 
-    this.selectedWork = event;
-
-    this.renderSelectedWork(work, event);
-
-    document.getElementById("worksGrid").hidden = true;
-    document.getElementById("emptyState").style.display = "none";
-
-    this.detailView.hidden = false;
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    // Load the selected event inside the iframe
+    const params = new URLSearchParams({
+        mappingtag: mappingTag,
+        title: work?.title || "Team Unity Event"
     });
 
-  }
+    document.getElementById("eventDetailsFrame").src =
+        `event-details.html?${params.toString()}`;
+
+    modal.classList.add("active");
+    document.body.classList.add("event-modal-open");
+
+    // Prevent background page scrolling
+    document.body.style.overflow = "hidden";
+}
+
+// Close the iframe popup
+backToWorks() {
+    const modal = document.getElementById("eventIframeModal");
+
+    if (modal) {
+        modal.classList.remove("active");
+
+        // Stop iframe content after closing
+        document.getElementById("eventDetailsFrame").src = "about:blank";
+    }
+
+    document.body.classList.remove("event-modal-open");
+    document.body.style.overflow = "";
+}
+
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        window.worksPortfolio?.backToWorks();
+    }
+});
+
 
   // =======================================================
   // RENDER SELECTED WORK DETAILS

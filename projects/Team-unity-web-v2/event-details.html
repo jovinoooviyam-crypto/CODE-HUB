@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team Unity | Event Details</title>
+
+    <link rel="stylesheet" href="styles/event-details.css">
+</head>
+
+<body>
+
+    <main class="event-page">
+
+        <header class="event-header">
+            <span class="event-label">TEAM UNITY | OUR WORKS</span>
+
+            <h1 id="eventTitle">Loading event...</h1>
+
+            <div class="event-meta">
+                <span id="eventDate"></span>
+                <span id="eventVenue"></span>
+            </div>
+        </header>
+
+        <section class="event-description">
+            <h2>About the Event</h2>
+            <p id="eventDescription"></p>
+        </section>
+
+        <section class="event-gallery-section">
+            <h2>Event Gallery</h2>
+            <div id="eventGallery" class="event-gallery"></div>
+        </section>
+
+    </main>
+
+    <div id="eventLightbox" class="event-lightbox">
+        <button id="lightboxClose" class="lightbox-close">&times;</button>
+        <button id="lightboxPrev" class="lightbox-arrow">❮</button>
+
+        <img id="lightboxImage" src="" alt="Event photograph">
+
+        <button id="lightboxNext" class="lightbox-arrow">❯</button>
+        <span id="lightboxCounter"></span>
+    </div>
+
+    <script src="data/projects-data.js"></script>
+    <script src="scripts/event-details.js"></script>
+
+</body>
+</html>

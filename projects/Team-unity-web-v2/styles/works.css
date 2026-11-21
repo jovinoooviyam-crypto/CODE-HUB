@@ -1450,3 +1450,133 @@ button:focus-visible {
   font-family: inherit;
   cursor: pointer;
 }
+
+
+/* =====================================
+   EVENT DETAILS IFRAME MODAL
+===================================== */
+
+.event-iframe-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.event-iframe-modal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.event-iframe-backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(8, 15, 35, 0.78);
+    backdrop-filter: blur(8px);
+}
+
+.event-iframe-container {
+    position: relative;
+    z-index: 1;
+
+    width: min(1100px, 95vw);
+    height: min(850px, 90vh);
+
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+
+    transform: translateY(25px) scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+.event-iframe-modal.active .event-iframe-container {
+    transform: translateY(0) scale(1);
+}
+
+.event-iframe-container iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    background: #ffffff;
+}
+
+.event-iframe-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+
+    z-index: 5;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #3354A5;
+    color: #ffffff;
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+.event-iframe-close:hover {
+    background: #16264c;
+    transform: rotate(90deg);
+}
+
+body.event-modal-open {
+    overflow: hidden;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .event-iframe-modal {
+        padding: 10px;
+    }
+
+    .event-iframe-container {
+        width: 100%;
+        height: 94vh;
+        border-radius: 13px;
+    }
+
+    .event-iframe-close {
+        top: 8px;
+        right: 8px;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 25px;
+    }
+}
