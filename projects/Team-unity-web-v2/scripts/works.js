@@ -669,3 +669,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.worksPortfolio = new WorksPortfolio();
 
 });
+
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        window.worksPortfolio?.backToWorks();
+    }
+});
