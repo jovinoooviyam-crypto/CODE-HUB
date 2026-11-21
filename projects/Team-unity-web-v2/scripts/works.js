@@ -1,352 +1,142 @@
 
 /* =========================================================
-   TEAM UNITY — WORKS PORTFOLIO
-   Year Selection + Selected Work Details + Image Slider
+   TEAM UNITY - WORKS PORTFOLIO
+   Year Selection + Event Details Iframe Popup
 ========================================================= */
 
 class WorksPortfolio {
 
-  constructor() {
-    this.currentYear = "202x";
+    constructor() {
 
-    this.eventCounts = {
-      2026: 2,
-      2025: 0,
-      2024: 0,
-      2023: 10,
-      2022: 0
-    };
+        this.currentYear = "202x";
 
-    this.selectedWork = null;
-    this.currentImages = [];
-    this.currentImageIndex = 0;
+        this.eventCounts = {
+            2026: 2,
+            2025: 0,
+            2024: 0,
+            2023: 10,
+            2022: 0
+        };
 
-    this.init();
-  }
+        this.selectedWork = null;
+        this.currentImages = [];
+        this.currentImageIndex = 0;
 
-  init() {
-    this.createDetailView();
-    this.createImageSlider();
-    this.setupEventListeners();
-    this.loadYear(this.currentYear);
-  }
-
-  // =======================================================
-  // CREATE DETAIL CONTAINER
-  // =======================================================
-
-  createDetailView() {
-
-    this.detailView = document.createElement("section");
-    this.detailView.id = "selectedWork";
-    this.detailView.className = "selected-work";
-    this.detailView.hidden = true;
-
-    document.getElementById("worksGrid")
-      .insertAdjacentElement("afterend", this.detailView);
-
-  }
-
-  // =======================================================
-  // CREATE IMAGE SLIDER
-  // =======================================================
-
-  createImageSlider() {
-
-    this.slider = document.createElement("div");
-
-    this.slider.className = "works-image-slider";
-    this.slider.setAttribute("aria-hidden", "true");
-
-    this.slider.innerHTML = `
-      <div class="works-slider-container">
-
-        <button class="works-slider-close"
-          type="button" aria-label="Close image">
-          &times;
-        </button>
-
-        <button class="works-slider-prev"
-          type="button" aria-label="Previous image">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-
-        <img class="works-slider-image" src="" alt="">
-
-        <button class="works-slider-next"
-          type="button" aria-label="Next image">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-        <div class="works-slider-counter">1 / 1</div>
-
-      </div>
-    `;
-
-    document.body.appendChild(this.slider);
-
-    this.sliderImage = this.slider.querySelector(
-      ".works-slider-image"
-    );
-
-    this.slider.querySelector(".works-slider-close")
-      .addEventListener("click", () => this.closeSlider());
-
-    this.slider.querySelector(".works-slider-prev")
-      .addEventListener("click", () => this.changeImage(-1));
-
-    this.slider.querySelector(".works-slider-next")
-      .addEventListener("click", () => this.changeImage(1));
-
-    this.slider.addEventListener("click", (e) => {
-      if (e.target === this.slider) this.closeSlider();
-    });
-
-  }
-
-  // =======================================================
-  // EVENT LISTENERS
-  // =======================================================
-
-  setupEventListeners() {
-
-    document.querySelectorAll(".year-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        this.switchYear(Number(btn.dataset.year));
-      });
-    });
-
-    document.querySelectorAll(".year-link").forEach(btn => {
-      btn.addEventListener("click", () => {
-        this.switchYear(Number(btn.dataset.year));
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    });
-
-    // Event delegation for Explore buttons
-    document.getElementById("worksGrid")
-      .addEventListener("click", (e) => {
-
-        const button = e.target.closest(".work-card-link");
-
-        if (!button) return;
-
-        e.preventDefault();
-
-        this.openSelectedWork(button.dataset.search);
-
-      });
-
-    // Back button
-    this.detailView.addEventListener("click", (e) => {
-
-      if (e.target.closest("#backToWorks")) {
-        this.backToWorks();
-      }
-
-      const photo = e.target.closest(".selected-work-photo");
-
-      if (photo) {
-        this.openSlider(Number(photo.dataset.index));
-      }
-
-    });
-
-    // Keyboard controls
-    document.addEventListener("keydown", (e) => {
-
-      if (!this.slider.classList.contains("active")) return;
-
-      if (e.key === "Escape") this.closeSlider();
-      if (e.key === "ArrowLeft") this.changeImage(-1);
-      if (e.key === "ArrowRight") this.changeImage(1);
-
-    });
-
-    this.setupMobileMenu();
-
-  }
-
-  // =======================================================
-  // YEAR SELECTION
-  // =======================================================
-
-  switchYear(year) {
-
-    document.querySelectorAll(".year-btn").forEach(btn => {
-
-      btn.classList.remove("active");
-      btn.setAttribute("aria-selected", "false");
-
-    });
-
-    const activeBtn = document.querySelector(
-      `.year-btn[data-year="${year}"]`
-    );
-
-    if (activeBtn) {
-      activeBtn.classList.add("active");
-      activeBtn.setAttribute("aria-selected", "true");
+        this.init();
     }
 
-    this.currentYear = year;
+    // =====================================================
+    // INITIALIZATION
+    // =====================================================
 
-    this.backToWorks();
-    this.updateRecord(year);
-    this.loadYear(year);
+    init() {
 
-  }
+        this.createDetailView();
+        this.createImageSlider();
+        this.createEventModal();
 
-  updateRecord(year) {
+        this.setupEventListeners();
+        this.loadYear(this.currentYear);
 
-    const record = document.getElementById("record");
-    const eventCount = document.getElementById("eventCount");
-
-    if (record) record.textContent = `RECORDS · ${year}`;
-
-    if (eventCount) {
-      eventCount.textContent = this.eventCounts[year] ?? 0;
     }
 
-  }
+    // =====================================================
+    // OLD DETAIL CONTAINER
+    // =====================================================
 
-  // =======================================================
-  // LOAD YEAR DATA
-  // =======================================================
+    createDetailView() {
 
-  loadYear(year) {
+        const grid = document.getElementById("worksGrid");
 
-    const dataKey = `worksData${year}`;
-    const works = window[dataKey];
+        if (!grid) return;
 
-    if (works) {
-      this.renderWorks(works);
-    } else {
-      this.showEmpty();
+        this.detailView = document.createElement("section");
+
+        this.detailView.id = "selectedWork";
+        this.detailView.className = "selected-work";
+        this.detailView.hidden = true;
+
+        grid.insertAdjacentElement("afterend", this.detailView);
+
     }
 
-  }
+    // =====================================================
+    // CREATE IMAGE SLIDER
+    // =====================================================
 
-  // =======================================================
-  // RENDER WORK CARDS
-  // =======================================================
+    createImageSlider() {
 
-  renderWorks(works) {
+        this.slider = document.createElement("div");
 
-    const grid = document.getElementById("worksGrid");
-    const emptyState = document.getElementById("emptyState");
+        this.slider.className = "works-image-slider";
+        this.slider.setAttribute("aria-hidden", "true");
 
-    if (!works || works.length === 0) {
-      this.showEmpty();
-      return;
+        this.slider.innerHTML = `
+            <div class="works-slider-container">
+
+                <button class="works-slider-close"
+                    type="button"
+                    aria-label="Close image">
+                    &times;
+                </button>
+
+                <button class="works-slider-prev"
+                    type="button"
+                    aria-label="Previous image">
+                    ❮
+                </button>
+
+                <img class="works-slider-image" src="" alt="">
+
+                <button class="works-slider-next"
+                    type="button"
+                    aria-label="Next image">
+                    ❯
+                </button>
+
+                <div class="works-slider-counter">1 / 1</div>
+
+            </div>
+        `;
+
+        document.body.appendChild(this.slider);
+
+        this.sliderImage = this.slider.querySelector(
+            ".works-slider-image"
+        );
+
+        this.slider.querySelector(".works-slider-close")
+            .addEventListener("click", () => this.closeSlider());
+
+        this.slider.querySelector(".works-slider-prev")
+            .addEventListener("click", () => this.changeImage(-1));
+
+        this.slider.querySelector(".works-slider-next")
+            .addEventListener("click", () => this.changeImage(1));
+
+        this.slider.addEventListener("click", (event) => {
+
+            if (event.target === this.slider) {
+                this.closeSlider();
+            }
+
+        });
+
     }
 
-    grid.innerHTML = "";
-    emptyState.style.display = "none";
+    // =====================================================
+    // CREATE IFRAME POPUP
+    // =====================================================
 
-    works.forEach(work => {
+    createEventModal() {
 
-      const card = this.createWorkCard(work);
-      grid.appendChild(card);
+        this.modal = document.createElement("div");
 
-    });
+        this.modal.id = "eventIframeModal";
+        this.modal.className = "event-iframe-modal";
 
-    grid.style.animation = "none";
+        this.modal.innerHTML = `
 
-    setTimeout(() => {
-      grid.style.animation = "fadeIn 0.6s ease-out";
-    }, 10);
-
-  }
-
-  // =======================================================
-  // CREATE WORK CARD
-  // =======================================================
-
-  createWorkCard(work) {
-
-    const card = document.createElement("article");
-    card.className = "work-card";
-
-    const tagsHTML = (work.tags || []).map(tag => `
-      <span class="work-tag">${this.escapeHTML(tag)}</span>
-    `).join("");
-
-    card.innerHTML = `
-
-      <div class="work-card-content">
-
-        <h3>${this.escapeHTML(work.title)}</h3>
-
-        <div class="work-card-meta">
-          ${tagsHTML}
-        </div>
-
-        <p>
-          <strong>Date:</strong>
-          ${this.escapeHTML(
-            (work.date || "").replace(/^Date:\s*/, "")
-          )}
-        </p>
-
-        <p>
-          <strong>Description:</strong>
-          ${this.escapeHTML(
-            (work.description || "").replace(/^Description:\s*/, "")
-          )}
-        </p>
-
-        ${work.search ? `
-          <button
-            type="button"
-            class="work-card-link"
-            data-search="${this.escapeHTML(work.search)}"
-          >
-            Explore More <span>→</span>
-          </button>
-        ` : ""}
-
-      </div>
-
-    `;
-
-    return card;
-
-  }
-
-  // =======================================================
-  // OPEN SELECTED WORK
-  // =======================================================
-
-  
-
-openSelectedWork(mappingTag) {
-
-    const event = projectDatas.find(
-        item => String(item.mappingtag) === String(mappingTag)
-    );
-
-    const worksData = window[`worksData${this.currentYear}`] || [];
-
-    const work = worksData.find(
-        item => String(item.search) === String(mappingTag)
-    );
-
-    if (!event) {
-        console.error("Event not found:", mappingTag);
-        return;
-    }
-
-    // Create iframe popup only once
-    let modal = document.getElementById("eventIframeModal");
-
-    if (!modal) {
-
-        modal = document.createElement("div");
-        modal.id = "eventIframeModal";
-        modal.className = "event-iframe-modal";
-
-        modal.innerHTML = `
             <div class="event-iframe-backdrop"></div>
 
             <div class="event-iframe-container">
@@ -355,6 +145,7 @@ openSelectedWork(mappingTag) {
                     class="event-iframe-close"
                     type="button"
                     aria-label="Close event details"
+                    title="Close"
                 >
                     &times;
                 </button>
@@ -366,325 +157,599 @@ openSelectedWork(mappingTag) {
                 ></iframe>
 
             </div>
+
         `;
 
-        document.body.appendChild(modal);
+        document.body.appendChild(this.modal);
 
-        // Close button
-        modal.querySelector(".event-iframe-close")
-            .addEventListener("click", (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                this.backToWorks();
-            });
+        this.iframe = this.modal.querySelector(
+            "#eventDetailsFrame"
+        );
 
-        // Close when clicking outside popup
-        modal.querySelector(".event-iframe-backdrop")
+        // CLOSE BUTTON
+        const closeButton = this.modal.querySelector(
+            ".event-iframe-close"
+        );
+
+        closeButton.addEventListener("click", (event) => {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            console.log("Event popup close button clicked");
+
+            this.backToWorks();
+
+        });
+
+        // BACKDROP CLICK
+        this.modal.querySelector(".event-iframe-backdrop")
             .addEventListener("click", () => {
+
                 this.backToWorks();
+
             });
+
     }
 
-    // Load selected event
-    const params = new URLSearchParams({
-        mappingtag: mappingTag,
-        title: work?.title || "Team Unity Event"
-    });
+    // =====================================================
+    // EVENT LISTENERS
+    // =====================================================
 
-    const iframe = modal.querySelector("#eventDetailsFrame");
+    setupEventListeners() {
 
-    iframe.src = `event-details.html?${params.toString()}`;
+        // Year buttons
+        document.querySelectorAll(".year-btn").forEach(btn => {
 
-    // Display popup
-    modal.classList.add("active");
+            btn.addEventListener("click", () => {
 
-    document.body.classList.add("event-modal-open");
-    document.body.style.overflow = "hidden";
+                this.switchYear(Number(btn.dataset.year));
 
-}
+            });
 
+        });
 
-// Close the iframe popup
+        // Year navigation links
+        document.querySelectorAll(".year-link").forEach(btn => {
 
-backToWorks() {
+            btn.addEventListener("click", () => {
 
-    // Close iframe popup
-    const modal = document.getElementById("eventIframeModal");
+                this.switchYear(Number(btn.dataset.year));
 
-    if (modal) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
-        modal.classList.remove("active");
+            });
 
-        const iframe = modal.querySelector("iframe");
+        });
 
-        if (iframe) {
-            iframe.src = "about:blank";
+        // Explore More buttons
+        const grid = document.getElementById("worksGrid");
+
+        if (grid) {
+
+            grid.addEventListener("click", (event) => {
+
+                const button = event.target.closest(".work-card-link");
+
+                if (!button) return;
+
+                event.preventDefault();
+
+                this.openSelectedWork(button.dataset.search);
+
+            });
+
         }
+
+        // Keyboard controls
+        document.addEventListener("keydown", (event) => {
+
+            // Close image slider first
+            if (
+                this.slider &&
+                this.slider.classList.contains("active")
+            ) {
+
+                if (event.key === "Escape") {
+                    this.closeSlider();
+                }
+
+                if (event.key === "ArrowLeft") {
+                    this.changeImage(-1);
+                }
+
+                if (event.key === "ArrowRight") {
+                    this.changeImage(1);
+                }
+
+                return;
+
+            }
+
+            // Close iframe popup
+            if (
+                this.modal &&
+                this.modal.classList.contains("active") &&
+                event.key === "Escape"
+            ) {
+
+                this.backToWorks();
+
+            }
+
+        });
+
+        this.setupMobileMenu();
+
     }
 
-    // Close image slider if open
-    this.closeSlider();
+    // =====================================================
+    // YEAR SELECTION
+    // =====================================================
 
-    // Restore page scrolling
-    document.body.classList.remove("event-modal-open");
-    document.body.style.overflow = "";
+    switchYear(year) {
 
-    // Reset selected work
-    this.selectedWork = null;
+        document.querySelectorAll(".year-btn").forEach(btn => {
 
-}
+            btn.classList.remove("active");
+            btn.setAttribute("aria-selected", "false");
 
+        });
 
-  // =======================================================
-  // RENDER SELECTED WORK DETAILS
-  // =======================================================
+        const activeBtn = document.querySelector(
+            `.year-btn[data-year="${year}"]`
+        );
 
-  renderSelectedWork(work, event) {
+        if (activeBtn) {
 
-    const images = [
-      event.image,
-      ...(event.imageSlider || [])
-    ].filter(Boolean);
+            activeBtn.classList.add("active");
+            activeBtn.setAttribute("aria-selected", "true");
 
-    const tagsHTML = (work.tags || []).map(tag => `
-      <span class="work-tag">${this.escapeHTML(tag)}</span>
-    `).join("");
+        }
 
-    const galleryHTML = images.map((image, index) => `
-      <button
-        type="button"
-        class="selected-work-photo"
-        data-index="${index}"
-        aria-label="View event photograph ${index + 1}"
-      >
-        <img
-          src="${this.escapeHTML(image)}"
-          alt="${this.escapeHTML(work.title)} - Photo ${index + 1}"
-          loading="lazy"
-        >
-        <span class="selected-photo-overlay">
-          <i class="fa-solid fa-expand"></i>
-        </span>
-      </button>
-    `).join("");
+        this.currentYear = year;
 
-    this.detailView.innerHTML = `
+        this.backToWorks();
 
-      <button
-        type="button"
-        class="selected-work-back"
-        id="backToWorks"
-      >
-        <i class="fa-solid fa-arrow-left"></i>
-        Back to Our Works
-      </button>
+        this.updateRecord(year);
 
-      <div class="selected-work-header">
+        this.loadYear(year);
 
-        <div class="year-label">TEAM UNITY · OUR WORKS</div>
+    }
 
-        <h2>${this.escapeHTML(work.title)}</h2>
+    updateRecord(year) {
 
-        <div class="work-card-meta">
-          ${tagsHTML}
-        </div>
+        const record = document.getElementById("record");
+        const eventCount = document.getElementById("eventCount");
 
-      </div>
+        if (record) {
+            record.textContent = `RECORDS · ${year}`;
+        }
 
-      <div class="selected-work-information">
+        if (eventCount) {
+            eventCount.textContent = this.eventCounts[year] ?? 0;
+        }
 
-        <div class="selected-work-main-image">
-          <img
-            src="${this.escapeHTML(event.image)}"
-            alt="${this.escapeHTML(work.title)}"
-          >
-        </div>
+    }
 
-        <div class="selected-work-description">
+    // =====================================================
+    // LOAD YEAR DATA
+    // =====================================================
 
-          <div class="selected-info-item">
-            <span>DATE</span>
-            <p>${this.escapeHTML(
-              (event.date || "").replace(/^Date:\s*/, "")
-            )}</p>
-          </div>
+    loadYear(year) {
 
-          <div class="selected-info-item">
-            <span>VENUE</span>
-            <p>${this.escapeHTML(event.venue || "Not specified")}</p>
-          </div>
+        const dataKey = `worksData${year}`;
 
-          <div class="selected-info-item">
-            <span>ABOUT THE EVENT</span>
+        const works = window[dataKey];
+
+        if (works) {
+
+            this.renderWorks(works);
+
+        } else {
+
+            this.showEmpty();
+
+        }
+
+    }
+
+    // =====================================================
+    // RENDER WORK CARDS
+    // =====================================================
+
+    renderWorks(works) {
+
+        const grid = document.getElementById("worksGrid");
+        const emptyState = document.getElementById("emptyState");
+
+        if (!grid) return;
+
+        if (!works || works.length === 0) {
+
+            this.showEmpty();
+            return;
+
+        }
+
+        grid.innerHTML = "";
+
+        if (emptyState) {
+            emptyState.style.display = "none";
+        }
+
+        works.forEach(work => {
+
+            const card = this.createWorkCard(work);
+
+            grid.appendChild(card);
+
+        });
+
+        grid.style.animation = "none";
+
+        setTimeout(() => {
+
+            grid.style.animation = "fadeIn 0.6s ease-out";
+
+        }, 10);
+
+    }
+
+    // =====================================================
+    // CREATE WORK CARD
+    // =====================================================
+
+    createWorkCard(work) {
+
+        const card = document.createElement("article");
+
+        card.className = "work-card";
+
+        const tagsHTML = (work.tags || []).map(tag => `
+
+            <span class="work-tag">
+                ${this.escapeHTML(tag)}
+            </span>
+
+        `).join("");
+
+        card.innerHTML = `
+
+            <div class="work-card-content">
+
+                <h3>
+                    ${this.escapeHTML(work.title)}
+                </h3>
+
+                <div class="work-card-meta">
+                    ${tagsHTML}
+                </div>
+
+                <p>
+                    <strong>Date:</strong>
+                    ${this.escapeHTML(
+                        (work.date || "").replace(/^Date:\s*/, "")
+                    )}
+                </p>
+
+                <p>
+                    <strong>Description:</strong>
+                    ${this.escapeHTML(
+                        (work.description || "").replace(/^Description:\s*/, "")
+                    )}
+                </p>
+
+                ${work.search ? `
+
+                    <button
+                        type="button"
+                        class="work-card-link"
+                        data-search="${this.escapeHTML(work.search)}"
+                    >
+                        Explore More <span>→</span>
+                    </button>
+
+                ` : ""}
+
+            </div>
+
+        `;
+
+        return card;
+
+    }
+
+    // =====================================================
+    // OPEN SELECTED EVENT
+    // =====================================================
+
+    openSelectedWork(mappingTag) {
+
+        const event = projectDatas.find(item =>
+
+            String(item.mappingtag) === String(mappingTag)
+
+        );
+
+        const worksData = window[
+            `worksData${this.currentYear}`
+        ] || [];
+
+        const work = worksData.find(item =>
+
+            String(item.search) === String(mappingTag)
+
+        );
+
+        if (!event) {
+
+            console.error("Event not found:", mappingTag);
+
+            return;
+
+        }
+
+        // Prepare iframe URL
+        const params = new URLSearchParams({
+
+            mappingtag: mappingTag,
+
+            title: work?.title || "Team Unity Event"
+
+        });
+
+        // Load selected event
+        this.iframe.src =
+            `event-details.html?${params.toString()}`;
+
+        // Show popup
+        this.modal.classList.add("active");
+
+        document.body.classList.add("event-modal-open");
+
+        document.body.style.overflow = "hidden";
+
+        this.selectedWork = event;
+
+    }
+
+    // =====================================================
+    // CLOSE EVENT POPUP
+    // =====================================================
+
+    backToWorks() {
+
+        // Close iframe popup
+        if (this.modal) {
+
+            this.modal.classList.remove("active");
+
+            // Stop iframe loading
+            if (this.iframe) {
+
+                this.iframe.src = "about:blank";
+
+            }
+
+        }
+
+        // Close image slider
+        this.closeSlider();
+
+        // Restore page scrolling
+        document.body.classList.remove("event-modal-open");
+
+        document.body.style.overflow = "";
+
+        // Reset selection
+        this.selectedWork = null;
+
+    }
+
+    // =====================================================
+    // OLD DETAIL RENDERER (NOT USED BY IFRAME)
+    // =====================================================
+
+    renderSelectedWork(work, event) {
+
+        const images = [
+            event.image,
+            ...(event.imageSlider || [])
+        ].filter(Boolean);
+
+        const galleryHTML = images.map((image, index) => `
+
+            <button
+                type="button"
+                class="selected-work-photo"
+                data-index="${index}"
+            >
+                <img
+                    src="${this.escapeHTML(image)}"
+                    alt="Event photograph ${index + 1}"
+                >
+            </button>
+
+        `).join("");
+
+        this.detailView.innerHTML = `
+
+            <button
+                type="button"
+                class="selected-work-back"
+                id="backToWorks"
+            >
+                Back to Our Works
+            </button>
+
+            <h2>${this.escapeHTML(work.title)}</h2>
+
+            <p>${this.escapeHTML(event.date || "")}</p>
+
+            <p>${this.escapeHTML(event.venue || "")}</p>
+
             <p>${this.escapeHTML(event.description || "")}</p>
-          </div>
 
-        </div>
+            <div class="selected-gallery-grid">
+                ${galleryHTML}
+            </div>
 
-      </div>
+        `;
 
-      <div class="selected-work-gallery">
+        this.currentImages = images;
 
-        <div class="selected-gallery-heading">
-          <div>
-            <span class="year-label">EVENT MOMENTS</span>
-            <h3>Photo Gallery</h3>
-          </div>
-
-          <span>${images.length} PHOTOS</span>
-        </div>
-
-        <div class="selected-gallery-grid">
-          ${galleryHTML}
-        </div>
-
-      </div>
-
-    `;
-
-    this.currentImages = images;
-
-  }
-
-  // =======================================================
-  // BACK TO WORKS
-  // =======================================================
-
-  backToWorks() {
-
-    if (this.detailView) {
-      this.detailView.hidden = true;
     }
 
-    const grid = document.getElementById("worksGrid");
+    // =====================================================
+    // IMAGE SLIDER
+    // =====================================================
 
-    if (grid) grid.hidden = false;
+    openSlider(index) {
 
-    this.closeSlider();
+        if (!this.currentImages.length) return;
 
-    this.selectedWork = null;
+        this.currentImageIndex = index;
 
-  }
+        this.updateSlider();
 
-  // =======================================================
-  // IMAGE SLIDER
-  // =======================================================
+        this.slider.classList.add("active");
 
-  openSlider(index) {
+        this.slider.setAttribute("aria-hidden", "false");
 
-    if (!this.currentImages.length) return;
+        document.body.style.overflow = "hidden";
 
-    this.currentImageIndex = index;
+    }
 
-    this.updateSlider();
+    updateSlider() {
 
-    this.slider.classList.add("active");
-    this.slider.setAttribute("aria-hidden", "false");
+        this.sliderImage.src =
+            this.currentImages[this.currentImageIndex];
 
-    document.body.style.overflow = "hidden";
+        this.sliderImage.alt =
+            `Event photo ${this.currentImageIndex + 1}`;
 
-  }
+        this.slider.querySelector(".works-slider-counter")
+            .textContent =
+            `${this.currentImageIndex + 1} / ${this.currentImages.length}`;
 
-  updateSlider() {
+        this.slider.querySelector(".works-slider-prev").disabled =
+            this.currentImageIndex === 0;
 
-    this.sliderImage.src =
-      this.currentImages[this.currentImageIndex];
+        this.slider.querySelector(".works-slider-next").disabled =
+            this.currentImageIndex === this.currentImages.length - 1;
 
-    this.sliderImage.alt =
-      `Event photo ${this.currentImageIndex + 1}`;
+    }
 
-    this.slider.querySelector(".works-slider-counter")
-      .textContent =
-      `${this.currentImageIndex + 1} / ${this.currentImages.length}`;
+    changeImage(direction) {
 
-    this.slider.querySelector(".works-slider-prev").disabled =
-      this.currentImageIndex === 0;
+        const nextIndex = this.currentImageIndex + direction;
 
-    this.slider.querySelector(".works-slider-next").disabled =
-      this.currentImageIndex === this.currentImages.length - 1;
+        if (
+            nextIndex < 0 ||
+            nextIndex >= this.currentImages.length
+        ) return;
 
-  }
+        this.currentImageIndex = nextIndex;
 
-  changeImage(direction) {
+        this.updateSlider();
 
-    const nextIndex = this.currentImageIndex + direction;
+    }
 
-    if (
-      nextIndex < 0 ||
-      nextIndex >= this.currentImages.length
-    ) return;
+    closeSlider() {
 
-    this.currentImageIndex = nextIndex;
-    this.updateSlider();
+        if (!this.slider) return;
 
-  }
+        this.slider.classList.remove("active");
 
-  closeSlider() {
+        this.slider.setAttribute("aria-hidden", "true");
 
-    if (!this.slider) return;
+        this.sliderImage.src = "";
 
-    this.slider.classList.remove("active");
-    this.slider.setAttribute("aria-hidden", "true");
+        // Keep scrolling locked if iframe popup remains open
+        if (
+            this.modal &&
+            this.modal.classList.contains("active")
+        ) {
 
-    document.body.style.overflow = "";
+            document.body.style.overflow = "hidden";
 
-    this.sliderImage.src = "";
+        } else {
 
-  }
+            document.body.style.overflow = "";
 
-  // =======================================================
-  // EMPTY STATE
-  // =======================================================
+        }
 
-  showEmpty() {
+    }
 
-    document.getElementById("worksGrid").innerHTML = "";
+    // =====================================================
+    // EMPTY STATE
+    // =====================================================
 
-    document.getElementById("emptyState").style.display = "flex";
+    showEmpty() {
 
-  }
+        const grid = document.getElementById("worksGrid");
 
-  // =======================================================
-  // MOBILE MENU
-  // =======================================================
+        const emptyState = document.getElementById("emptyState");
 
-  setupMobileMenu() {
+        if (grid) {
+            grid.innerHTML = "";
+        }
 
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileNav = document.getElementById("mobileNav");
+        if (emptyState) {
+            emptyState.style.display = "flex";
+        }
 
-    if (!menuBtn || !mobileNav) return;
+    }
 
-    menuBtn.addEventListener("click", () => {
+    // =====================================================
+    // MOBILE MENU
+    // =====================================================
 
-      mobileNav.classList.toggle("active");
+    setupMobileMenu() {
 
-      menuBtn.setAttribute(
-        "aria-expanded",
-        mobileNav.classList.contains("active")
-      );
+        const menuBtn = document.getElementById("menuBtn");
 
-    });
+        const mobileNav = document.getElementById("mobileNav");
 
-  }
+        if (!menuBtn || !mobileNav) return;
 
-  // =======================================================
-  // HTML ESCAPING
-  // =======================================================
+        menuBtn.addEventListener("click", () => {
 
-  escapeHTML(value) {
+            mobileNav.classList.toggle("active");
 
-    return String(value ?? "").replace(/[&<>"']/g, char => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;"
-    })[char]);
+            menuBtn.setAttribute(
+                "aria-expanded",
+                mobileNav.classList.contains("active")
+            );
 
-  }
+        });
+
+    }
+
+    // =====================================================
+    // HTML ESCAPING
+    // =====================================================
+
+    escapeHTML(value) {
+
+        return String(value ?? "").replace(/[&<>"']/g, char => ({
+
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;"
+
+        })[char]);
+
+    }
 
 }
+
 
 // =========================================================
 // INITIALIZE
@@ -692,31 +757,6 @@ backToWorks() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  window.worksPortfolio = new WorksPortfolio();
+    window.worksPortfolio = new WorksPortfolio();
 
 });
-
-
-
-document.addEventListener("keydown", (event) => {
-
-    if (event.key === "Escape") {
-
-        const modal = document.getElementById("eventIframeModal");
-        const slider = document.querySelector(".works-image-slider");
-
-        // Close image slider first if it is open
-        if (slider?.classList.contains("active")) {
-            window.worksPortfolio?.closeSlider();
-            return;
-        }
-
-        // Otherwise close event popup
-        if (modal?.classList.contains("active")) {
-            window.worksPortfolio?.backToWorks();
-        }
-
-    }
-
-});
-
