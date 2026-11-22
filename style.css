@@ -1203,3 +1203,7 @@ footer small {
     color: var(--bg);
     transform: translateY(-3px);
 }
+
+.notes-btn span {
+    font-size: 17px;
+}
