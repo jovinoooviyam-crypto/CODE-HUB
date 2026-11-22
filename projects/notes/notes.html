@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Space | Tasks & Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <div>
+                    <h1>Focus Space</h1>
+                    <p>Your personal productivity space</p>
+                </div>
+            </div>
+
+            <div class="date" id="currentDate"></div>
+        </header>
+
+        <!-- Sliding Switch -->
+        <div class="switch-wrapper">
+            <div class="switch-track">
+                <div class="switch-slider" id="switchSlider"></div>
+
+                <button class="switch-btn active"
+                        data-page="todo">
+                    <span>☑</span> To-Do List
+                </button>
+
+                <button class="switch-btn"
+                        data-page="notes">
+                    <span>✎</span> Notes
+                </button>
+            </div>
+        </div>
+
+
+        <!-- TODO SECTION -->
+        <section class="page active" id="todoPage">
+
+            <div class="section-heading">
+                <div>
+                    <h2>My Tasks</h2>
+                    <p>Organize your day, one task at a time.</p>
+                </div>
+                <div class="progress-circle" id="progressCircle">
+                    <span id="progressText">0%</span>
+                </div>
+            </div>
+
+            <div class="task-stats">
+                <div class="stat-card">
+                    <span>Total Tasks</span>
+                    <h3 id="totalTasks">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span>Pending</span>
+                    <h3 id="pendingTasks">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span>Completed</span>
+                    <h3 id="completedTasks">0</h3>
+                </div>
+            </div>
+
+            <!-- Add Task -->
+            <form class="add-task-form" id="taskForm">
+
+                <input type="hidden" id="editTaskId">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    required
+                    maxlength="120"
+                >
+
+                <button type="submit" id="addTaskBtn">
+                    + Add Task
+                </button>
+
+            </form>
+
+            <div class="filter-row">
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-filter="pending">
+                        Pending
+                    </button>
+
+                    <button class="filter-btn" data-filter="completed">
+                        Completed
+                    </button>
+                </div>
+
+                <span class="task-count" id="taskCount">0 tasks</span>
+
+            </div>
+
+            <div class="task-list" id="taskList"></div>
+
+        </section>
+
+
+        <!-- NOTES SECTION -->
+        <section class="page" id="notesPage">
+
+            <div class="section-heading">
+                <div>
+                    <h2>My Notes</h2>
+                    <p>Your thoughts, ideas and reminders.</p>
+                </div>
+
+                <button class="new-note-btn" id="newNoteBtn">
+                    + New Note
+                </button>
+            </div>
+
+            <div class="notes-layout">
+
+                <!-- Notes sidebar -->
+                <aside class="notes-sidebar">
+                    <div class="notes-sidebar-heading">
+                        <span>ALL NOTES</span>
+                        <span id="notesCount">0</span>
+                    </div>
+
+                    <div id="notesList" class="notes-list"></div>
+                </aside>
+
+                <!-- Editor -->
+                <div class="editor-container">
+
+                    <div id="emptyEditor" class="empty-editor">
+                        <div class="empty-icon">✎</div>
+                        <h3>Select a note</h3>
+                        <p>Choose a note or create a new one.</p>
+                        <button id="emptyNewNote">Create a note</button>
+                    </div>
+
+                    <div id="noteEditor" class="note-editor hidden">
+
+                        <div class="editor-toolbar">
+                            <span id="saveStatus">Saved locally</span>
+
+                            <button id="deleteNoteBtn" class="delete-note-btn">
+                                Delete note
+                            </button>
+                        </div>
+
+                        <input
+                            type="text"
+                            id="noteTitle"
+                            placeholder="Note title..."
+                            maxlength="100"
+                        >
+
+                        <textarea
+                            id="noteContent"
+                            placeholder="Start writing your thoughts..."
+                        ></textarea>
+
+                        <div class="editor-footer">
+                            <span id="wordCount">0 words</span>
+                            <span>Auto-saved</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <span>FOCUS SPACE</span>
+            <span>Designed for your productivity ✦</span>
+        </footer>
+
+    </main>
+
+    <!-- Task Edit Modal -->
+    <div class="modal-overlay" id="taskModal">
+
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Edit Task</h3>
+                <button id="closeModal">×</button>
+            </div>
+
+            <form id="editForm">
+                <input type="hidden" id="modalTaskId">
+
+                <input
+                    type="text"
+                    id="modalTaskTitle"
+                    placeholder="Task title"
+                    required
+                >
+
+                <div class="modal-actions">
+                    <button type="button" id="cancelEdit">Cancel</button>
+                    <button type="submit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
