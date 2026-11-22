@@ -1175,3 +1175,13 @@ footer small {
     }
 
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notes-btn {
+    width: 168.39px;
+    height: 49px;
+}
