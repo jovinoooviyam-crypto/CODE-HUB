@@ -1206,4 +1206,6 @@ footer small {
 
 .notes-btn span {
     font-size: 17px;
+    display: flex;
+    justify-content: flex-end;
 }
