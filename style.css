@@ -369,6 +369,8 @@ footer {
 /* HERO SECTION */
 
 .hero {
+    display: flex;
+    flex-direction: row;
 
     position: relative;
     overflow: hidden;
