@@ -1,21 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick links</title>
-    <link href="quick.css" rel="Stylesheet">
+
+    <meta name="theme-color" content="#0D1020">
+    <meta name="description" content="CODE HUB - My personal project archive">
+
+    <title>CODE HUB | My Projects</title>
+
+    <link rel="icon" type="image/png" href="src/icon.png">
+    <link rel="stylesheet" href="quick.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <div class="container">
-        <div class="links">
-            <div class="link">
-                <img src="">
-                <div class="url">
-                    <a href="" target="_blank">text</a>
+
+    <main>
+
+        <!-- PROJECT SECTION -->
+
+        <section class="projects-section" id="projects">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        THE COLLECTION
+                    </span>
+
+                    <h2>
+                        My Projects<span>.</span>
+                    </h2>
+
+                    <p class="section-description">
+                        A little collection of things I've built.
+                    </p>
+
                 </div>
+
+                <div class="project-count">
+
+                    <span id="projectCount">00</span>
+                    <small>TOTAL PROJECTS</small>
+
+                </div>
+
             </div>
-        </div>
-    </div>
+
+
+            <!-- SEARCH BAR -->
+
+            <div class="search-container">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="projectSearch"
+                    placeholder="Search something..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- PROJECT GRID -->
+
+            <div class="project-container" id="projectContainer">
+
+                <!-- TEAM UNITY V1 -->
+
+                <article class="projects" data-name="team unity v1 organisation website">
+
+                    <div class="project-icon">
+                        <img
+                            src="src/unity_logo.png"
+                            class="project-img"
+                            alt="Team Unity Logo"
+                        >
+                    </div>
+
+                    <div class="project-info">
+
+                        <span class="project-category">
+                            TEAM UNITY WEB - V1
+                        </span>
+
+                        <h3>
+                            <a href="projects/Team-unity-web/index.html">
+                                TEAM UNITY - V1
+                            </a>
+                        </h3>
+
+                        <p>
+                            A website for an organisation called TEAM UNITY.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="projects/Team-unity-web/index.html"
+                        class="project-arrow"
+                        aria-label="Open project"
+                    >
+                        ↗
+                    </a>
+
+                </article>
+
+
+                <!-- TEAM UNITY V2 -->
+
+                <article class="projects" data-name="team unity v2 organisation website">
+
+                    <div class="project-icon">
+                        <img
+                            src="src/unity_logo.png"
+                            class="project-img"
+                            alt="Team Unity Logo"
+                        >
+                    </div>
+
+                    <div class="project-info">
+
+                        <span class="project-category">
+                            TEAM UNITY WEB - V2
+                        </span>
+
+                        <h3>
+                            <a href="projects/Team-unity-web-v2/index.html">
+                                TEAM UNITY - V2
+                            </a>
+                        </h3>
+
+                        <p>
+                            An updated website for the TEAM UNITY organisation.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="projects/Team-unity-web-v2/index.html"
+                        class="project-arrow"
+                        aria-label="Open project"
+                    >
+                        ↗
+                    </a>
+
+                </article>
+
+
+                <!-- ADD MORE PROJECTS HERE -->
+
+            </div>
+
+
+            <!-- EMPTY SEARCH STATE -->
+
+            <div class="empty-state" id="emptyState">
+
+                <span>✧</span>
+
+                <h3>No projects found</h3>
+
+                <p>Try searching with another keyword.</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PROJECT SCRIPTS -->
 </body>
+
 </html>
