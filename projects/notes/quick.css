@@ -44,6 +44,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-color: var(--hero-end);
+    border: 1px solid var(--border);
+    width: 100%;
 }
 
 .url a {
@@ -53,5 +56,6 @@ body {
 }
 
 .link :hover {
-    transform: translateY(10px);
+    transform: translateY(-10px);
+    transition: 0.5s ease;
 }
