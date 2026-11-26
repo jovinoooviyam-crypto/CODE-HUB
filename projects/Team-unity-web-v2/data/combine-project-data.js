@@ -4,8 +4,8 @@
 ============================================= */
 
 window.projectDatas = [
-    ...(window.projectDatas2026 || []),
-    ...(window.projectDatas2025 || [])
+    ...(window.projectDatas2025 || []),
+    ...(window.projectDatas2026 || [])
 ];
 
 console.log(
