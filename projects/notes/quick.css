@@ -1,0 +1,28 @@
+:root {
+
+    color-scheme: dark;
+
+    --bg: #0D1020;
+    --surface: #14182C;
+    --surface-light: #1B2040;
+
+    --primary: #8875FF;
+    --secondary: #C4B8FF;
+    --accent: #A9C6FF;
+
+    --text: #E9E8FF;
+    --muted: #9297B5;
+
+    --border: rgba(196, 184, 255, 0.14);
+    --glass: rgba(136, 117, 255, 0.09);
+
+    --hero-start: #27204E;
+    --hero-middle: #191C3B;
+    --hero-end: #11172D;
+
+    --shadow: rgba(0, 0, 0, 0.25);
+}
+
+body {
+    background: var(--bg);
+}
