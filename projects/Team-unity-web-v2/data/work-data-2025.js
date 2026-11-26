@@ -1,5 +1,5 @@
 window.worksData2025 = [
-    {
+{
   id: "1",
   title: "Test",
   tags: ["Awarness", "Performance"],
