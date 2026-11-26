@@ -33,6 +33,12 @@ body {
     border: 1px solid var(--border);
 }
 
+.link img {
+    height: 100px;
+    width: 100px;
+    border-radius: 13px;
+}
+
 .link {
     padding: 20px;
 }
