@@ -8,15 +8,9 @@ class WorksPortfolio {
 
     constructor() {
 
-        this.currentYear = "202x";
+        
 
-        this.eventCounts = {
-            2026: 2,
-            2025: 0,
-            2024: 0,
-            2023: 10,
-            2022: 0
-        };
+        
 
         this.selectedWork = null;
         this.currentImages = [];
@@ -36,8 +30,8 @@ class WorksPortfolio {
         this.createEventModal();
 
         this.setupEventListeners();
-        this.loadYear(this.currentYear);
-
+        this.loadAllWorks();
+        
     }
 
     // =====================================================
@@ -202,9 +196,6 @@ class WorksPortfolio {
         document.querySelectorAll(".year-btn").forEach(btn => {
 
             btn.addEventListener("click", () => {
-
-                this.switchYear(Number(btn.dataset.year));
-
             });
 
         });
@@ -214,7 +205,6 @@ class WorksPortfolio {
 
             btn.addEventListener("click", () => {
 
-                this.switchYear(Number(btn.dataset.year));
 
                 window.scrollTo({
                     top: 0,
@@ -287,76 +277,18 @@ class WorksPortfolio {
     }
 
     // =====================================================
-    // YEAR SELECTION
-    // =====================================================
-
-    switchYear(year) {
-
-        document.querySelectorAll(".year-btn").forEach(btn => {
-
-            btn.classList.remove("active");
-            btn.setAttribute("aria-selected", "false");
-
-        });
-
-        const activeBtn = document.querySelector(
-            `.year-btn[data-year="${year}"]`
-        );
-
-        if (activeBtn) {
-
-            activeBtn.classList.add("active");
-            activeBtn.setAttribute("aria-selected", "true");
-
-        }
-
-        this.currentYear = year;
-
-        this.backToWorks();
-
-        this.updateRecord(year);
-
-        this.loadYear(year);
-
-    }
-
-    updateRecord(year) {
-
-        const record = document.getElementById("record");
-        const eventCount = document.getElementById("eventCount");
-
-        if (record) {
-            record.textContent = `RECORDS · ${year}`;
-        }
-
-        if (eventCount) {
-            eventCount.textContent = this.eventCounts[year] ?? 0;
-        }
-
-    }
-
-    // =====================================================
     // LOAD YEAR DATA
     // =====================================================
 
-    loadYear(year) {
+    loadAllWorks() {
 
-        const dataKey = `worksData${year}`;
+    const works = window.allWorksData || [];
 
-        const works = window[dataKey];
+    console.log("Total works loaded:", works.length);
 
-        if (works) {
+    this.renderWorks(works);
 
-            this.renderWorks(works);
-
-        } else {
-
-            this.showEmpty();
-
-        }
-
-    }
-
+}
     // =====================================================
     // RENDER WORK CARDS
     // =====================================================
@@ -467,55 +399,58 @@ class WorksPortfolio {
     // OPEN SELECTED EVENT
     // =====================================================
 
-    openSelectedWork(mappingTag) {
 
-        const event = projectDatas.find(item =>
+/* =============================================
+   OPEN SELECTED EVENT
+============================================= */
 
-            String(item.mappingtag) === String(mappingTag)
+openSelectedWork(mappingTag) {
 
+    console.log("Explore More clicked:", mappingTag);
+
+    // Find matching project/event using mappingtag
+    const event = (window.projectDatas || []).find(item =>
+        String(item.mappingtag).trim() === String(mappingTag).trim()
+    );
+
+    // Find matching Works record using search
+    const work = (window.allWorksData || []).find(item =>
+        String(item.search).trim() === String(mappingTag).trim()
+    );
+
+    // Stop if no matching event exists
+    if (!event) {
+
+        console.error(
+            "Event not found for mapping ID:",
+            mappingTag
         );
 
-        const worksData = window[
-            `worksData${this.currentYear}`
-        ] || [];
-
-        const work = worksData.find(item =>
-
-            String(item.search) === String(mappingTag)
-
-        );
-
-        if (!event) {
-
-            console.error("Event not found:", mappingTag);
-
-            return;
-
-        }
-
-        // Prepare iframe URL
-        const params = new URLSearchParams({
-
-            mappingtag: mappingTag,
-
-            title: work?.title || "Team Unity Event"
-
-        });
-
-        // Load selected event
-        this.iframe.src =
-            `event-details.html?${params.toString()}`;
-
-        // Show popup
-        this.modal.classList.add("active");
-
-        document.body.classList.add("event-modal-open");
-
-        document.body.style.overflow = "hidden";
-
-        this.selectedWork = event;
-
+        return;
     }
+
+    // Prepare iframe URL
+    const params = new URLSearchParams({
+        mappingtag: mappingTag,
+        title: work?.title || "Team Unity Event"
+    });
+
+    // Load event details
+    this.iframe.src =
+        `event-details.html?${params.toString()}`;
+
+    // Open popup
+    this.modal.classList.add("active");
+
+    document.body.classList.add("event-modal-open");
+
+    document.body.style.overflow = "hidden";
+
+    this.selectedWork = event;
+
+    console.log("Matching event found:", event);
+}
+
 
     // =====================================================
     // CLOSE EVENT POPUP
@@ -758,5 +693,35 @@ class WorksPortfolio {
 document.addEventListener("DOMContentLoaded", () => {
 
     window.worksPortfolio = new WorksPortfolio();
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuBtn = document.querySelector(".menu-btn");
+    const mobileNav = document.querySelector(".mobile-nav");
+
+    if (!menuBtn || !mobileNav) return;
+
+    menuBtn.addEventListener("click", () => {
+        mobileNav.classList.toggle("active");
+    });
+
+    // Close dropdown after clicking a navigation link
+    mobileNav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            mobileNav.classList.remove("active");
+        });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+        if (
+            !menuBtn.contains(event.target) &&
+            !mobileNav.contains(event.target)
+        ) {
+            mobileNav.classList.remove("active");
+        }
+    });
 
 });
