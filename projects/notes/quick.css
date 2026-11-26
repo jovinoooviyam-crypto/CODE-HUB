@@ -34,11 +34,15 @@ body {
 }
 
 .link img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     border-radius: 13px;
 }
 
 .link {
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
 }
