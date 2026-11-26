@@ -46,6 +46,6 @@ body {
     justify-content: flex-start;
 }
 
-.link a {
+.link .url a {
     border-left: 60px;
 }
