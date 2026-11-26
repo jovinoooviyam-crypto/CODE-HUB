@@ -47,5 +47,11 @@ body {
 }
 
 .url a {
-    padding-left: 60px;
+    padding-left: 40px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.link :hover {
+    transform: translateY(10px);
 }
