@@ -7,11 +7,6 @@
 class WorksPortfolio {
 
     constructor() {
-
-        
-
-        
-
         this.selectedWork = null;
         this.currentImages = [];
         this.currentImageIndex = 0;
