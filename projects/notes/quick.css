@@ -29,4 +29,10 @@ body {
 
 .links {
     background-color: var(--hero-start);
+    border-radius: 13px;
+    border: 1px var(--border);
+}
+
+.link {
+    padding: 20px;
 }
